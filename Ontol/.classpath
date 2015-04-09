@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="C:/Users/Anas/workspace/Ontol/owlapi-osgidistribution-4.0.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:file:/C:/Users/Anas/workspace/Ontol/owlapi-osgidistribution-4.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/Anas/workspace/Ontol/slf4j-simple-1.7.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anas/workspace/Ontol/elk-owlapi.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anas/workspace/Ontol/elk-owlapi-sources.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Anas/workspace/Ontol/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="elk-owlapi-sources.jar"/>
+	<classpathentry kind="lib" path="C:/git/Ontol/elk-owlapi.jar"/>
+	<classpathentry kind="lib" path="C:/git/Ontol/elk-owlapi-sources.jar"/>
+	<classpathentry kind="lib" path="C:/git/Ontol/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/git/Ontol/owlapi-osgidistribution-4.0.1.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/Ontol/owlapi-osgidistribution-4.0.0-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/git/Ontol/slf4j-simple-1.7.10.jar"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
