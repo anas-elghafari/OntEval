@@ -1,7 +1,7 @@
 /**
  * 
  */
-package eval;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -34,12 +34,15 @@ import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 import org.semanticweb.owlapi.model.parameters.ChangeApplied;
 import org.semanticweb.owlapi.reasoner.InferenceType;
 import org.semanticweb.owlapi.reasoner.Node;
+import org.semanticweb.owlapi.reasoner.NodeSet;
 import org.semanticweb.owlapi.reasoner.OWLReasoner;
 import org.semanticweb.owlapi.reasoner.OWLReasonerFactory;
 import org.semanticweb.owlapi.util.SimpleIRIMapper;
 
+import uk.ac.manchester.cs.owl.owlapi.OWLObjectIntersectionOfImpl;
 
-/** @author Anas
+
+/** @author Anas Elghafari
  *
  */
 public class EvaluatingGCIs {
@@ -72,10 +75,11 @@ public class EvaluatingGCIs {
 		System.out.println("\nGCI:" + exp);
 		ArrayList<String> operands = (ArrayList<String>) getGciOperands(exp);
 		System.out.println("operands: " + operands);
+		/*
 		if(operands.get(1).equals("(bottom)")) {
 			ArrayList<String> disjointClassesOperands = getGciOperands(operands.get(0));
 			System.out.println("DISJOINT CLASSES OPERANDS:" + disjointClassesOperands);
-		}
+		}*/
 		
 		OWLClassExpression subclass = getOWLClass(operands.get(0));
 		OWLClassExpression superclass = getOWLClass(operands.get(1));
@@ -305,19 +309,42 @@ public class EvaluatingGCIs {
 	
 	
 	//a method to create an unsatisfiable calss in the ontology, for testing purposes-
-    private static void addUnsatisfiableClass() {
+    private static void addUnsatisfiableClassAsGCI() {
+    	    System.out.println("adding an unsatisfiable class as a GCI");
 			OWLClass dead = factory.getOWLClass(IRI.create(groIRI + "#dead"));
 			OWLClass alive = factory.getOWLClass(IRI.create(groIRI + "#alive"));
 			OWLClass zombies = factory.getOWLClass(IRI.create(groIRI + "#zombies"));
 			OWLSubClassOfAxiom zombiesDead = factory.getOWLSubClassOfAxiom(zombies, alive);
 			OWLSubClassOfAxiom zombiesAlive = factory.getOWLSubClassOfAxiom(zombies, dead);
-			OWLDisjointClassesAxiom disjointness = factory.getOWLDisjointClassesAxiom(dead, alive);
+			OWLClassExpression intersectionDeadAlive = factory.getOWLObjectIntersectionOf(dead, alive);
+			OWLSubClassOfAxiom intersectionSubclassBottom = factory.getOWLSubClassOfAxiom(intersectionDeadAlive, 
+					factory.getOWLNothing());
 			manager.addAxiom(gro, zombiesAlive);
 			manager.addAxiom(gro, zombiesDead);
-			manager.addAxiom(gro, disjointness);
+			manager.addAxiom(gro, intersectionSubclassBottom);
+			NodeSet<OWLClass> zombiesSuperclass = reasoner.getSuperClasses(zombies, true);
+			Node<OWLClass> zombiesEquivalent = reasoner.getEquivalentClasses(zombies);
+			System.out.println("zombies superclass:" + zombiesSuperclass);
+			System.out.println("zombies equivalentclasses:" + zombiesEquivalent);
+			
 		}
 	
 	
+    
+    
+    private static void addUnsatisfiableClass() {
+		OWLClass dead = factory.getOWLClass(IRI.create(groIRI + "#dead"));
+		OWLClass alive = factory.getOWLClass(IRI.create(groIRI + "#alive"));
+		OWLClass zombies = factory.getOWLClass(IRI.create(groIRI + "#zombies"));
+		OWLSubClassOfAxiom zombiesDead = factory.getOWLSubClassOfAxiom(zombies, alive);
+		OWLSubClassOfAxiom zombiesAlive = factory.getOWLSubClassOfAxiom(zombies, dead);
+		OWLDisjointClassesAxiom disjointness = factory.getOWLDisjointClassesAxiom(dead, alive);
+		manager.addAxiom(gro, zombiesAlive);
+		manager.addAxiom(gro, zombiesDead);
+		manager.addAxiom(gro, disjointness);
+	}
+
+    
 	private static String[] fileToLines(String fileName) throws IOException {
 		Path filePath = new File(fileName).toPath();
 		Charset charset = Charset.defaultCharset();        
@@ -344,14 +371,114 @@ public class EvaluatingGCIs {
 	}
 	
 	
+	
+	
 	static ArrayList<OWLAxiom> getRedundantAxioms(ArrayList<OWLAxiom> axioms) {
-		return null;
+		ArrayList<OWLAxiom> redundant = new ArrayList<OWLAxiom>();
+		for(OWLAxiom a:axioms) {
+			if(reasoner.isEntailed(a)) {
+				redundant.add(a);
+			}
+		}
+		return redundant;
+	}
+	
+	
+	
+	static ArrayList<OWLAxiom> getRedundantAxiomsDETAILED(ArrayList<OWLAxiom> axioms) {
+		ArrayList<OWLAxiom> redundant = new ArrayList<OWLAxiom>();
+		int disjointnessAxioms = 0;
+		int bottomAsSuperclass = 0;
+	    int topAsSuperclass = 0;
+	    int topNotSuperclass = 0;
+	    int singleSuperclass = 0;
+	    int superclassIsExpression = 0;
+	    
+		for(OWLAxiom a: axioms){
+			OWLSubClassOfAxiom axiom = (OWLSubClassOfAxiom) a;
+			if (axiom.getSuperClass().equals(factory.getOWLNothing())) {
+				disjointnessAxioms++;
+			    OWLClassExpression subclass = axiom.getSubClass();
+			    NodeSet<OWLClass> inferredSuperclasses = reasoner.getSuperClasses(subclass, false);
+			    Node<OWLClass> inferredEquivalentclasses = reasoner.getEquivalentClasses(subclass);
+			    System.out.println("\nDisjointness Axiom: " + a.toString());
+			    System.out.println("superclasses of the subclass: "+ inferredSuperclasses);
+			    
+			    if (inferredSuperclasses.containsEntity(factory.getOWLNothing())  ||
+			    	inferredEquivalentclasses.contains(factory.getOWLNothing())) {
+			    	System.out.println("Bottom found as a superclass!!");
+			    	redundant.add(axiom);
+			    	bottomAsSuperclass++;
+			    }
+			    
+			    if (inferredSuperclasses.containsEntity(factory.getOWLThing())) {
+			    	topAsSuperclass++;
+			    }else {
+			    	topNotSuperclass++;
+			    }
+			   
+			    
+			    if (inferredSuperclasses.isSingleton()) {
+			    	singleSuperclass++;
+			    }
+			    
+			    /*
+			    List<OWLClassExpression> operandsList =  intersection.getOperandsAsList();
+			    NodeSet<OWLClass> disjointClasses = reasoner.getDisjointClasses(operandsList.get(0));
+			    for (int i= 1; i<operandsList.size(); i++) {
+			    	if (disjointClasses.containsEntity((OWLClass) operandsList.get(i))) {
+			    		System.out.println("redundancy found!!!");
+			    	}
+			    }*/
+			}
+			
+			else {
+
+				
+				OWLClassExpression subclass = axiom.getSubClass();
+				OWLClassExpression superclass = axiom.getSuperClass();
+			    NodeSet<OWLClass> inferredSuperclasses = reasoner.getSuperClasses(subclass, false);
+			    Node<OWLClass> inferredEquivalentclasses = reasoner.getEquivalentClasses(subclass);
+			    if (!superclass.getClass().equals(OWLClass.class)) {
+			    	System.out.println("Superclass of the axiom is an expression, not a class");
+			    	superclassIsExpression++;
+			    	continue;
+			    }
+			    
+			    if (inferredSuperclasses.containsEntity((OWLClass) superclass) ||
+			        inferredEquivalentclasses.contains((OWLClass) superclass)) {
+			    	System.out.println("Redundant axiom found!!" );
+			    	redundant.add(axiom);
+			    }
+			    System.out.println("\nSubclass Axiom: " + a.toString());
+			    System.out.println("superclasses of the subclass: "+ inferredSuperclasses);
+			    System.out.println("equivalent classes to the subclass:" + inferredEquivalentclasses);
+			    
+			}
+		}
 		
+		System.out.println("Total number of axioms: " + axioms.size());
+        System.out.println("number of disjointness axioms: " + disjointnessAxioms);
+	    System.out.println("number of times bottom was found as superclass: " + bottomAsSuperclass);
+	    System.out.println("number of times top was found as superclass: " + topAsSuperclass);
+	    System.out.println("number of time top was not a superclass: " + topNotSuperclass);
+		System.out.println("number of casese with only 1 superclass:" + singleSuperclass);
+		System.out.println("number of redundant suclassof axioms:" +  redundant.size());
+		System.out.println("number of axioms where the superclass is an expression:" + superclassIsExpression);
+		
+		return redundant;
     }
+	
+	
+	
+	
 	
 	
 	public static void main(String[] args) throws Exception{
 		
+		loadGRO();
+		
+		/*
 		String exampleGCI = "(gci (and (exists HasPart (and)) (exists PerformsBindingToProtein (and))) "
 				+ "(and (exists HasPart Protein_cncpt) "
 				+ "(exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) (exists PerformsPositiveRegulation "
@@ -374,9 +501,9 @@ public class EvaluatingGCIs {
 		ArrayList<String> parts = (ArrayList<String>) getGciOperands(example6);
 		System.out.println("operands: ");
 		System.out.println(parts);
+		*/
 		//System.out.println(gro);
-		loadGRO();
-		System.out.println("PRINTING GRO:" + gro);
+		//System.out.println("PRINTING GRO:" + gro);
 		//System.out.println(factory);
 		
 		
@@ -392,6 +519,7 @@ public class EvaluatingGCIs {
 		parseExists("(exists Encodes Chemical_cncpt)");
 		parseExists("(exists PerformsPositiveRegulation (and))");*/
 		
+		/*
 		System.out.println("parsing a GCI:");
 		OWLAxiom oa1 = parseGCI("(gci (and Gene_cncpt Nucleus_cncpt) (bottom))");
 		manager.addAxiom(gro, oa1);
@@ -409,9 +537,13 @@ public class EvaluatingGCIs {
 		OWLAxiom oa4 = parseGCI("(gci (exists PerformsBinding (and)) (exists PerformsBinding Protein_cncpt))");
 		manager.addAxiom(gro, oa4);
 		
+		*/
         //System.out.println("reasoner:" + reasoner);
-        boolean consistency = reasoner.isConsistent();
-        System.out.println("consistency: " + consistency);
+		
+		
+		boolean consistency = reasoner.isConsistent();
+        System.out.println("consistency (before adding any axioms): " + consistency);
+        
         
         /*
         addInconsistency();
@@ -448,6 +580,9 @@ public class EvaluatingGCIs {
         OWLOntologyChangesVetoedListener vetoesListener = new OWLVetoesListener();
     	manager.addOntologyChangesVetoedListener(vetoesListener);
     	
+    	
+    	
+    	/*
         for(OWLAxiom a: axioms) {
         	ChangeApplied c = manager.addAxiom(gro, a);
         	if(c == ChangeApplied.UNSUCCESSFULLY) {
@@ -460,14 +595,16 @@ public class EvaluatingGCIs {
         	}
         }
         System.out.println("Axioms count after adding GCIs: " + gro.getAxiomCount());
+        */
         
-        
-        
+    	//ArrayList<OWLAxiom> re = getRedundantAxioms(axioms);
+        ArrayList<OWLAxiom> re = getRedundantAxiomsDETAILED(axioms);
+    	System.out.println("REDUNDANT AXIOMS: " + re);
         
         //testing the reasoner, comment out as needed. only 1 of those 2 can be tested at one time
         //addInconsistency();
         //addUnsatisfiableClass();    
-                
+        addUnsatisfiableClassAsGCI();        
         reasoner.flush();
         reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
         consistency = reasoner.isConsistent();
