@@ -79,7 +79,7 @@ public class EvaluatingGCIs {
 	
 	
 	public static OWLSubClassOfAxiom parseGCI(String exp){
-		//System.out.println("\nGCI:" + exp);
+		System.out.println("\n\ninput GCI: " + exp);
 		ArrayList<String> operands = (ArrayList<String>) getGciOperands(exp);
 		//System.out.println("In parseGCI, operands: " + operands);
 		/*
@@ -91,7 +91,7 @@ public class EvaluatingGCIs {
 		OWLClassExpression subclass = getOWLClass(operands.get(0));
 		OWLClassExpression superclass = getOWLClass(operands.get(1));
 		OWLSubClassOfAxiom axiom = factory.getOWLSubClassOfAxiom(subclass, superclass);
-		//System.out.println("Corresponding OWL axiom:" + axiom);
+		System.out.println("OWL axiom: " + axiom);
 		return axiom;
 	}
 	
@@ -215,15 +215,22 @@ public class EvaluatingGCIs {
 		String exp = e.trim();
 		String operandsString = exp.substring(5, exp.length()-1);
 		//5 because that's the length of "(and"
-		System.out.println("expression now is:" + exp);
+		//System.out.println("\nexpression now is:" + exp);
 		ArrayList<String> operands = new ArrayList<String>();
 		ArrayList<Integer> splitPoints = new ArrayList<Integer>();
+		
+		for (int i=0; i<operandsString.length(); i++) {
+			if (operandsString.charAt(i) == ' ') {
+				
+			}
+		}
 			
 		if(operandsString.indexOf("(") == -1) {
 			operands.addAll(Arrays.asList(operandsString.split("\\s+")));
 			
 		}
 		else {
+			operandsString += " "; //makes parsing easier
 			int bracketsCount = 0;
 			for (int i= 0; i<operandsString.length(); i++) {
 				if (operandsString.charAt(i) == '(') {
@@ -231,12 +238,8 @@ public class EvaluatingGCIs {
 				}
 				if (operandsString.charAt(i) == ')') {
 					bracketsCount--;
-				    if (bracketsCount == 0) {
-				    	splitPoints.add(i+1);
-				    	i++; //skipping over the white space.
-				    }
 				}
-				if (bracketsCount== 0 && i<operandsString.length() && operandsString.charAt(i)==' ') {
+				if (bracketsCount== 0 && operandsString.charAt(i)==' ') {
 					splitPoints.add(i);
 				}
 			}
@@ -244,11 +247,11 @@ public class EvaluatingGCIs {
 		
 		int lastSplit = 0;
 		for (int split: splitPoints) {
-			operands.add(operandsString.substring(lastSplit, split));
+			operands.add(operandsString.substring(lastSplit, split).trim());
 			lastSplit = split;
 		}
-		System.out.println("split points" + splitPoints);
-		System.out.println("AND operands: " + operands);
+		//System.out.println("split points" + splitPoints);
+		//System.out.println("AND operands: " + operands);
 		return operands;
 	}
 	
@@ -389,44 +392,28 @@ public class EvaluatingGCIs {
 	static ArrayList<OWLAxiom> getRedundantAxiomsDETAILED(ArrayList<OWLAxiom> axioms) {
 		ArrayList<OWLAxiom> redundant = new ArrayList<OWLAxiom>();
 		int disjointnessAxioms = 0;
-		int bottomAsSuperclass = 0;
-	    int topAsSuperclass = 0;
-	    int topNotSuperclass = 0;
-	    int singleSuperclass = 0;
 	    int dummyClassIndex = 0;
 	    
 		for(OWLAxiom a: axioms){
 			OWLSubClassOfAxiom axiom = (OWLSubClassOfAxiom) a;
+			
+			//the case of disjintness axioms:
 			if (axiom.getSuperClass().equals(factory.getOWLNothing())) {
 				disjointnessAxioms++;
 			    OWLClassExpression subclass = axiom.getSubClass();
-			    NodeSet<OWLClass> inferredSuperclasses = reasoner.getSuperClasses(subclass, false);
 			    Node<OWLClass> inferredEquivalentclasses = reasoner.getEquivalentClasses(subclass);
 			    
 
-			    if (inferredSuperclasses.containsEntity(factory.getOWLNothing())  ||
-			    	inferredEquivalentclasses.contains(factory.getOWLNothing())) {
+			    if (inferredEquivalentclasses.contains(factory.getOWLNothing())) {
 			    	//System.out.println("Bottom found as an equivalent class!!");
 				    //System.out.println("superclasses of the subclass: "+ inferredSuperclasses);
 				    //System.out.println("equivalent classes: " + inferredEquivalentclasses);
 			    	redundant.add(axiom);
-			    	bottomAsSuperclass++;
 			    }else {
 			    	System.out.println("\nBOTTOM NOT FOUND AS EQUIVALENT CLASS");
 			    	System.out.println("The disjointness Axiom: " + a.toString());
 				    System.out.println("GCI operand1: " + subclass);
 			    	
-			    }
-			    
-			    if (inferredSuperclasses.containsEntity(factory.getOWLThing())) {
-			    	topAsSuperclass++;
-			    }else {
-			    	topNotSuperclass++;
-			    }
-			   
-			    
-			    if (inferredSuperclasses.isSingleton()) {
-			    	singleSuperclass++;
 			    }
 			    
 			    /*
@@ -439,8 +426,9 @@ public class EvaluatingGCIs {
 			    }*/
 			}
 			
+			
+			//the case of subclass axioms:
 			else {
-
 				OWLClassExpression subclass = axiom.getSubClass();
 				OWLClassExpression superclass = axiom.getSuperClass();
 			    dummyClassIndex++;
@@ -458,7 +446,7 @@ public class EvaluatingGCIs {
 					    
 			    if (inferredSuperclasses.containsEntity(equivClass) ||
 			        inferredEquivalentclasses.contains(equivClass)) {
-			    	System.out.println("Redundant axiom found!!" );
+			    	System.out.println("Redundant subclass axiom found." );
 			    	redundant.add(axiom);
 			    }
 			    System.out.println("\nSubclass Axiom: " + a.toString());
@@ -471,13 +459,8 @@ public class EvaluatingGCIs {
 		
 		System.out.println("Total number of axioms: " + axioms.size());
         System.out.println("number of disjointness axioms: " + disjointnessAxioms);
-	    System.out.println("number of times bottom was found as superclass: " + bottomAsSuperclass);
-	    System.out.println("number of times top was found as superclass: " + topAsSuperclass);
-	    System.out.println("number of time top was not a superclass: " + topNotSuperclass);
-		System.out.println("number of casese with only 1 superclass:" + singleSuperclass);
 		System.out.println("number of redundant suclassof axioms:" +  redundant.size());
 		System.out.println("number of axioms where the superclass is an expression:" + dummyClassIndex);
-		
 		return redundant;
     }
 	
@@ -597,10 +580,10 @@ public class EvaluatingGCIs {
         OWLOntologyChangesVetoedListener vetoesListener = new OWLVetoesListener();
     	manager.addOntologyChangesVetoedListener(vetoesListener);
     	
-    	/*
+    	
+    	
     	//addingg the axioms:
         for(OWLAxiom a: axioms) {
-        	System.out.println(a);
         	ChangeApplied c = manager.addAxiom(gro, a);
         	if(c == ChangeApplied.UNSUCCESSFULLY) {
         		System.out.println("This Axiom couldn't be added to the ontology:\n" + a);
@@ -613,11 +596,11 @@ public class EvaluatingGCIs {
         }
         System.out.println("Axioms count after adding GCIs: " + gro.getAxiomCount());
         reasoner.flush();
-        */
+        
         
         
     	
-    	/*
+    	
     	//ArrayList<OWLAxiom> re = getRedundantAxioms(axioms);
         ArrayList<OWLAxiom> re = getRedundantAxiomsDETAILED(axioms);
         System.out.println("redundant axioms:");
@@ -625,7 +608,7 @@ public class EvaluatingGCIs {
         	System.out.println(a);
         }
         System.out.println("Number of redundant axioms:" + re.size());
-        */
+        
         
         
         
@@ -661,6 +644,8 @@ public class EvaluatingGCIs {
         }
         
         
+        
+        /*
         System.out.println("inspecting GRO content:");
         Set<OWLClass> allGROclasses = gro.getClassesInSignature();
         int classFoundInInputFile = 0;
@@ -680,6 +665,8 @@ public class EvaluatingGCIs {
         for(String s: extractedClassNames) {
         	System.out.println(s);
         }
+        */
+        
      }
 
 }
