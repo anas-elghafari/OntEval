@@ -58,6 +58,7 @@ public class EvaluatingGCIs {
     private static OWLReasoner reasoner;
 	private static HashMap<String,String> AxiomToGci;
 	private static HashSet<String> extractedClassNames;
+	private static HashSet<String> extractedPropertyNames;
 	private static String inputFileAsString;
 	
 	
@@ -71,6 +72,7 @@ public class EvaluatingGCIs {
 		factory = manager.getOWLDataFactory();
 		AxiomToGci = new HashMap<String, String>();
 		extractedClassNames = new HashSet<String>();
+		extractedPropertyNames = new HashSet<String>();
 		OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
 		reasoner = reasonerFactory.createReasoner(gro);
 		Logger.getLogger("org.semanticweb.elk").setLevel(Level.ERROR);
@@ -79,7 +81,7 @@ public class EvaluatingGCIs {
 	
 	
 	public static OWLSubClassOfAxiom parseGCI(String exp){
-		System.out.println("\n\ninput GCI: " + exp);
+		//System.out.println("\n\ninput GCI: " + exp);
 		ArrayList<String> operands = (ArrayList<String>) getGciOperands(exp);
 		//System.out.println("In parseGCI, operands: " + operands);
 		/*
@@ -91,7 +93,7 @@ public class EvaluatingGCIs {
 		OWLClassExpression subclass = getOWLClass(operands.get(0));
 		OWLClassExpression superclass = getOWLClass(operands.get(1));
 		OWLSubClassOfAxiom axiom = factory.getOWLSubClassOfAxiom(subclass, superclass);
-		System.out.println("OWL axiom: " + axiom);
+		//System.out.println("OWL axiom: " + axiom);
 		return axiom;
 	}
 	
@@ -103,18 +105,21 @@ public class EvaluatingGCIs {
 	private static OWLClassExpression parseExists(String exp) {
 		//8 because it's the length of "(exists "
 		String propertyName = exp.substring(8, exp.indexOf(" ", 8));
+		propertyName =  propertyName.substring(0, 1).toLowerCase() + propertyName.substring(1);
 		OWLObjectProperty p = factory.getOWLObjectProperty(IRI.create(groIRI + 
 				"#" + propertyName));
+		extractedPropertyNames.add(propertyName);
+		int startIndx = 8+ propertyName.length() +1;
+		String classPart = exp.substring(startIndx, exp.length()-1);
 		OWLClassExpression c;
 		
-		if(exp.indexOf("(and)") == -1) {
-			String className = exp.substring(exp.lastIndexOf(" ") +1 , exp.length()-2);
-			//this must go through the recursive getOWLClass (rather than the
-			//factory.getOWLClass () because className might be a conjunction
-		    c = getOWLClass(className);
+		if(classPart.startsWith("(and)")) {
+			c = factory.getOWLThing();
 		}
 		else {
-			c = factory.getOWLThing();
+			//this must go through the recursive getOWLClass (rather than the
+			//factory.getOWLClass () because className might be a conjunction
+		    c = getOWLClass(classPart);
 		}
 		
 		OWLClassExpression ce = factory.getOWLObjectSomeValuesFrom(p, c);
@@ -138,9 +143,13 @@ public class EvaluatingGCIs {
 				return factory.getOWLNothing();
 			}
 			else {
-				extractedClassNames.add(exp);
+				String fixedExp = exp;
+				if(exp.endsWith("_cncpt")) {
+					fixedExp = exp.substring(0, exp.length()-6);
+				}
+				extractedClassNames.add(fixedExp);
 				OWLClass result = factory.
-						getOWLClass(IRI.create(groIRI + "#" + exp));
+						getOWLClass(IRI.create(groIRI + "#" + fixedExp));
 				return result;
 			}
 		}
@@ -218,16 +227,9 @@ public class EvaluatingGCIs {
 		//System.out.println("\nexpression now is:" + exp);
 		ArrayList<String> operands = new ArrayList<String>();
 		ArrayList<Integer> splitPoints = new ArrayList<Integer>();
-		
-		for (int i=0; i<operandsString.length(); i++) {
-			if (operandsString.charAt(i) == ' ') {
-				
-			}
-		}
 			
 		if(operandsString.indexOf("(") == -1) {
 			operands.addAll(Arrays.asList(operandsString.split("\\s+")));
-			
 		}
 		else {
 			operandsString += " "; //makes parsing easier
@@ -477,7 +479,7 @@ public class EvaluatingGCIs {
 			excludedAxiom.add(a);
 			ArrayList<OWLAxiom> redundant = getRedundantAxiomsDETAILED(excludedAxiom);
 			if (!redundant.isEmpty()) {
-				System.out.println("found an axiom entailed by others: " + a);
+				//System.out.println("found an axiom entailed by others: " + a);
 				result.add(a);
 			}
 		}
@@ -574,7 +576,7 @@ public class EvaluatingGCIs {
 		
 		
 		boolean consistency = reasoner.isConsistent();
-        System.out.println("consistency (before adding any axioms): " + consistency);
+        System.out.println("\nconsistency (before adding any axioms): " + consistency);
         
         
         /*
@@ -598,7 +600,6 @@ public class EvaluatingGCIs {
         
         
         
-        
         //parsing the axioms from the file:
         ArrayList<OWLAxiom> axioms = fileToAxioms("C:\\Users\\Anas\\Desktop\\yue_role-depth-1");
         System.out.println("number of GCIs parsed from file:" + axioms.size());
@@ -606,9 +607,14 @@ public class EvaluatingGCIs {
     	manager.addOntologyChangesVetoedListener(vetoesListener);
     	
     	
+    	
     	/*
     	//adding the axioms:
     	System.out.println("Axioms count in the ontology before adding GCIs: " + gro.getAxiomCount());
+    	Set<OWLObjectProperty> propertiesBeforeAddition = new HashSet<OWLObjectProperty>();
+    	propertiesBeforeAddition = gro.getObjectPropertiesInSignature();
+    	Set<OWLClass> classesBeforeAddition = new HashSet<OWLClass>();
+    	classesBeforeAddition = gro.getClassesInSignature();
         for(OWLAxiom a: axioms) {
         	ChangeApplied c = manager.addAxiom(gro, a);
         	if(c == ChangeApplied.UNSUCCESSFULLY) {
@@ -622,20 +628,52 @@ public class EvaluatingGCIs {
         }
         System.out.println("Axioms count after adding GCIs: " + gro.getAxiomCount());
         reasoner.flush();
+        Set<OWLObjectProperty> propertiesAfterAddition = new HashSet<OWLObjectProperty>();
+    	propertiesAfterAddition = gro.getObjectPropertiesInSignature();
+    	Set<OWLClass> classesAfterAddition = new HashSet<OWLClass>();
+    	classesAfterAddition = gro.getClassesInSignature();
+    	System.out.println("\nNumber of new relations added to signature:" + 
+    	         (propertiesAfterAddition.size()-propertiesBeforeAddition.size()) + "\n");
+        for(OWLObjectProperty p: propertiesAfterAddition) {
+        	if (!propertiesBeforeAddition.contains(p)) {
+        		System.out.println(p);
+        	}
+        }
+        
+        System.out.println("\nNumber of new classes added to signature:" +
+                   (classesAfterAddition.size() - classesBeforeAddition.size()) + "\n");
+        for(OWLClass c: classesAfterAddition) {
+        	if (!classesBeforeAddition.contains(c)) {
+        		System.out.println(c);
+        	}
+        }
         */
         
         
     	
-    	/*
+    	
     	//ArrayList<OWLAxiom> re = getRedundantAxioms(axioms);
         ArrayList<OWLAxiom> re = getRedundantAxiomsDETAILED(axioms);
         System.out.println("redundant axioms:");
         for (OWLAxiom a: re) {
-        	System.out.println(a);
+        	//System.out.println(a);
         }
         System.out.println("Number of redundant axioms:" + re.size());
-        */
         
+        
+  
+        ArrayList<OWLAxiom> entailedByOthers = getAxiomsEntailedByOthers(axioms);
+        //System.out.println("GCIs entailed by other GCIs: " + entailedByOthers);
+        System.out.println("Count  of GCIs entailed by other GCIs in the input file: " + entailedByOthers.size());
+        System.out.println("GCIs that follow only from other GCIs in the file (not from ontology):");
+        for(OWLAxiom a: entailedByOthers) {
+        	if (!re.contains(a)) {
+        		System.out.println(a);
+        	}
+        }
+        System.out.println("GCIs that follow only from other GCIs in the input file:" + 
+        (entailedByOthers.size()- re.size()));
+        		
         
         
 
@@ -647,7 +685,7 @@ public class EvaluatingGCIs {
         //addInconsistency();
         //addUnsatisfiableClass();    
         //addUnsatisfiableClassAsGCI();        
-        reasoner.flush();
+        //reasoner.flush();
         reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
         consistency = reasoner.isConsistent();
         System.out.println("consistency:" + consistency);
@@ -660,6 +698,7 @@ public class EvaluatingGCIs {
         // want to print out the unsatisfiable classes excluding owl:Nothing,
         // and we can used a convenience method on the node to get these
         Set<OWLClass> unsatisfiable = bottomNode.getEntitiesMinusBottom();
+        System.out.println("Count of unsat. classes: " + unsatisfiable.size());
         if (!unsatisfiable.isEmpty()) {
              System.out.println("The following classes are unsatisfiable: ");
              for (OWLClass cls : unsatisfiable) {
@@ -670,31 +709,83 @@ public class EvaluatingGCIs {
         }
         
         
-        ArrayList<OWLAxiom> entailedByOthers = getAxiomsEntailedByOthers(axioms);
-        System.out.println("Axioms entailed by other axioms: " + entailedByOthers);
         
-        /*
-        System.out.println("inspecting GRO content:");
-        Set<OWLClass> allGROclasses = gro.getClassesInSignature();
-        int classFoundInInputFile = 0;
-        for(OWLClass c: allGROclasses) {
-        	System.out.println(c.getIRI());
-        	String className = c.getIRI().toString().substring(c.getIRI().toString().indexOf("#")+1);
-        	if(inputFileAsString.indexOf(className) != -1) {
-        		System.out.println("Following GRO class found in input file: " + className);
-        		classFoundInInputFile++;
-        	}
-        }
-        System.out.println("classes found in input file:" + classFoundInInputFile);
-        System.out.println("total number of classes in input file: " + extractedClassNames.size());
+        
+        
+       Set<OWLObjectProperty> objectPropertiesLongForm = gro.getObjectPropertiesInSignature();
+       Set<String> objectProperties = new HashSet<String>();
+       System.out.println("\n\n\nObject properties in the GRO:");
+       for(OWLObjectProperty p: objectPropertiesLongForm) {
+    	   objectProperties.add(p.getIRI().getShortForm());
+    	   System.out.println(p.getIRI().getShortForm());
+       }
+       
+       System.out.println("\n\n\nObject properties extracted from file:");
+       for(String propName: extractedPropertyNames) {
+    	   System.out.println(propName);
+       }
+
+       for(String op: extractedPropertyNames) {
+    	   if (objectProperties.contains(op)) {
+    		   System.out.println("The following GCI objectProperty is in  GRO:" + op);
+    	   }
+       }
        
        
-        System.out.println("extracted class names:");
-        for(String s: extractedClassNames) {
-        	System.out.println(s);
-        }
-        */
-        
+       Set<String> gciClassNames = new HashSet<String>();
+       Set<String> groClassNames = new HashSet<String>();
+       for(OWLAxiom a: axioms) {
+    	   OWLSubClassOfAxiom sca = (OWLSubClassOfAxiom) a;
+    	   OWLClassExpression subclass = sca.getSubClass();
+    	   OWLClassExpression superclass = sca.getSuperClass();
+    	   //System.out.println(subclass.getClass());
+    	   if(subclass instanceof OWLClass) {
+    		   //System.out.println("Proper subclass found: " + subclass);
+    		   gciClassNames.add(((OWLClass) subclass).getIRI().getShortForm());
+    	   }
+    	   
+    	   else {
+    		   Set<OWLClassExpression> conjuncts = subclass.asConjunctSet();
+    		   for (OWLClassExpression e: conjuncts) {
+    			   if(e instanceof OWLClass) {
+    				   //System.out.println("proper class found in conjunction: " + e);
+    				   gciClassNames.add(((OWLClass) e).getIRI().getShortForm());
+    			   }
+    		   }
+    	   }
+    	   if(superclass instanceof OWLClass && !superclass.equals(factory.getOWLNothing())) {
+    		   //System.out.println("Proper superclass found: " + superclass);
+    		   gciClassNames.add(((OWLClass) superclass).getIRI().getShortForm());
+    	   }
+    	   
+       }
+       
+       
+       /*
+       System.out.println("\n\n\nAll class names found in the GCI file: ");
+       for(String gciClassName: gciClassNames) {
+    	   System.out.println(gciClassName);
+       }
+       System.out.println("count of proper class names in GCI file: " + gciClassNames.size());
+       System.out.println("\n\n\nNames of classes occuring in GRO:");
+       for(OWLClass c: gro.getClassesInSignature()) {
+    	   String name = c.getIRI().getShortForm();
+    	   System.out.println(name);
+    	   groClassNames.add(name);
+       }
+       
+       
+       System.out.println("count of class names in GRO ontology: " + gro.getClassesInSignature().size());
+       int classesNotInGRO = 0;
+       for (String gciClassName: gciClassNames) {
+    	   if (!groClassNames.contains(gciClassName)) {
+    		   System.out.println("GCI class not in GRO: " + gciClassName);
+    		   classesNotInGRO++;
+    	   }
+       }
+       
+       System.out.println("classes in GCI but not in GRO: " + classesNotInGRO);
+       */
      }
 
 }
