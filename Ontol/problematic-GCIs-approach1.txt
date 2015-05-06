@@ -1,3 +1,6 @@
+#This file contains the GCIs that, by themselves (i.e. not in conjunction with other GCIs), make some classes in the GRO unsatisfiable.
+
+
 The following GCIs have caused the following classes to become unsat
 
 
