@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
@@ -29,11 +30,13 @@ import org.semanticweb.owlapi.model.OWLClassAssertionAxiom;
 import org.semanticweb.owlapi.model.OWLClassExpression;
 import org.semanticweb.owlapi.model.OWLDataFactory;
 import org.semanticweb.owlapi.model.OWLDisjointClassesAxiom;
+import org.semanticweb.owlapi.model.OWLLogicalAxiom;
 import org.semanticweb.owlapi.model.OWLNamedIndividual;
 import org.semanticweb.owlapi.model.OWLObjectProperty;
 import org.semanticweb.owlapi.model.OWLOntology;
 import org.semanticweb.owlapi.model.OWLOntologyChangeVetoException;
 import org.semanticweb.owlapi.model.OWLOntologyChangesVetoedListener;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 import org.semanticweb.owlapi.model.OWLOntologyManager;
 import org.semanticweb.owlapi.model.OWLSubClassOfAxiom;
 import org.semanticweb.owlapi.model.parameters.ChangeApplied;
@@ -59,12 +62,34 @@ public class EvaluatingGCIs {
     private static OWLReasoner reasoner;
 	private static HashMap<String,String> AxiomToGci;
 	private static HashSet<OWLAxiom> unsatClassesGCIs;
+	private static HashSet<OWLAxiom> unsatClassesGCIs2;
 	private static HashSet<String> extractedClassNames;
 	private static HashSet<String> extractedPropertyNames;
 	private static String inputFileAsString;
 	
 	
-	static void loadGRO() throws Exception {
+	
+	private static void p(String arg) {
+		System.out.println(arg);
+	}
+	
+	
+	private static void p(Object o) {
+		if (o instanceof Iterable<?>) {
+			Iterator<?> i = ((Iterable<?>)o).iterator();
+			while(i.hasNext()) {
+				System.out.println(i.next());
+			}
+		}
+		else {
+			System.out.println(o);
+		}
+	}
+	
+	
+	
+	
+	static void loadGRO() throws OWLOntologyCreationException {
 		manager = OWLManager.createOWLOntologyManager();
 		groIRI = IRI.create("http://www.bootstrep.eu/ontology/GRO");
 		IRI fileIRI = IRI.create(new File("C:\\Users\\Anas\\Desktop\\GRO_latest.xml"));
@@ -77,12 +102,18 @@ public class EvaluatingGCIs {
 		Logger.getLogger("org.semanticweb.elk").setLevel(Level.ERROR);
 	}
 	
+	
+	
+	
+	
 	static void initializeRecords() {
 		AxiomToGci = new HashMap<String, String>();
 		unsatClassesGCIs = new HashSet<OWLAxiom>();
+		unsatClassesGCIs2 = new HashSet<OWLAxiom>();
 		extractedClassNames = new HashSet<String>();
 		extractedPropertyNames = new HashSet<String>();
 	}
+	
 	
 	
 	
@@ -510,6 +541,9 @@ public class EvaluatingGCIs {
         }
    }
 	
+	
+	
+	
 	private static void mapGCIsToUnsatClasses(ArrayList<OWLAxiom> axioms) throws Exception {
 		HashMap<String, HashSet<String>> m = new HashMap<String, HashSet<String>>();
 		HashSet<String> allUnsatClasses = new HashSet<String>();
@@ -519,6 +553,7 @@ public class EvaluatingGCIs {
         	if(c == ChangeApplied.UNSUCCESSFULLY) {
         		System.out.println("This Axiom couldn't be added to the ontology:\n" + a);	
         	}
+        	reasoner.flush();
         	Node<OWLClass> bottomNode = reasoner.getUnsatisfiableClasses();
             Set<OWLClass> unsat = bottomNode.getEntitiesMinusBottom();
 			HashSet<String> unsatClassNames = new HashSet<String>();
@@ -526,22 +561,24 @@ public class EvaluatingGCIs {
 				unsatClassNames.add(cl.getIRI().getShortForm());
 			}
 			if (!unsatClassNames.isEmpty()) {
+				unsatClassesGCIs2.add(a);
 				System.out.println("\n\nOWL axiom: " +a);
-				System.out.println("adding it caused the following classes to become unsatisfiable: " + 
+				System.out.println("adding it caused (" + unsatClassNames.size()  + 
+						") classes to become unsatisfiable:\n " + 
 				unsatClassNames);
 			}
 			allUnsatClasses.addAll(unsatClassNames);
 			m.put(a.toString(), unsatClassNames);
 			
 		}
+		System.out.println("Number of problematic GCIs causing some classes to become unsat.: " +  unsatClassesGCIs2.size());
 		System.out.println("Total number of unsat classes accounted for by individual axioms: " + allUnsatClasses.size());
 		
 	}
 	
 	
 	
-	private static HashSet<OWLAxiom> mapGCIsToUnsatClassesCUMULATIVE(ArrayList<OWLAxiom> axioms) throws Exception {
-		HashMap<String, HashSet<String>> m = new HashMap<String, HashSet<String>>();
+	private static HashSet<OWLAxiom> getGCIsCausingUnsatClassesCUMULATIVE(ArrayList<OWLAxiom> axioms) throws Exception {
 		HashSet<String> unsatBeforeAddition = new HashSet<String>();
 		HashSet<String> unsatAfterAddition = new HashSet<String>();
 		HashSet<String> difference = new HashSet<String>();
@@ -554,6 +591,7 @@ public class EvaluatingGCIs {
         		System.out.println("In function mapGCI: This Axiom couldn't be added to the ontology:\n" + a);	
         	}
         	reasoner.flush();
+            reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
         	Node<OWLClass> bottomNode = reasoner.getUnsatisfiableClasses();
             Set<OWLClass> unsat = bottomNode.getEntitiesMinusBottom(); 
             unsatAfterAddition= new HashSet<String>();
@@ -574,7 +612,6 @@ public class EvaluatingGCIs {
 				System.out.println("adding it caused (" +  difference.size() +
 						") classes to become unsatisfiable:\n " + difference);
 			}
-			m.put(a.toString(), difference);
 			unsatBeforeAddition = unsatAfterAddition;
 			
 		}
@@ -585,23 +622,142 @@ public class EvaluatingGCIs {
 	
 	
 	
-	private static HashSet<OWLAxiom> getProblematicGCIs(ArrayList<OWLAxiom> axioms) throws Exception {
+	public static HashSet<OWLAxiom> getProblematicGCIs(ArrayList<OWLAxiom> axioms) throws Exception {
+		loadGRO();
 		HashSet<OWLAxiom> allProblematicGCIs = new HashSet<OWLAxiom>();
-		HashSet<OWLAxiom> lastRoundProblematic = mapGCIsToUnsatClassesCUMULATIVE(axioms);
-		while(!lastRoundProblematic.isEmpty()) {
+		HashSet<OWLAxiom> lastRoundProblematic;
+		ArrayList<OWLAxiom> newAxioms = axioms;
+		do {
+			loadGRO();
+			lastRoundProblematic = getGCIsCausingUnsatClassesCUMULATIVE(newAxioms);
 			allProblematicGCIs.addAll(lastRoundProblematic);
-			ArrayList<OWLAxiom> newAxioms = new ArrayList<OWLAxiom>();
+			newAxioms = new ArrayList<OWLAxiom>();
 			for (OWLAxiom a: axioms) {
 				if(!allProblematicGCIs.contains(a)) {
 					newAxioms.add(a);
 				}
 			}
-			loadGRO();
-			lastRoundProblematic = mapGCIsToUnsatClassesCUMULATIVE(newAxioms);
-		}
+			
+		} while(!lastRoundProblematic.isEmpty());
 		unsatClassesGCIs = allProblematicGCIs;
 		return allProblematicGCIs;
 	}
+	
+	
+	
+	
+	/**
+	 * @param axioms
+	 * @return List of axioms that equals the input list minus the axioms causing unsat classes. 
+	 * @throws Exception
+	 */
+	public static ArrayList<OWLAxiom> filterOutAxiomsCausingUnsatClasses(ArrayList<OWLAxiom> axioms) throws Exception {
+		Set<OWLAxiom> problematicGCIs = getProblematicGCIs(axioms);
+		ArrayList<OWLAxiom> result = new ArrayList<OWLAxiom>();
+		for (OWLAxiom a: axioms) {
+			if (!problematicGCIs.contains(a)) {
+				result.add(a);
+			}
+		}
+		return result;
+	}
+	
+	
+	
+	public static ArrayList<OWLAxiom> filterOutAxiomsEntailedByOntology(ArrayList<OWLAxiom> axioms) throws OWLOntologyCreationException {
+		loadGRO();
+		ArrayList<OWLAxiom> result = new ArrayList<OWLAxiom>();
+		ArrayList<OWLAxiom> entailed = getRedundantAxiomsDETAILED(axioms);
+		for (OWLAxiom a: axioms) {
+			if (!entailed.contains(a)) {
+				result.add(a);
+			}
+		}
+		
+		System.out.println("Number of axioms entailed by ontology:  "+ entailed.size());
+		return result;
+	}
+	
+	
+	
+	
+	
+	/**
+	 * 
+	 * @param axioms
+	 * @param badRelNames
+	 * @return list of OWLAxioms that do not contain any of the bad relation names.
+	 * @throws OWLOntologyCreationException in case there was a problem loading the ontology.
+	 * @throws Exception 
+	 */
+	public static ArrayList<OWLAxiom> filterOutAxiomsWithBadRelName(ArrayList<OWLAxiom> axioms) throws OWLOntologyCreationException {
+		Set<String> badRelNames = getBadRelationNames(axioms);
+		ArrayList<OWLAxiom> result = new ArrayList<OWLAxiom>();
+		int filteredOut = 0;
+		outerloop: for (OWLAxiom a: axioms) {
+			String axStr = a.toString().toLowerCase();
+			for (String badRelName: badRelNames) {
+				if (axStr.indexOf(badRelName.toLowerCase()) > -1) {
+					filteredOut++;
+					continue outerloop;
+				}
+			}
+			result.add(a);
+		}
+		System.out.println(filteredOut + " axioms filtered out for containing bad relation names.");
+		return result;
+	}
+	
+	
+	
+	/**
+	 * Finds the bad relation names occuring the passed list of axioms. A relation name is bad if  it 
+	 * does not occur in the ontology.
+	 * 
+	 * @param axioms
+	 * @return A set containing the bad relations names.
+	 * @throws OWLOntologyCreationException 
+	 * @throws Exception
+	 */
+	
+	public static HashSet<String> getBadRelationNames(ArrayList<OWLAxiom> axioms) throws OWLOntologyCreationException {
+		loadGRO();
+		HashSet<String> badRelNames = new HashSet<String>();
+		Set<OWLObjectProperty> propertiesBefore = gro.getObjectPropertiesInSignature();
+		for (OWLAxiom a: axioms) {
+			ChangeApplied c = manager.addAxiom(gro, a);
+        	if(c == ChangeApplied.UNSUCCESSFULLY) {
+        		throw new IllegalArgumentException("This Axiom could not be added to the ontology: " + a);
+        		
+        	}
+		}
+		Set<OWLObjectProperty> propertiesAfter = gro.getObjectPropertiesInSignature();
+		for (OWLObjectProperty p: propertiesAfter) {
+			if (!propertiesBefore.contains(p)) {
+				badRelNames.add(p.toString());
+			}
+		}
+		return badRelNames;
+		
+	}
+	
+	
+	
+	
+	
+	public static ArrayList<OWLAxiom> getEntailedAxiomsContainingBadRelNames(ArrayList<OWLAxiom> axioms) 
+			throws OWLOntologyCreationException {
+	     ArrayList<OWLAxiom> entailed = getRedundantAxiomsDETAILED(axioms);
+	     ArrayList<OWLAxiom> entailedWithoutBadRelNames = filterOutAxiomsWithBadRelName(entailed);
+	     ArrayList<OWLAxiom> result = new ArrayList<OWLAxiom>();
+	     for (OWLAxiom a:entailed) {
+	    	 if (!entailedWithoutBadRelNames.contains(a)) {
+	    		 result.add(a);
+	    	 }
+	     }
+	     return result;
+	}
+	
 	
 	
 	
@@ -676,6 +832,8 @@ public class EvaluatingGCIs {
         //System.out.println("reasoner:" + reasoner);
 		
 		
+		reasoner.flush();
+        reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
 		boolean consistency = reasoner.isConsistent();
         System.out.println("\nconsistency (before adding any axioms): " + consistency);
         
@@ -711,12 +869,13 @@ public class EvaluatingGCIs {
     	
     	
     	
-    	/*
+    	
         //testing which GCI causes which unsatisfiable classes:
         System.out.println("The following GCIs have caused the following classes to become unsat");
         //mapGCIsToUnsatClasses(axioms);
-        mapGCIsToUnsatClassesCUMULATIVE(axioms);
-        */
+        //System.out.println(mapGCIsToUnsatClassesCUMULATIVE(axioms));
+        
+    	/*
     	HashSet<OWLAxiom> problematicAxioms = getProblematicGCIs(axioms);
         System.out.println("The following GCIs have caused unsat classes. " + problematicAxioms.size() + " GCIs:" );
         for(OWLAxiom a: problematicAxioms) {
@@ -724,21 +883,33 @@ public class EvaluatingGCIs {
         	System.out.println("OWLAxiom: " + a);
         }
     	
+    	System.out.println("Axioms that are found by cumulative function, not by the simple one");
+    	for (OWLAxiom a: unsatClassesGCIs) {
+    		if (!unsatClassesGCIs2.contains(a)) {
+    			System.out.println(a);
+    		}
+    	}*/
     	
     	
     	
     	
     	
-    	
+        /*
     	//adding the axioms:
     	loadGRO();
     	System.out.println("Axioms count in the ontology before adding GCIs: " + gro.getAxiomCount());
+    	//Set<OWLLogicalAxiom> groLogicalAxioms = gro.getLogicalAxioms();
+    	//System.out.println("\n\nLogical axioms already in GRO:\n");
+    	for (OWLLogicalAxiom la: groLogicalAxioms) {
+    		//System.out.println(la);
+    	}
+    	
     	Set<OWLObjectProperty> propertiesBeforeAddition = new HashSet<OWLObjectProperty>();
     	propertiesBeforeAddition = gro.getObjectPropertiesInSignature();
     	Set<OWLClass> classesBeforeAddition = new HashSet<OWLClass>();
     	classesBeforeAddition = gro.getClassesInSignature();
         for(OWLAxiom a: axioms) {
-        	if (unsatClassesGCIs.contains(a)) {
+        	if (unsatClassesGCIs2.contains(a)) {
         		continue;
         	}
         	ChangeApplied c = manager.addAxiom(gro, a);
@@ -772,8 +943,22 @@ public class EvaluatingGCIs {
         		System.out.println(c);
         	}
         }
+        */
         
-      
+        
+        ArrayList<OWLAxiom> axioms2 = filterOutAxiomsWithBadRelName(axioms);
+        ArrayList<OWLAxiom> axioms3 = filterOutAxiomsCausingUnsatClasses(axioms2);
+        ArrayList<OWLAxiom> axioms4 = filterOutAxiomsEntailedByOntology(axioms3);
+        p("Num of input axioms:" + axioms.size()); 
+        p("Num of axioms after removing those containing invalid names: " + axioms2.size());
+        p("Num of axioms after removing those causing unsat classes: " + axioms3.size());
+        p("Num of axioms after removing those entailed by GRO: " +  + axioms4.size());
+        p("Surviving axioms (Not containing bad rel name, not causing unsat classes, "
+        		+ "not entailed by GRO): \n\n");
+        for (OWLAxiom a: axioms4) {
+        	p("\n\nGCI: "+ AxiomToGci.get(a.toString()));
+        	p(a);
+        }
         
         
     	
@@ -811,7 +996,7 @@ public class EvaluatingGCIs {
         //addInconsistency();
         //addUnsatisfiableClass();    
         //addUnsatisfiableClassAsGCI();        
-        //reasoner.flush();
+        reasoner.flush();
         reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
         consistency = reasoner.isConsistent();
         System.out.println("consistency:" + consistency);
@@ -919,6 +1104,9 @@ public class EvaluatingGCIs {
        
        System.out.println("classes in GCI but not in GRO: " + classesNotInGRO);
        */
+       
+   
+       System.out.println("REACHED END OF MAIN.");
      }
 
 }
