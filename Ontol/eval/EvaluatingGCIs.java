@@ -9,17 +9,14 @@ import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Set;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-import org.omg.CORBA.INITIALIZE;
 import org.semanticweb.elk.owlapi.ElkReasonerFactory;
 import org.semanticweb.owlapi.apibinding.OWLManager;
 import org.semanticweb.owlapi.model.IRI;
@@ -50,10 +47,21 @@ import org.semanticweb.owlapi.util.SimpleIRIMapper;
 import uk.ac.manchester.cs.owl.owlapi.OWLEquivalentClassesAxiomImpl;
 import uk.ac.manchester.cs.owl.owlapi.OWLObjectIntersectionOfImpl;
 
-/** @author Anas
+/** @author Anas Elghafari
  *
  */
+
+
 public class EvaluatingGCIs {
+	
+	//LOGLEVEL = 0  --> turn off most of the output. 
+	//LOGLEVEL = 1 --> only the interesting results.
+	//LOGLEVEL = 2 --> output that allows deeper look into the process... and so on.
+
+	public static final int LOGLEVEL = 3;
+	public static final String INPUTFILE = "C:\\Users\\Anas\\Desktop\\yue_role-depth-1";
+	public static final Level reasonerLogLevel = Level.ERROR;
+	
 	
 	private static OWLOntology gro;
 	private static OWLOntologyManager manager;
@@ -69,24 +77,10 @@ public class EvaluatingGCIs {
 	
 	
 	
-	private static void p(String arg) {
-		System.out.println(arg);
-	}
 	
 	
-	private static void p(Object o) {
-		if (o instanceof Iterable<?>) {
-			Iterator<?> i = ((Iterable<?>)o).iterator();
-			while(i.hasNext()) {
-				System.out.println(i.next());
-			}
-		}
-		else {
-			System.out.println(o);
-		}
-	}
 	
-	
+
 	
 	
 	static void loadGRO() throws OWLOntologyCreationException {
@@ -99,7 +93,7 @@ public class EvaluatingGCIs {
 		factory = manager.getOWLDataFactory();
 		OWLReasonerFactory reasonerFactory = new ElkReasonerFactory();
 		reasoner = reasonerFactory.createReasoner(gro);
-		Logger.getLogger("org.semanticweb.elk").setLevel(Level.ERROR);
+		Logger.getLogger("org.semanticweb.elk").setLevel(reasonerLogLevel);
 	}
 	
 	
@@ -117,208 +111,14 @@ public class EvaluatingGCIs {
 	
 	
 	
-	public static OWLSubClassOfAxiom parseGCI(String exp){
-		//System.out.println("\n\ninput GCI: " + exp);
-		ArrayList<String> operands = (ArrayList<String>) getGciOperands(exp);
-		//System.out.println("In parseGCI, operands: " + operands);
-		/*
-		if(operands.get(1).equals("(bottom)")) {
-			ArrayList<String> disjointClassesOperands = getGciOperands(operands.get(0));
-			System.out.println("DISJOINT CLASSES OPERANDS:" + disjointClassesOperands);
-		}*/
-		
-		OWLClassExpression subclass = getOWLClass(operands.get(0));
-		OWLClassExpression superclass = getOWLClass(operands.get(1));
-		OWLSubClassOfAxiom axiom = factory.getOWLSubClassOfAxiom(subclass, superclass);
-		//System.out.println("OWL axiom: " + axiom);
-		return axiom;
-	}
 	
 	
 	
 	
-	
-	
-	private static OWLClassExpression parseExists(String exp) {
-		//8 because it's the length of "(exists "
-		String propertyName = exp.substring(8, exp.indexOf(" ", 8));
-		propertyName =  propertyName.substring(0, 1).toLowerCase() + propertyName.substring(1);
-		OWLObjectProperty p = factory.getOWLObjectProperty(IRI.create(groIRI + 
-				"#" + propertyName));
-		extractedPropertyNames.add(propertyName);
-		int startIndx = 8+ propertyName.length() +1;
-		String classPart = exp.substring(startIndx, exp.length()-1);
-		OWLClassExpression c;
-		
-		if(classPart.startsWith("(and)")) {
-			c = factory.getOWLThing();
-		}
-		else {
-			//this must go through the recursive getOWLClass (rather than the
-			//factory.getOWLClass () because className might be a conjunction
-		    c = getOWLClass(classPart);
-		}
-		
-		OWLClassExpression ce = factory.getOWLObjectSomeValuesFrom(p, c);
-		//System.out.println("\nIn parseExists()");
-		//System.out.println("property:" + p + ", class:" + c.toString());
-		//System.out.println("expression of existential restriction: " +ce);
-		return ce;
-	}
 	
 	
 		
 	
-	
-	private static  OWLClassExpression getOWLClass(String e) {
-		String exp = e.trim();
-		
-		//base case: single concept or "bottom"
-		if(exp.indexOf(" ") == -1) {
-			
-			if(exp.equals("(bottom)")) {
-				return factory.getOWLNothing();
-			}
-			else {
-				String fixedExp = exp;
-				if(exp.endsWith("_cncpt")) {
-					fixedExp = exp.substring(0, exp.length()-6);
-				}
-				extractedClassNames.add(fixedExp);
-				OWLClass result = factory.
-						getOWLClass(IRI.create(groIRI + "#" + fixedExp));
-				return result;
-			}
-		}
-	
-		//"and" case:
-		if(exp.startsWith("(and")) {
-			ArrayList<String> operands =  getAndOperands(exp);
-			HashSet<OWLClassExpression> expressionsList = new HashSet<OWLClassExpression>();
-			for(int i =0; i<operands.size(); i++) {
-				String s = operands.get(i);
-				OWLClassExpression operandResult = getOWLClass(s);
-				expressionsList.add(operandResult);
-			}
-			OWLClassExpression result = factory.getOWLObjectIntersectionOf(expressionsList);
-			return result;
-		}
-		
-		
-		//"exist" case:
-		if(exp.startsWith("(exists")) {
-			OWLClassExpression result = parseExists(exp);
-			return result;		
-		}
-		
-	   //if this happens, the input is not well-formed.
-	   return null;
-	}
-	
-	
-	
-	
-	
-	
-	
-	/*
-	static OWLAxiom makeSubclassAxiom(String subclassName, String superclassName) {
-		OWLClass subclass = factory.getOWLClass(IRI.create(groIRI + "#" + subclassName));
-		OWLClass superclass = factory.getOWLClass(IRI.create(groIRI + "#" + superclassName));
-		 // Now create the axiom
-		 OWLAxiom axiom = factory.getOWLSubClassOfAxiom(subclass, superclass);
-		 return axiom;
-	}
-	*/
-	
-	/*
-	static OWLAxiom makeSubclassAxiom2(String subName, String superName) {
-		//following is modified from examples on github
-		OWLObjectProperty hasPart = factory.getOWLObjectProperty(IRI
-				.create(base + "#hasPart"));
-				OWLClass nose = factory.getOWLClass(IRI.create(base + "#Nose"));
-				// Now create a restriction to describe the class of individuals that
-				// have at least one part that is a kind of nose
-				OWLClassExpression hasPartSomeNose = factory
-				.getOWLObjectSomeValuesFrom(hasPart, nose);
-				// Obtain a reference to the Head class so that we can specify that
-				// Heads have noses
-				OWLClass head = factory.getOWLClass(IRI.create(base + "#Head"));
-				// We now want to state that Head is a subclass of hasPart some Nose, to
-				// do this we create a subclass axiom, with head as the subclass and
-				// "hasPart some Nose" as the superclass (remember, restrictions are
-				// also classes - they describe classes of individuals -- they are
-				// anonymous classes).
-				OWLSubClassOfAxiom ax = factory.getOWLSubClassOfAxiom(head,
-				hasPartSomeNose);
-	}*/
-	
-	
-	
-	
-	
-	public static ArrayList<String> getAndOperands(String e) {
-		String exp = e.trim();
-		String operandsString = exp.substring(5, exp.length()-1);
-		//5 because that's the length of "(and"
-		//System.out.println("\nexpression now is:" + exp);
-		ArrayList<String> operands = new ArrayList<String>();
-		ArrayList<Integer> splitPoints = new ArrayList<Integer>();
-			
-		if(operandsString.indexOf("(") == -1) {
-			operands.addAll(Arrays.asList(operandsString.split("\\s+")));
-		}
-		else {
-			operandsString += " "; //makes parsing easier
-			int bracketsCount = 0;
-			for (int i= 0; i<operandsString.length(); i++) {
-				if (operandsString.charAt(i) == '(') {
-					bracketsCount++;
-				}
-				if (operandsString.charAt(i) == ')') {
-					bracketsCount--;
-				}
-				if (bracketsCount== 0 && operandsString.charAt(i)==' ') {
-					splitPoints.add(i);
-				}
-			}
-		}
-		
-		int lastSplit = 0;
-		for (int split: splitPoints) {
-			operands.add(operandsString.substring(lastSplit, split).trim());
-			lastSplit = split;
-		}
-		//System.out.println("split points" + splitPoints);
-		//System.out.println("AND operands: " + operands);
-		return operands;
-	}
-	
-	
-	
-	public static ArrayList<String> getGciOperands(String exp) {
-		String operandsString = exp.substring(exp.indexOf("(gci ")+5, exp.length()-1);
-		int bracketsCount = 0;
-		int splitPoint = 0;
-		for(int i= 0; i<operandsString.length(); i++) {
-			if (operandsString.charAt(i) == '(') {
-				bracketsCount++;
-			}
-			if (operandsString.charAt(i) == ')') {
-				bracketsCount--;
-			}
-			
-			if (bracketsCount == 0 && operandsString.charAt(i) == ' ') {
-				splitPoint = i;
-				break;
-			}
-		}
-		ArrayList<String> result = new ArrayList<String>();
-		result.add(operandsString.substring(0, splitPoint));
-		result.add(operandsString.substring(splitPoint+1));
-		return result;
-		
-	}
 	
 	
 	
@@ -384,36 +184,6 @@ public class EvaluatingGCIs {
 	}
 
     
-	private static String[] fileToLines(String fileName) throws IOException {
-		Path filePath = new File(fileName).toPath();
-		Charset charset = Charset.defaultCharset();        
-		List<String> lines = Files.readAllLines(filePath, charset);
-		for(String l: lines) {
-			inputFileAsString += l;
-		}
-		return lines.toArray(new String[] {});
-	}
-	
-	
-	
-	
-	static ArrayList<OWLAxiom> fileToAxioms(String fileName) throws IOException {
-		ArrayList<OWLAxiom> result = new ArrayList<OWLAxiom>();
-		String[] lines = fileToLines(fileName);
-		for(String line: lines) {
-			//System.out.println("line now is:" + line + "END OF LINE");
-			if(line.isEmpty()) {
-				continue;
-			}
-			OWLAxiom a = parseGCI(line);
-			AxiomToGci.put(a.toString(), line);
-			result.add(a);
-		}
-		return result;
-	}
-	
-	
-	
 	
 	static ArrayList<OWLAxiom> getRedundantAxioms(ArrayList<OWLAxiom> axioms) {
 		ArrayList<OWLAxiom> redundant = new ArrayList<OWLAxiom>();
@@ -788,11 +558,13 @@ public class EvaluatingGCIs {
 		String example8 = "(gci (and (exists FromSpecies Virus_cncpt) "
 				+ "(exists PerformsPositiveRegulationOfGeneExpression (and))) (bottom))";
 		
-		ArrayList<String> parts = (ArrayList<String>) getGciOperands(example8);
+		ParserGCIs parser = new ParserGCIs(manager, factory, groIRI, INPUTFILE);
+		
+		ArrayList<String> parts = (ArrayList<String>) parser.getGciOperands(example8);
 		System.out.println("GCI operands: ");
 		System.out.println(parts);
 		System.out.println("parsing GCI:");
-		System.out.println(parseGCI(example8));
+		System.out.println(parser.parseGCI(example8));
 		//System.out.println(gro);
 		//System.out.println("PRINTING GRO:" + gro);
 		//System.out.println(factory);
@@ -861,7 +633,7 @@ public class EvaluatingGCIs {
         
         //parsing the axioms from the file:
         //ArrayList<OWLAxiom> axioms = fileToAxioms("C:\\Users\\Anas\\Desktop\\GCIs-filtered.txt");
-        ArrayList<OWLAxiom> axioms = fileToAxioms("C:\\Users\\Anas\\Desktop\\yue_role-depth-1");
+        ArrayList<OWLAxiom> axioms = parser.parseFile();
         System.out.println("number of GCIs parsed from file:" + axioms.size());
         OWLOntologyChangesVetoedListener vetoesListener = new OWLVetoesListener();
     	manager.addOntologyChangesVetoedListener(vetoesListener);
@@ -949,15 +721,15 @@ public class EvaluatingGCIs {
         ArrayList<OWLAxiom> axioms2 = filterOutAxiomsWithBadRelName(axioms);
         ArrayList<OWLAxiom> axioms3 = filterOutAxiomsCausingUnsatClasses(axioms2);
         ArrayList<OWLAxiom> axioms4 = filterOutAxiomsEntailedByOntology(axioms3);
-        p("Num of input axioms:" + axioms.size()); 
-        p("Num of axioms after removing those containing invalid names: " + axioms2.size());
-        p("Num of axioms after removing those causing unsat classes: " + axioms3.size());
-        p("Num of axioms after removing those entailed by GRO: " +  + axioms4.size());
-        p("Surviving axioms (Not containing bad rel name, not causing unsat classes, "
-        		+ "not entailed by GRO): \n\n");
+        helpers.print("Num of input axioms:" + axioms.size(),0); 
+        helpers.print("Num of axioms after removing those containing invalid names: " + axioms2.size(), 0);
+        helpers.print("Num of axioms after removing those causing unsat classes: " + axioms3.size(), 0);
+        helpers.print("Num of axioms after removing those entailed by GRO: " +  + axioms4.size(),0);
+        helpers.print("Surviving axioms (Not containing bad rel name, not causing unsat classes, "
+        		+ "not entailed by GRO): \n\n", 0);
         for (OWLAxiom a: axioms4) {
-        	p("\n\nGCI: "+ AxiomToGci.get(a.toString()));
-        	p(a);
+        	helpers.print("\n\nGCI: "+ AxiomToGci.get(a.toString()), 0);
+        	helpers.print(a,0);
         }
         
         
@@ -1108,5 +880,6 @@ public class EvaluatingGCIs {
    
        System.out.println("REACHED END OF MAIN.");
      }
+
 
 }
