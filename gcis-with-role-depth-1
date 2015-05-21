@@ -1,0 +1,3498 @@
+(gci (and CellComponent_cncpt Gene_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and Gene_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt DNARegion_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Gene_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Gene_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Protein_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt Protein_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Protein_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt Protein_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Localization_cncpt) (bottom))
+
+(gci (and Gene_cncpt Localization_cncpt) (bottom))
+
+(gci (and Localization_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Localization_cncpt) (bottom))
+
+(gci (and Localization_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Localization_cncpt Protein_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Enzyme_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Gene_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Enzyme_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Protein_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Localization_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Eukaryote_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Gene_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Eukaryote_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Protein_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Localization_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Eukaryote_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Gene_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Mutation_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Mutation_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Mutation_cncpt Protein_cncpt) (bottom))
+
+(gci (and Localization_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Mutation_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Gene_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Protein_cncpt) (bottom))
+
+(gci (and Localization_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Mutation_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Chemical_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Gene_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and Chemical_cncpt DNARegion_cncpt) (bottom))
+
+(gci (and Chemical_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Protein_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Localization_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Enzyme_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Eukaryote_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Chemical_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Gene_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Protein_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Localization_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Mutation_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Chemical_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Cell_cncpt) (bottom))
+
+(gci (and Cell_cncpt Gene_cncpt) (bottom))
+
+(gci (and Cell_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and Cell_cncpt DNARegion_cncpt) (bottom))
+
+(gci (and Cell_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Cell_cncpt Protein_cncpt) (bottom))
+
+(gci (and Cell_cncpt Localization_cncpt) (bottom))
+
+(gci (and Cell_cncpt Enzyme_cncpt) (bottom))
+
+(gci (and Cell_cncpt Eukaryote_cncpt) (bottom))
+
+(gci (and Cell_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Cell_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Cell_cncpt Chemical_cncpt) (bottom))
+
+(gci (and Cell_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Ion_cncpt) (bottom))
+
+(gci (and Gene_cncpt Ion_cncpt) (bottom))
+
+(gci (and Ion_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Ion_cncpt) (bottom))
+
+(gci (and Ion_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Ion_cncpt Protein_cncpt) (bottom))
+
+(gci (and Ion_cncpt Localization_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Ion_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Ion_cncpt) (bottom))
+
+(gci (and Ion_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Ion_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Ion_cncpt) (bottom))
+
+(gci (and Ion_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt Ion_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Virus_cncpt) (bottom))
+
+(gci (and Gene_cncpt Virus_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt Virus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Virus_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt Virus_cncpt) (bottom))
+
+(gci (and Protein_cncpt Virus_cncpt) (bottom))
+
+(gci (and Localization_cncpt Virus_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Virus_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Virus_cncpt) (bottom))
+
+(gci (and Mutation_cncpt Virus_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Virus_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Virus_cncpt) (bottom))
+
+(gci (and SignalingPathway_cncpt Virus_cncpt) (bottom))
+
+(gci (and Cell_cncpt Virus_cncpt) (bottom))
+
+(gci (and Ion_cncpt Virus_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Gene_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt Promoter_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Promoter_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Promoter_cncpt Protein_cncpt) (bottom))
+
+(gci (and Localization_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Mutation_cncpt Promoter_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Promoter_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Ion_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Promoter_cncpt Virus_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt DNA_cncpt) (bottom))
+
+(gci (and DNA_cncpt Gene_cncpt) (bottom))
+
+(gci (and DNA_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt DNA_cncpt) (bottom))
+
+(gci (and DNA_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and DNA_cncpt Protein_cncpt) (bottom))
+
+(gci (and DNA_cncpt Localization_cncpt) (bottom))
+
+(gci (and DNA_cncpt Enzyme_cncpt) (bottom))
+
+(gci (and DNA_cncpt Eukaryote_cncpt) (bottom))
+
+(gci (and DNA_cncpt Mutation_cncpt) (bottom))
+
+(gci (and DNA_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Chemical_cncpt DNA_cncpt) (bottom))
+
+(gci (and DNA_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt DNA_cncpt) (bottom))
+
+(gci (and DNA_cncpt Ion_cncpt) (bottom))
+
+(gci (and DNA_cncpt Virus_cncpt) (bottom))
+
+(gci (and DNA_cncpt Promoter_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and Gene_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt Protein_cncpt) (bottom))
+
+(gci (and Localization_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and Mutation_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and Chemical_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and Ion_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt Virus_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt Promoter_cncpt) (bottom))
+
+(gci (and DNA_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt CellComponent_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Gene_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt DNARegion_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Protein_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Localization_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Enzyme_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Eukaryote_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Mutation_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Chemical_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Cell_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Ion_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Virus_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Promoter_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt DNA_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Gene_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt Sequence_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Sequence_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Protein_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Localization_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Mutation_cncpt Sequence_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Sequence_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Ion_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Sequence_cncpt Virus_cncpt) (bottom))
+
+(gci (and Promoter_cncpt Sequence_cncpt) (bottom))
+
+(gci (and DNA_cncpt Sequence_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt Sequence_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Sequence_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Gene_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Protein_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Localization_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Mutation_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Chemical_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and SignalingPathway_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Cell_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Ion_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and TranscriptionFactor_cncpt Virus_cncpt) (bottom))
+
+(gci (and Promoter_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and DNA_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Sequence_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Gene_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and ProteinSubunit_cncpt Protein_cncpt) (bottom))
+
+(gci (and Localization_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Mutation_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Chemical_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and ProteinSubunit_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Ion_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and ProteinSubunit_cncpt Virus_cncpt) (bottom))
+
+(gci (and Promoter_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and DNA_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and ProteinSubunit_cncpt Sequence_cncpt) (bottom))
+
+(gci (and ProteinSubunit_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and Gene_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and ProteinDomain_cncpt Protein_cncpt) (bottom))
+
+(gci (and Localization_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and Mutation_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and Chemical_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and ProteinDomain_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and Ion_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and ProteinDomain_cncpt Virus_cncpt) (bottom))
+
+(gci (and Promoter_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and DNA_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and ProteinDomain_cncpt Sequence_cncpt) (bottom))
+
+(gci (and ProteinDomain_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and ProteinDomain_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Gene_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Protein_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Localization_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Mutation_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Chemical_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Ion_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Virus_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Promoter_cncpt) (bottom))
+
+(gci (and DNA_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Sequence_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Gene_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt Transcription_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Transcription_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Protein_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Localization_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Mutation_cncpt Transcription_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Transcription_cncpt) (bottom))
+
+(gci (and SignalingPathway_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Cell_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Ion_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Transcription_cncpt Virus_cncpt) (bottom))
+
+(gci (and Promoter_cncpt Transcription_cncpt) (bottom))
+
+(gci (and DNA_cncpt Transcription_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt Transcription_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Sequence_cncpt Transcription_cncpt) (bottom))
+
+(gci (and TranscriptionFactor_cncpt Transcription_cncpt) (bottom))
+
+(gci (and ProteinSubunit_cncpt Transcription_cncpt) (bottom))
+
+(gci (and ProteinDomain_cncpt Transcription_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Transcription_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Gene_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt Tissue_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Tissue_cncpt) (bottom))
+
+(gci (and ProteinComplex_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Protein_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Localization_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Mutation_cncpt Tissue_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Tissue_cncpt) (bottom))
+
+(gci (and SignalingPathway_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Cell_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Ion_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Tissue_cncpt Virus_cncpt) (bottom))
+
+(gci (and Promoter_cncpt Tissue_cncpt) (bottom))
+
+(gci (and DNA_cncpt Tissue_cncpt) (bottom))
+
+(gci (and PositiveRegulation_cncpt Tissue_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Sequence_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Tissue_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and ProteinSubunit_cncpt Tissue_cncpt) (bottom))
+
+(gci (and ProteinDomain_cncpt Tissue_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Tissue_cncpt Transcription_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Chromosome_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Gene_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt DNARegion_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Protein_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Localization_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Enzyme_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Eukaryote_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Mutation_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Chromosome_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt Chromosome_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Ion_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Virus_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Promoter_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt DNA_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Chromosome_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt ExperimentalMethod_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Tissue_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Gene_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Nucleus_cncpt Peptide_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Peptide_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and Peptide_cncpt Protein_cncpt) (bottom))
+
+(gci (and Localization_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Mutation_cncpt Peptide_cncpt) (bottom))
+
+(gci (and MessengerRNA_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Chemical_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Peptide_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Ion_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Peptide_cncpt Virus_cncpt) (bottom))
+
+(gci (and Peptide_cncpt Promoter_cncpt) (bottom))
+
+(gci (and DNA_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Peptide_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Peptide_cncpt Sequence_cncpt) (bottom))
+
+(gci (and Peptide_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and Peptide_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and Peptide_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt Peptide_cncpt) (bottom))
+
+(gci (and Peptide_cncpt Transcription_cncpt) (bottom))
+
+(gci (and Peptide_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt Peptide_cncpt) (bottom))
+
+(gci (and CellComponent_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Gene_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Nucleus_cncpt) (bottom))
+
+(gci (and DNARegion_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt ProteinComplex_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Protein_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Localization_cncpt) (bottom))
+
+(gci (and Enzyme_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and Eukaryote_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Mutation_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt MessengerRNA_cncpt) (bottom))
+
+(gci (and Chemical_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt SignalingPathway_cncpt) (bottom))
+
+(gci (and Cell_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Ion_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Virus_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Promoter_cncpt) (bottom))
+
+(gci (and DNA_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt PositiveRegulation_cncpt) (bottom))
+
+(gci (and AminoAcid_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Sequence_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt TranscriptionFactor_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt ProteinSubunit_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt ProteinDomain_cncpt) (bottom))
+
+(gci (and ExperimentalMethod_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Transcription_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Tissue_cncpt) (bottom))
+
+(gci (and Chromosome_cncpt GeneExpression_cncpt) (bottom))
+
+(gci (and GeneExpression_cncpt Peptide_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Gene_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) ProteinComplex_cncpt) (exists PerformsRegulatoryProcess Gene_cncpt))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Protein_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Enzyme_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Chemical_cncpt) (exists PerformsRegulatoryProcess Gene_cncpt))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) SignalingPathway_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) DNA_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) PositiveRegulation_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) TranscriptionFactor_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) ProteinDomain_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and)) GeneExpression_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt))
+
+(gci (exists PerformsBinding (and)) (exists PerformsBinding Protein_cncpt))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA (and)) (exists PerformsBindingOfTFToTFBindingSiteOfDNA Gene_cncpt))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Gene_cncpt) (exists PerformsBindingOfProteinToDNA Gene_cncpt))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Protein_cncpt) (exists PerformsBindingOfProteinToDNA Gene_cncpt))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Enzyme_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) SignalingPathway_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) DNA_cncpt) (exists PerformsBindingOfProteinToDNA Protein_cncpt))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) TranscriptionFactor_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) GeneExpression_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) (exists PerformsRegulatoryProcess (and))) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression (and)) (exists PerformsPositiveRegulationOfGeneExpression Gene_cncpt))
+
+(gci (exists PerformsNegativeRegulation (and)) (exists PerformsNegativeRegulation Protein_cncpt))
+
+(gci (exists PerformsResponseProcess (and)) (exists PerformsResponseProcess Protein_cncpt))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein (and)) (exists PerformsBindingOfTFToTFBindingSiteOfProtein Protein_cncpt))
+
+(gci (exists PerformsCellAdhesion (and)) (exists PerformsCellAdhesion Protein_cncpt))
+
+(gci (and (exists PerformsIncrease (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Gene_cncpt) (exists PerformsIncrease Gene_cncpt))
+
+(gci (and (exists PerformsIncrease (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Protein_cncpt) (exists PerformsIncrease Protein_cncpt))
+
+(gci (and (exists PerformsIncrease (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Enzyme_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) SignalingPathway_cncpt) (exists PerformsIncrease Protein_cncpt))
+
+(gci (and (exists PerformsIncrease (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) DNA_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) PositiveRegulation_cncpt) (exists PerformsIncrease Protein_cncpt))
+
+(gci (and (exists PerformsIncrease (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) TranscriptionFactor_cncpt) (exists PerformsIncrease Protein_cncpt))
+
+(gci (and (exists PerformsIncrease (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) GeneExpression_cncpt) (exists PerformsIncrease Protein_cncpt))
+
+(gci (and (exists PerformsIncrease (and)) (exists PerformsRegulatoryProcess (and))) (exists PerformsIncrease (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) (exists PerformsIncrease (and))) (bottom))
+
+(gci (and (exists HasPart (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Gene_cncpt) (exists HasPart Promoter_cncpt))
+
+(gci (and (exists HasPart (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) ProteinComplex_cncpt) (exists HasPart Protein_cncpt))
+
+(gci (and (exists HasPart (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Enzyme_cncpt) (exists HasPart Protein_cncpt))
+
+(gci (and (exists HasPart (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) SignalingPathway_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) DNA_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) TranscriptionFactor_cncpt) (exists HasPart Protein_cncpt))
+
+(gci (and (exists HasPart (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) ProteinDomain_cncpt) (exists HasPart AminoAcid_cncpt))
+
+(gci (and (exists HasPart (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) Chromosome_cncpt) (exists HasPart Gene_cncpt))
+
+(gci (and (exists HasPart (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) GeneExpression_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) (exists PerformsRegulatoryProcess (and))) (bottom))
+
+(gci (and (exists HasPart (and)) (exists PerformsBindingOfProteinToDNA (and))) (bottom))
+
+(gci (and (exists HasPart (and)) (exists PerformsIncrease (and))) (bottom))
+
+(gci (exists PerformsMaintenance (and)) (exists PerformsMaintenance (and Protein_cncpt Gene_cncpt)))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene (and)) (exists PerformsNegativeRegulationOfTranscriptionOfGene Protein_cncpt))
+
+(gci (and (exists FromSpecies (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Gene_cncpt) (exists FromSpecies Eukaryote_cncpt))
+
+(gci (and (exists FromSpecies (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Protein_cncpt) (exists FromSpecies Virus_cncpt))
+
+(gci (and (exists FromSpecies (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Enzyme_cncpt) (exists FromSpecies Eukaryote_cncpt))
+
+(gci (and (exists FromSpecies (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) SignalingPathway_cncpt) (exists FromSpecies Eukaryote_cncpt))
+
+(gci (and (exists FromSpecies (and)) Cell_cncpt) (exists FromSpecies Eukaryote_cncpt))
+
+(gci (and (exists FromSpecies (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) DNA_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt))
+
+(gci (and (exists FromSpecies (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) Tissue_cncpt) (exists FromSpecies Eukaryote_cncpt))
+
+(gci (and (exists FromSpecies (and)) Chromosome_cncpt) (exists FromSpecies Eukaryote_cncpt))
+
+(gci (and (exists FromSpecies (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists FromSpecies (and)) GeneExpression_cncpt) (exists FromSpecies Eukaryote_cncpt))
+
+(gci (and (exists FromSpecies (and)) (exists PerformsRegulatoryProcess (and))) (bottom))
+
+(gci (and (exists FromSpecies (and)) (exists PerformsBindingOfProteinToDNA (and))) (bottom))
+
+(gci (and (exists FromSpecies (and)) (exists PerformsIncrease (and))) (bottom))
+
+(gci (and (exists FromSpecies (and)) (exists HasPart (and))) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA (and)) (exists PerformsBindingOfTranscriptionFactorToDNA Gene_cncpt))
+
+(gci (exists PerformsPhosphorylation (and)) (exists PerformsPhosphorylation Protein_cncpt))
+
+(gci (exists PerformsDecrease (and)) (exists PerformsDecrease Protein_cncpt))
+
+(gci (exists PerformsPositiveRegulationOfTranscription (and)) (exists PerformsPositiveRegulationOfTranscription Gene_cncpt))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein (and)) (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Protein_cncpt))
+
+(gci (exists PerformsCellularMetabolicProcess (and)) (exists PerformsCellularMetabolicProcess (and Protein_cncpt Gene_cncpt)))
+
+(gci (exists PerformsGeneExpression (and)) (exists PerformsGeneExpression Protein_cncpt))
+
+(gci (exists PerformsProteinBiosynthesis (and)) (exists PerformsProteinBiosynthesis Protein_cncpt))
+
+(gci (and (exists Encodes (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Protein_cncpt) (and (exists Encodes Protein_cncpt) Gene_cncpt))
+
+(gci (and (exists Encodes (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Enzyme_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) SignalingPathway_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) TranscriptionFactor_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) GeneExpression_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsRegulatoryProcess (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsBindingOfProteinToDNA (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsIncrease (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists HasPart (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists FromSpecies (and))) (and (exists Encodes Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) Gene_cncpt))
+
+(gci (and (exists PerformsBindingToProtein (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Gene_cncpt) (and (exists PerformsBindingToProtein Protein_cncpt) Protein_cncpt))
+
+(gci (and (exists PerformsBindingToProtein (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) ProteinComplex_cncpt) (exists PerformsBindingToProtein Protein_cncpt))
+
+(gci (and (exists PerformsBindingToProtein (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Enzyme_cncpt) (exists PerformsBindingToProtein Protein_cncpt))
+
+(gci (and (exists PerformsBindingToProtein (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) SignalingPathway_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) DNA_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) TranscriptionFactor_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) ProteinSubunit_cncpt) (exists PerformsBindingToProtein Protein_cncpt))
+
+(gci (and (exists PerformsBindingToProtein (and)) ProteinDomain_cncpt) (exists PerformsBindingToProtein Protein_cncpt))
+
+(gci (and (exists PerformsBindingToProtein (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) GeneExpression_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) (exists PerformsRegulatoryProcess (and))) (and (exists PerformsBindingToProtein Protein_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt) Protein_cncpt))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) (exists PerformsBindingToProtein (and))) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) (exists PerformsIncrease (and))) (exists PerformsIncrease (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists HasPart (and)) (exists PerformsBindingToProtein (and))) (and (exists HasPart Protein_cncpt) (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) (exists PerformsPositiveRegulation Transcription_cncpt) Protein_cncpt))
+
+(gci (and (exists FromSpecies (and)) (exists PerformsBindingToProtein (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsBindingToProtein (and))) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Gene_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Enzyme_cncpt) (exists PerformsPositiveRegulation Protein_cncpt))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Mutation_cncpt) (exists PerformsPositiveRegulation Protein_cncpt))
+
+(gci (and (exists PerformsPositiveRegulation (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) SignalingPathway_cncpt) (exists PerformsPositiveRegulation Protein_cncpt))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Cell_cncpt) (exists PerformsPositiveRegulation Protein_cncpt))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) DNA_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) PositiveRegulation_cncpt) (exists PerformsPositiveRegulation Protein_cncpt))
+
+(gci (and (exists PerformsPositiveRegulation (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) TranscriptionFactor_cncpt) (exists PerformsPositiveRegulation Transcription_cncpt))
+
+(gci (and (exists PerformsPositiveRegulation (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Transcription_cncpt) (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) GeneExpression_cncpt) (exists PerformsPositiveRegulation Protein_cncpt))
+
+(gci (and (exists PerformsPositiveRegulation (and)) (exists PerformsRegulatoryProcess (and))) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) (exists PerformsPositiveRegulation (and))) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) (exists PerformsPositiveRegulation (and))) (bottom))
+
+(gci (and (exists HasPart (and)) (exists PerformsPositiveRegulation (and))) (and (exists HasPart Protein_cncpt) (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) (exists PerformsPositiveRegulation Transcription_cncpt) Protein_cncpt))
+
+(gci (and (exists FromSpecies (and)) (exists PerformsPositiveRegulation (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsPositiveRegulation (and))) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) (exists PerformsPositiveRegulation (and))) (and (exists PerformsBindingToProtein Protein_cncpt) Protein_cncpt))
+
+(gci (and (exists LocatedIn (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Protein_cncpt) (exists LocatedIn CellComponent_cncpt))
+
+(gci (and (exists LocatedIn (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Enzyme_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) SignalingPathway_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) DNA_cncpt) (exists LocatedIn Tissue_cncpt))
+
+(gci (and (exists LocatedIn (and)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) TranscriptionFactor_cncpt) (exists LocatedIn Cell_cncpt))
+
+(gci (and (exists LocatedIn (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists LocatedIn (and)) GeneExpression_cncpt) (exists LocatedIn Protein_cncpt))
+
+(gci (and (exists LocatedIn (and)) (exists PerformsRegulatoryProcess (and))) (bottom))
+
+(gci (and (exists LocatedIn (and)) (exists PerformsBindingOfProteinToDNA (and))) (bottom))
+
+(gci (and (exists LocatedIn (and)) (exists PerformsIncrease (and))) (bottom))
+
+(gci (and (exists HasPart (and)) (exists LocatedIn (and))) (bottom))
+
+(gci (and (exists FromSpecies (and)) (exists LocatedIn (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists LocatedIn (and))) (bottom))
+
+(gci (and (exists LocatedIn (and)) (exists PerformsBindingToProtein (and))) (bottom))
+
+(gci (and (exists LocatedIn (and)) (exists PerformsPositiveRegulation (and))) (bottom))
+
+(gci (exists Precedes (and)) (exists Precedes GeneExpression_cncpt))
+
+(gci (exists PerformsProteinCatabolism (and)) (exists PerformsProteinCatabolism Protein_cncpt))
+
+(gci (exists PerformsRegulatoryProcess CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsIncrease CellComponent_cncpt) (bottom))
+
+(gci (exists HasPart CellComponent_cncpt) (bottom))
+
+(gci (exists FromSpecies CellComponent_cncpt) (bottom))
+
+(gci (exists Encodes CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation CellComponent_cncpt) (bottom))
+
+(gci (and (exists LocatedIn CellComponent_cncpt) Gene_cncpt Protein_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Gene_cncpt) (and Gene_cncpt Protein_cncpt))
+
+(gci (and (exists PerformsPositiveRegulationOfGeneExpression (and)) Gene_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) (exists PerformsPositiveRegulationOfGeneExpression (and))) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) (exists PerformsPositiveRegulationOfGeneExpression (and))) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) (exists PerformsPositiveRegulationOfGeneExpression (and))) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression CellComponent_cncpt) (bottom))
+
+(gci (and (exists LocatedIn CellComponent_cncpt) (exists PerformsPositiveRegulationOfGeneExpression (and))) (bottom))
+
+(gci (and (exists HasPart Gene_cncpt) Protein_cncpt) (bottom))
+
+(gci (exists FromSpecies Gene_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfTFToTFBindingSiteOfDNA (and)) (exists PerformsBindingOfTranscriptionFactorToDNA (and))) (bottom))
+
+(gci (and (exists PerformsPositiveRegulationOfTranscription (and)) Gene_cncpt) (bottom))
+
+(gci (and (exists HasPart (and)) (exists PerformsPositiveRegulationOfTranscription (and))) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) (exists PerformsPositiveRegulationOfTranscription (and))) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and)) (exists PerformsPositiveRegulationOfTranscription (and))) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription CellComponent_cncpt) (bottom))
+
+(gci (and (exists LocatedIn CellComponent_cncpt) (exists PerformsPositiveRegulationOfTranscription (and))) (bottom))
+
+(gci (and (exists PerformsPositiveRegulationOfGeneExpression (and)) (exists PerformsPositiveRegulationOfTranscription (and))) (bottom))
+
+(gci (exists Encodes Gene_cncpt) (exists Encodes (and Protein_cncpt Gene_cncpt)))
+
+(gci (exists PerformsBindingToProtein Gene_cncpt) (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)))
+
+(gci (exists PerformsPositiveRegulation Gene_cncpt) (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)))
+
+(gci (exists LocatedIn Gene_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Nucleus_cncpt) (bottom))
+
+(gci (exists HasPart Nucleus_cncpt) (bottom))
+
+(gci (exists FromSpecies Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Nucleus_cncpt) (bottom))
+
+(gci (exists Encodes Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Nucleus_cncpt) (bottom))
+
+(gci (exists LocatedIn Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsIncrease DNARegion_cncpt) (bottom))
+
+(gci (exists HasPart DNARegion_cncpt) (bottom))
+
+(gci (exists FromSpecies DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription DNARegion_cncpt) (bottom))
+
+(gci (exists Encodes DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation DNARegion_cncpt) (bottom))
+
+(gci (exists LocatedIn DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsIncrease ProteinComplex_cncpt) (bottom))
+
+(gci (exists HasPart ProteinComplex_cncpt) (bottom))
+
+(gci (exists FromSpecies ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription ProteinComplex_cncpt) (bottom))
+
+(gci (exists Encodes ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation ProteinComplex_cncpt) (bottom))
+
+(gci (exists LocatedIn ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess Gene_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt)) (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsPositiveRegulationOfGeneExpression (and)) (exists PerformsRegulatoryProcess Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsPositiveRegulationOfTranscription (and)) (exists PerformsRegulatoryProcess Protein_cncpt)) (bottom))
+
+(gci (exists PerformsBinding CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsBinding Gene_cncpt) (bottom))
+
+(gci (exists PerformsBinding Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsBinding DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsBinding ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Protein_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Protein_cncpt) DNA_cncpt)
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Protein_cncpt) (exists PerformsPositiveRegulationOfGeneExpression (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsNegativeRegulation (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Gene_cncpt) (exists PerformsNegativeRegulation (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) DNA_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) TranscriptionFactor_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) (exists PerformsRegulatoryProcess (and))) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) (exists PerformsNegativeRegulation (and))) (bottom))
+
+(gci (and (exists PerformsIncrease (and)) (exists PerformsNegativeRegulation (and))) (bottom))
+
+(gci (and (exists HasPart (and)) (exists PerformsNegativeRegulation (and))) (bottom))
+
+(gci (and (exists FromSpecies (and)) (exists PerformsNegativeRegulation (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsNegativeRegulation (and))) (exists PerformsNegativeRegulation (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsBindingToProtein (and)) (exists PerformsNegativeRegulation (and))) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) (exists PerformsPositiveRegulation (and))) (bottom))
+
+(gci (and (exists LocatedIn (and)) (exists PerformsNegativeRegulation (and))) (bottom))
+
+(gci (exists PerformsNegativeRegulation CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) (exists PerformsPositiveRegulationOfGeneExpression (and))) (bottom))
+
+(gci (exists PerformsNegativeRegulation Gene_cncpt) (exists PerformsNegativeRegulation (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsNegativeRegulation (and)) (exists PerformsPositiveRegulationOfTranscription (and))) (bottom))
+
+(gci (exists PerformsNegativeRegulation Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Gene_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfTFToTFBindingSiteOfDNA (and)) (exists PerformsBindingOfTFToTFBindingSiteOfProtein (and))) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Gene_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfTFToTFBindingSiteOfProtein (and)) (exists PerformsBindingOfTranscriptionFactorToDNA (and))) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Gene_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfTFToTFBindingSiteOfDNA (and)) (exists PerformsIncrease Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsIncrease Protein_cncpt) (exists PerformsPositiveRegulationOfGeneExpression (and))) (bottom))
+
+(gci (and (exists PerformsIncrease Gene_cncpt) (exists PerformsIncrease Protein_cncpt)) (exists PerformsIncrease (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsBindingOfTranscriptionFactorToDNA (and)) (exists PerformsIncrease Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsIncrease Protein_cncpt) (exists PerformsPositiveRegulationOfTranscription (and))) (bottom))
+
+(gci (and (exists PerformsBindingOfTFToTFBindingSiteOfProtein (and)) (exists PerformsIncrease Protein_cncpt)) (bottom))
+
+(gci (and (exists HasPart Protein_cncpt) (exists PerformsBindingOfTFToTFBindingSiteOfDNA (and))) (bottom))
+
+(gci (and (exists HasPart Gene_cncpt) (exists HasPart Protein_cncpt)) (exists HasPart (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists HasPart Protein_cncpt) (exists PerformsBindingOfTranscriptionFactorToDNA (and))) (bottom))
+
+(gci (and (exists HasPart Protein_cncpt) (exists PerformsBindingOfTFToTFBindingSiteOfProtein (and))) (bottom))
+
+(gci (and (exists PerformsNegativeRegulationOfTranscriptionOfGene (and)) Protein_cncpt) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsNegativeRegulationOfTranscriptionOfGene (and))) (bottom))
+
+(gci (and (exists LocatedIn (and)) (exists PerformsNegativeRegulationOfTranscriptionOfGene (and))) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsIncrease Gene_cncpt) (exists PerformsNegativeRegulationOfTranscriptionOfGene (and))) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Gene_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene ProteinComplex_cncpt) (bottom))
+
+(gci (exists FromSpecies Protein_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Protein_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Gene_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsPhosphorylation (and)) (exists PerformsRegulatoryProcess Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) (exists PerformsPhosphorylation (and))) (bottom))
+
+(gci (and (exists HasPart Protein_cncpt) (exists PerformsPhosphorylation (and))) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) CellComponent_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Gene_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Nucleus_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) DNARegion_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Protein_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Localization_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Enzyme_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Eukaryote_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Mutation_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) MessengerRNA_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Chemical_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) SignalingPathway_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Cell_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Ion_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Virus_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Promoter_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) AminoAcid_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Sequence_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) TranscriptionFactor_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) ExperimentalMethod_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Transcription_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Tissue_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Chromosome_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) Peptide_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) GeneExpression_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) (exists PerformsRegulatoryProcess (and))) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA (and)) (exists PerformsDecrease (and))) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) (exists PerformsIncrease (and))) (bottom))
+
+(gci (and (exists HasPart (and)) (exists PerformsDecrease (and))) (bottom))
+
+(gci (and (exists FromSpecies (and)) (exists PerformsDecrease (and))) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsDecrease (and))) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and)) (exists PerformsDecrease (and))) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) (exists PerformsPositiveRegulation (and))) (bottom))
+
+(gci (and (exists LocatedIn (and)) (exists PerformsDecrease (and))) (bottom))
+
+(gci (exists PerformsDecrease CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Gene_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsDecrease DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsDecrease ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsDecrease (and)) (exists PerformsNegativeRegulation (and))) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Protein_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Gene_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein (and)) (exists PerformsRegulatoryProcess Protein_cncpt)) (bottom))
+
+(gci (exists PerformsGeneExpression CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Gene_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression ProteinComplex_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Gene_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsCellAdhesion (and)) (exists PerformsProteinBiosynthesis (and))) (bottom))
+
+(gci (and (exists PerformsBindingToProtein Protein_cncpt) (exists PerformsPhosphorylation (and))) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein (and)) (exists PerformsBindingToProtein Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsCellAdhesion (and)) (exists PerformsPositiveRegulation Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsPhosphorylation (and)) (exists PerformsPositiveRegulation Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation Protein_cncpt) (exists PerformsProteinBiosynthesis (and))) (bottom))
+
+(gci (exists LocatedIn Protein_cncpt) GeneExpression_cncpt)
+
+(gci (and (exists LocatedIn CellComponent_cncpt) (exists LocatedIn Protein_cncpt)) (bottom))
+
+(gci (exists PerformsProteinCatabolism CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Gene_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsProteinCatabolism (and)) (exists PerformsRegulatoryProcess Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and)) (exists PerformsProteinCatabolism (and))) (bottom))
+
+(gci (and (exists HasPart Protein_cncpt) (exists PerformsProteinCatabolism (and))) (bottom))
+
+(gci (and (exists PerformsPhosphorylation (and)) (exists PerformsProteinCatabolism (and))) (bottom))
+
+(gci (and (exists PerformsBindingToProtein Protein_cncpt) (exists PerformsProteinCatabolism (and))) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation Protein_cncpt) (exists PerformsProteinCatabolism (and))) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) Protein_cncpt) (exists PerformsIncrease (and Protein_cncpt Gene_cncpt)))
+
+(gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) Enzyme_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) Chemical_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) ProteinDomain_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) GeneExpression_cncpt) (bottom))
+
+(gci (and (exists PerformsNegativeRegulation (and Protein_cncpt Gene_cncpt)) Protein_cncpt) (bottom))
+
+(gci (and (exists HasPart (and Protein_cncpt Gene_cncpt)) Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsMaintenance (and Protein_cncpt Gene_cncpt)) (exists PerformsRegulatoryProcess Protein_cncpt)) (bottom))
+
+(gci (and (exists PerformsIncrease Protein_cncpt) (exists PerformsMaintenance (and Protein_cncpt Gene_cncpt))) (bottom))
+
+(gci (and (exists PerformsMaintenance (and Protein_cncpt Gene_cncpt)) (exists PerformsPositiveRegulation Protein_cncpt)) (bottom))
+
+(gci (and (exists Encodes (and)) (exists PerformsCellularMetabolicProcess (and Protein_cncpt Gene_cncpt))) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess CellComponent_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Nucleus_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess DNARegion_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingOfProteinToDNA Protein_cncpt) (exists PerformsCellularMetabolicProcess (and Protein_cncpt Gene_cncpt))) (bottom))
+
+(gci (and (exists PerformsCellularMetabolicProcess (and Protein_cncpt Gene_cncpt)) (exists PerformsDecrease (and))) (bottom))
+
+(gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) Gene_cncpt Protein_cncpt) (bottom))
+
+(gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) (exists PerformsNegativeRegulation (and Protein_cncpt Gene_cncpt))) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) Protein_cncpt) (and (exists HasPart Protein_cncpt) (exists PerformsPositiveRegulation Transcription_cncpt)))
+
+(gci (and (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) Enzyme_cncpt) (bottom))
+
+(gci (and (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) ProteinSubunit_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) Protein_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) Mutation_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) SignalingPathway_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) Cell_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) PositiveRegulation_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) GeneExpression_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) (exists PerformsResponseProcess (and))) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Localization_cncpt) (bottom))
+
+(gci (exists PerformsBinding Localization_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Localization_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Localization_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Localization_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Localization_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Localization_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Localization_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Localization_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Localization_cncpt) (bottom))
+
+(gci (exists HasPart Localization_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Localization_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Localization_cncpt) (bottom))
+
+(gci (exists FromSpecies Localization_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Localization_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Localization_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Localization_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Localization_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Localization_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Localization_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Localization_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Localization_cncpt) (bottom))
+
+(gci (exists Encodes Localization_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Localization_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Localization_cncpt) (bottom))
+
+(gci (exists LocatedIn Localization_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Localization_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsBinding Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Enzyme_cncpt) (bottom))
+
+(gci (exists HasPart Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Enzyme_cncpt) (bottom))
+
+(gci (exists FromSpecies Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Enzyme_cncpt) (bottom))
+
+(gci (exists Encodes Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Enzyme_cncpt) (bottom))
+
+(gci (exists LocatedIn Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Enzyme_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsBinding Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Eukaryote_cncpt) (bottom))
+
+(gci (exists HasPart Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Eukaryote_cncpt) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists PerformsBindingOfTFToTFBindingSiteOfDNA (and))) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists PerformsBindingOfTranscriptionFactorToDNA (and))) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists PerformsBindingOfTFToTFBindingSiteOfProtein (and))) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists PerformsCellAdhesion (and))) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists PerformsNegativeRegulationOfTranscriptionOfGene (and))) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists PerformsPhosphorylation (and))) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists PerformsProteinBiosynthesis (and))) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists PerformsProteinCatabolism (and))) (bottom))
+
+(gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) (exists FromSpecies Eukaryote_cncpt) Gene_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Eukaryote_cncpt) (bottom))
+
+(gci (exists Encodes Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Eukaryote_cncpt) (bottom))
+
+(gci (exists LocatedIn Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Eukaryote_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Mutation_cncpt) (bottom))
+
+(gci (exists PerformsBinding Mutation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Mutation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Mutation_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Mutation_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Mutation_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Mutation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Mutation_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Mutation_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Mutation_cncpt) (bottom))
+
+(gci (exists HasPart Mutation_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Mutation_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Mutation_cncpt) (bottom))
+
+(gci (exists FromSpecies Mutation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Mutation_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Mutation_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Mutation_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Mutation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Mutation_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Mutation_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Mutation_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Mutation_cncpt) (bottom))
+
+(gci (exists Encodes Mutation_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Mutation_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Mutation_cncpt) (bottom))
+
+(gci (exists LocatedIn Mutation_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Mutation_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsBinding MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsIncrease MessengerRNA_cncpt) (bottom))
+
+(gci (exists HasPart MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene MessengerRNA_cncpt) (bottom))
+
+(gci (exists FromSpecies MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsDecrease MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis MessengerRNA_cncpt) (bottom))
+
+(gci (exists Encodes MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation MessengerRNA_cncpt) (bottom))
+
+(gci (exists LocatedIn MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism MessengerRNA_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Chemical_cncpt) (bottom))
+
+(gci (exists PerformsBinding Chemical_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Chemical_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Chemical_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Chemical_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Chemical_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Chemical_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Chemical_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Chemical_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Chemical_cncpt) (bottom))
+
+(gci (exists HasPart Chemical_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Chemical_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Chemical_cncpt) (bottom))
+
+(gci (exists FromSpecies Chemical_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Chemical_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Chemical_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Chemical_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Chemical_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Chemical_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Chemical_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Chemical_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Chemical_cncpt) (bottom))
+
+(gci (exists Encodes Chemical_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Chemical_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Chemical_cncpt) (bottom))
+
+(gci (exists LocatedIn Chemical_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Chemical_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess SignalingPathway_cncpt) (and (exists PerformsBindingToProtein Protein_cncpt) (exists PerformsRegulatoryProcess Protein_cncpt) Protein_cncpt))
+
+(gci (and (exists PerformsIncrease (and Protein_cncpt Gene_cncpt)) (exists PerformsRegulatoryProcess SignalingPathway_cncpt)) (bottom))
+
+(gci (exists PerformsBinding SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsIncrease SignalingPathway_cncpt) (bottom))
+
+(gci (exists HasPart SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene SignalingPathway_cncpt) (bottom))
+
+(gci (exists FromSpecies SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsDecrease SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis SignalingPathway_cncpt) (bottom))
+
+(gci (exists Encodes SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation SignalingPathway_cncpt) (bottom))
+
+(gci (exists LocatedIn SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism SignalingPathway_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Cell_cncpt) (bottom))
+
+(gci (exists PerformsBinding Cell_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Cell_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Cell_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Cell_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Cell_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Cell_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Cell_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Cell_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Cell_cncpt) (bottom))
+
+(gci (exists HasPart Cell_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Cell_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Cell_cncpt) (bottom))
+
+(gci (exists FromSpecies Cell_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Cell_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Cell_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Cell_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Cell_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Cell_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Cell_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Cell_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Cell_cncpt) (bottom))
+
+(gci (exists Encodes Cell_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Cell_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Cell_cncpt) (bottom))
+
+(gci (exists LocatedIn Cell_cncpt) TranscriptionFactor_cncpt)
+
+(gci (and (exists LocatedIn CellComponent_cncpt) (exists LocatedIn Cell_cncpt)) (bottom))
+
+(gci (and (exists LocatedIn Cell_cncpt) (exists PerformsBindingOfTFToTFBindingSiteOfDNA (and))) (bottom))
+
+(gci (and (exists LocatedIn Cell_cncpt) (exists PerformsBindingOfTranscriptionFactorToDNA (and))) (bottom))
+
+(gci (and (exists LocatedIn Cell_cncpt) (exists PerformsBindingOfTFToTFBindingSiteOfProtein (and))) (bottom))
+
+(gci (exists PerformsProteinCatabolism Cell_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Ion_cncpt) (bottom))
+
+(gci (exists PerformsBinding Ion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Ion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Ion_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Ion_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Ion_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Ion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Ion_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Ion_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Ion_cncpt) (bottom))
+
+(gci (exists HasPart Ion_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Ion_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Ion_cncpt) (bottom))
+
+(gci (exists FromSpecies Ion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Ion_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Ion_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Ion_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Ion_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Ion_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Ion_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Ion_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Ion_cncpt) (bottom))
+
+(gci (exists Encodes Ion_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Ion_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Ion_cncpt) (bottom))
+
+(gci (exists LocatedIn Ion_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Ion_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Virus_cncpt) (bottom))
+
+(gci (exists PerformsBinding Virus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Virus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Virus_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Virus_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Virus_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Virus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Virus_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Virus_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Virus_cncpt) (bottom))
+
+(gci (exists HasPart Virus_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Virus_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Virus_cncpt) (bottom))
+
+(gci (exists FromSpecies Virus_cncpt) Protein_cncpt)
+
+(gci (and (exists FromSpecies Virus_cncpt) (exists PerformsPositiveRegulationOfGeneExpression (and))) (bottom))
+
+(gci (and (exists FromSpecies Virus_cncpt) (exists PerformsPositiveRegulationOfTranscription (and))) (bottom))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists FromSpecies Virus_cncpt)) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Virus_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Virus_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Virus_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Virus_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Virus_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Virus_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Virus_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Virus_cncpt) (bottom))
+
+(gci (exists Encodes Virus_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Virus_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Virus_cncpt) (bottom))
+
+(gci (exists LocatedIn Virus_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Virus_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Promoter_cncpt) (bottom))
+
+(gci (exists PerformsBinding Promoter_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Promoter_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Promoter_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Promoter_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Promoter_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Promoter_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Promoter_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Promoter_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Promoter_cncpt) (bottom))
+
+(gci (exists HasPart Promoter_cncpt) Gene_cncpt)
+
+(gci (and (exists HasPart Gene_cncpt) (exists HasPart Promoter_cncpt)) (bottom))
+
+(gci (and (exists HasPart Promoter_cncpt) (exists HasPart Protein_cncpt)) (bottom))
+
+(gci (and (exists HasPart Promoter_cncpt) (exists PerformsNegativeRegulationOfTranscriptionOfGene (and))) (bottom))
+
+(gci (exists PerformsMaintenance Promoter_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Promoter_cncpt) (bottom))
+
+(gci (exists FromSpecies Promoter_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Promoter_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Promoter_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Promoter_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Promoter_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Promoter_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Promoter_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Promoter_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Promoter_cncpt) (bottom))
+
+(gci (exists Encodes Promoter_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Promoter_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Promoter_cncpt) (bottom))
+
+(gci (exists LocatedIn Promoter_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Promoter_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess DNA_cncpt) (bottom))
+
+(gci (exists PerformsBinding DNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA DNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA DNA_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression DNA_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation DNA_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess DNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein DNA_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion DNA_cncpt) (bottom))
+
+(gci (exists PerformsIncrease DNA_cncpt) (bottom))
+
+(gci (exists HasPart DNA_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance DNA_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene DNA_cncpt) (bottom))
+
+(gci (exists FromSpecies DNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA DNA_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation DNA_cncpt) (bottom))
+
+(gci (exists PerformsDecrease DNA_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription DNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein DNA_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess DNA_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression DNA_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis DNA_cncpt) (bottom))
+
+(gci (exists Encodes DNA_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein DNA_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation DNA_cncpt) (bottom))
+
+(gci (exists LocatedIn DNA_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism DNA_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsBinding PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsIncrease PositiveRegulation_cncpt) (bottom))
+
+(gci (exists HasPart PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene PositiveRegulation_cncpt) (bottom))
+
+(gci (exists FromSpecies PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsDecrease PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis PositiveRegulation_cncpt) (bottom))
+
+(gci (exists Encodes PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation PositiveRegulation_cncpt) (bottom))
+
+(gci (exists LocatedIn PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism PositiveRegulation_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsBinding AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsIncrease AminoAcid_cncpt) (bottom))
+
+(gci (exists HasPart AminoAcid_cncpt) ProteinDomain_cncpt)
+
+(gci (and (exists HasPart AminoAcid_cncpt) (exists HasPart Gene_cncpt)) (bottom))
+
+(gci (and (exists HasPart AminoAcid_cncpt) (exists HasPart Protein_cncpt)) (bottom))
+
+(gci (and (exists HasPart AminoAcid_cncpt) (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein (and))) (bottom))
+
+(gci (exists PerformsMaintenance AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene AminoAcid_cncpt) (bottom))
+
+(gci (exists FromSpecies AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsDecrease AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis AminoAcid_cncpt) (bottom))
+
+(gci (exists Encodes AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation AminoAcid_cncpt) (bottom))
+
+(gci (exists LocatedIn AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism AminoAcid_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Sequence_cncpt) (bottom))
+
+(gci (exists PerformsBinding Sequence_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Sequence_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Sequence_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Sequence_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Sequence_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Sequence_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Sequence_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Sequence_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Sequence_cncpt) (bottom))
+
+(gci (exists HasPart Sequence_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Sequence_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Sequence_cncpt) (bottom))
+
+(gci (exists FromSpecies Sequence_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Sequence_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Sequence_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Sequence_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Sequence_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Sequence_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Sequence_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Sequence_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Sequence_cncpt) (bottom))
+
+(gci (exists Encodes Sequence_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Sequence_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Sequence_cncpt) (bottom))
+
+(gci (exists LocatedIn Sequence_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Sequence_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsBinding TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsIncrease TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists HasPart TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists FromSpecies TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsDecrease TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists Encodes TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists LocatedIn TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsBinding ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsIncrease ProteinSubunit_cncpt) (bottom))
+
+(gci (exists HasPart ProteinSubunit_cncpt) Protein_cncpt)
+
+(gci (and (exists HasPart ProteinSubunit_cncpt) (exists HasPart Protein_cncpt)) (bottom))
+
+(gci (and (exists HasPart Promoter_cncpt) (exists HasPart ProteinSubunit_cncpt)) (bottom))
+
+(gci (exists PerformsMaintenance ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene ProteinSubunit_cncpt) (bottom))
+
+(gci (exists FromSpecies ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsDecrease ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis ProteinSubunit_cncpt) (bottom))
+
+(gci (exists Encodes ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation ProteinSubunit_cncpt) (bottom))
+
+(gci (exists LocatedIn ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism ProteinSubunit_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsBinding ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsIncrease ProteinDomain_cncpt) (bottom))
+
+(gci (exists HasPart ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene ProteinDomain_cncpt) (bottom))
+
+(gci (exists FromSpecies ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsDecrease ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis ProteinDomain_cncpt) (bottom))
+
+(gci (exists Encodes ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation ProteinDomain_cncpt) (bottom))
+
+(gci (exists LocatedIn ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism ProteinDomain_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsBinding ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsIncrease ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists HasPart ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists FromSpecies ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsDecrease ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists Encodes ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists LocatedIn ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Transcription_cncpt) (bottom))
+
+(gci (exists PerformsBinding Transcription_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Transcription_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Transcription_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Transcription_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Transcription_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Transcription_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Transcription_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Transcription_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Transcription_cncpt) (bottom))
+
+(gci (exists HasPart Transcription_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Transcription_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Transcription_cncpt) (bottom))
+
+(gci (exists FromSpecies Transcription_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Transcription_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Transcription_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Transcription_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Transcription_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Transcription_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Transcription_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Transcription_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Transcription_cncpt) (bottom))
+
+(gci (exists Encodes Transcription_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Transcription_cncpt) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation Transcription_cncpt) Protein_cncpt) (and (exists HasPart Protein_cncpt) (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt))))
+
+(gci (and (exists PerformsBindingOfTFToTFBindingSiteOfDNA (and)) (exists PerformsPositiveRegulation Transcription_cncpt)) (bottom))
+
+(gci (and (exists PerformsBindingOfTranscriptionFactorToDNA (and)) (exists PerformsPositiveRegulation Transcription_cncpt)) (bottom))
+
+(gci (and (exists PerformsBindingOfTFToTFBindingSiteOfProtein (and)) (exists PerformsPositiveRegulation Transcription_cncpt)) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation Protein_cncpt) (exists PerformsPositiveRegulation Transcription_cncpt)) (bottom))
+
+(gci (exists LocatedIn Transcription_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Transcription_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Tissue_cncpt) (bottom))
+
+(gci (exists PerformsBinding Tissue_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Tissue_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Tissue_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Tissue_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Tissue_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Tissue_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Tissue_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Tissue_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Tissue_cncpt) (bottom))
+
+(gci (exists HasPart Tissue_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Tissue_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Tissue_cncpt) (bottom))
+
+(gci (exists FromSpecies Tissue_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Tissue_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Tissue_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Tissue_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Tissue_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Tissue_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Tissue_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Tissue_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Tissue_cncpt) (bottom))
+
+(gci (exists Encodes Tissue_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Tissue_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Tissue_cncpt) (bottom))
+
+(gci (and (exists LocatedIn CellComponent_cncpt) (exists LocatedIn Tissue_cncpt)) (bottom))
+
+(gci (and (exists LocatedIn Protein_cncpt) (exists LocatedIn Tissue_cncpt)) (bottom))
+
+(gci (and (exists LocatedIn Tissue_cncpt) (exists PerformsCellularMetabolicProcess (and Protein_cncpt Gene_cncpt))) (bottom))
+
+(gci (and (exists LocatedIn Cell_cncpt) (exists LocatedIn Tissue_cncpt)) (bottom))
+
+(gci (exists PerformsProteinCatabolism Tissue_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsBinding Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Chromosome_cncpt) (bottom))
+
+(gci (exists HasPart Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Chromosome_cncpt) (bottom))
+
+(gci (exists FromSpecies Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Chromosome_cncpt) (bottom))
+
+(gci (exists Encodes Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Chromosome_cncpt) (bottom))
+
+(gci (exists LocatedIn Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Chromosome_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess Peptide_cncpt) (bottom))
+
+(gci (exists PerformsBinding Peptide_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA Peptide_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA Peptide_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression Peptide_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation Peptide_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess Peptide_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein Peptide_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion Peptide_cncpt) (bottom))
+
+(gci (exists PerformsIncrease Peptide_cncpt) (bottom))
+
+(gci (exists HasPart Peptide_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance Peptide_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene Peptide_cncpt) (bottom))
+
+(gci (exists FromSpecies Peptide_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA Peptide_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation Peptide_cncpt) (bottom))
+
+(gci (exists PerformsDecrease Peptide_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription Peptide_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein Peptide_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess Peptide_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression Peptide_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis Peptide_cncpt) (bottom))
+
+(gci (exists Encodes Peptide_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein Peptide_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation Peptide_cncpt) (bottom))
+
+(gci (exists LocatedIn Peptide_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism Peptide_cncpt) (bottom))
+
+(gci (exists PerformsRegulatoryProcess GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsBinding GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfDNA GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToDNA GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfGeneExpression GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulation GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsResponseProcess GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTFToTFBindingSiteOfProtein GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsCellAdhesion GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsIncrease GeneExpression_cncpt) (bottom))
+
+(gci (exists HasPart GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsMaintenance GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsNegativeRegulationOfTranscriptionOfGene GeneExpression_cncpt) (bottom))
+
+(gci (exists FromSpecies GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfTranscriptionFactorToDNA GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsPhosphorylation GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsDecrease GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulationOfTranscription GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsBindingOfProteinToProteinBindingSiteOfProtein GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsCellularMetabolicProcess GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsGeneExpression GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsProteinBiosynthesis GeneExpression_cncpt) (bottom))
+
+(gci (exists Encodes GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsBindingToProtein GeneExpression_cncpt) (bottom))
+
+(gci (exists PerformsPositiveRegulation GeneExpression_cncpt) (bottom))
+
+(gci (exists LocatedIn GeneExpression_cncpt) (bottom))
+
+(gci (exists Precedes CellComponent_cncpt) (bottom))
+
+(gci (exists Precedes Gene_cncpt) (bottom))
+
+(gci (exists Precedes Nucleus_cncpt) (bottom))
+
+(gci (exists Precedes DNARegion_cncpt) (bottom))
+
+(gci (exists Precedes ProteinComplex_cncpt) (bottom))
+
+(gci (and (exists PerformsRegulatoryProcess Protein_cncpt) (exists Precedes (and))) (bottom))
+
+(gci (and (exists PerformsIncrease Protein_cncpt) (exists Precedes (and))) (bottom))
+
+(gci (and (exists PerformsPositiveRegulation Protein_cncpt) (exists Precedes (and))) (bottom))
+
+(gci (exists Precedes Protein_cncpt) (bottom))
+
+(gci (and (exists PerformsMaintenance (and Protein_cncpt Gene_cncpt)) (exists Precedes (and))) (bottom))
+
+(gci (exists Precedes Localization_cncpt) (bottom))
+
+(gci (exists Precedes Enzyme_cncpt) (bottom))
+
+(gci (exists Precedes Eukaryote_cncpt) (bottom))
+
+(gci (exists Precedes Mutation_cncpt) (bottom))
+
+(gci (exists Precedes MessengerRNA_cncpt) (bottom))
+
+(gci (exists Precedes Chemical_cncpt) (bottom))
+
+(gci (exists Precedes SignalingPathway_cncpt) (bottom))
+
+(gci (exists Precedes Cell_cncpt) (bottom))
+
+(gci (exists Precedes Ion_cncpt) (bottom))
+
+(gci (exists Precedes Virus_cncpt) (bottom))
+
+(gci (exists Precedes Promoter_cncpt) (bottom))
+
+(gci (exists Precedes DNA_cncpt) (bottom))
+
+(gci (exists Precedes PositiveRegulation_cncpt) (bottom))
+
+(gci (exists Precedes AminoAcid_cncpt) (bottom))
+
+(gci (exists Precedes Sequence_cncpt) (bottom))
+
+(gci (exists Precedes TranscriptionFactor_cncpt) (bottom))
+
+(gci (exists Precedes ProteinSubunit_cncpt) (bottom))
+
+(gci (exists Precedes ProteinDomain_cncpt) (bottom))
+
+(gci (exists Precedes ExperimentalMethod_cncpt) (bottom))
+
+(gci (exists Precedes Transcription_cncpt) (bottom))
+
+(gci (exists Precedes Tissue_cncpt) (bottom))
+
+(gci (exists Precedes Chromosome_cncpt) (bottom))
+
+(gci (exists Precedes Peptide_cncpt) (bottom))
+
+(gci (exists PerformsProteinCatabolism GeneExpression_cncpt) (bottom))
+

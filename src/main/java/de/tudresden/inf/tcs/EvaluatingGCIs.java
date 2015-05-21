@@ -62,7 +62,7 @@ public class EvaluatingGCIs {
         //LOGLEVEL = 2 --> output that allows deeper look into the process... and so on.
 
         public static final int LOGLEVEL = 3;
-        public static final String INPUTFILE = "C:\\Users\\Anas\\Desktop\\yue_role-depth-1";
+        public static final String INPUTFILE = "gcis-with-role-depth-1";
         public static final Level reasonerLogLevel = Level.ERROR;
 
 
@@ -89,7 +89,7 @@ public class EvaluatingGCIs {
         static void loadGRO() throws OWLOntologyCreationException {
                 manager = OWLManager.createOWLOntologyManager();
                 groIRI = IRI.create("http://www.bootstrep.eu/ontology/GRO");
-                IRI fileIRI = IRI.create(new File("C:\\Users\\Anas\\Desktop\\GRO_latest.xml"));
+                IRI fileIRI = IRI.create(new File("gro-latest"));
                 SimpleIRIMapper mapper = new SimpleIRIMapper(groIRI, fileIRI);
                 manager.addIRIMapper(mapper);
                 gro = manager.loadOntology(groIRI);
