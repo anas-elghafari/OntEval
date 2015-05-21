@@ -1,4 +1,0 @@
-Axioms that are found by cumulative function, not by the simple one
-SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
-SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#AminoAcid>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Protein>)) owl:Nothing)
-SubClassOf(<http://www.bootstrep.eu/ontology/GRO#TOYConcept2> <http://www.bootstrep.eu/ontology/GRO#TOYConcept1>)
