@@ -1,0 +1,113 @@
+This file contains GCIs entailed by the GRO but that also contain invalid relation names. 
+
+
+27 axioms filtered out for containing bad relation names.
+Entailed axioms containing invalid relation names:
+
+
+GCI: (gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) ProteinComplex_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#ProteinComplex> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) Protein_cncpt) (exists PerformsIncrease (and Protein_cncpt Gene_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsIncrease> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)))
+
+
+GCI: (gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) Enzyme_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) Chemical_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chemical> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) PositiveRegulation_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#PositiveRegulation> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) ProteinDomain_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#ProteinDomain> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsRegulatoryProcess (and Protein_cncpt Gene_cncpt)) GeneExpression_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#GeneExpression> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsNegativeRegulation (and Protein_cncpt Gene_cncpt)) Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsNegativeRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsMaintenance (and Protein_cncpt Gene_cncpt)) (exists PerformsRegulatoryProcess Protein_cncpt)) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsMaintenance> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> <http://www.bootstrep.eu/ontology/GRO#Protein>)) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsIncrease Protein_cncpt) (exists PerformsMaintenance (and Protein_cncpt Gene_cncpt))) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsIncrease> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsMaintenance> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsMaintenance (and Protein_cncpt Gene_cncpt)) (exists PerformsPositiveRegulation Protein_cncpt)) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsMaintenance> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> <http://www.bootstrep.eu/ontology/GRO#Protein>)) owl:Nothing)
+
+
+GCI: (gci (and (exists Encodes (and)) (exists PerformsCellularMetabolicProcess (and Protein_cncpt Gene_cncpt))) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsCellularMetabolicProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsBindingOfProteinToDNA Protein_cncpt) (exists PerformsCellularMetabolicProcess (and Protein_cncpt Gene_cncpt))) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsBindingOfProteinToDNA> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsCellularMetabolicProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsCellularMetabolicProcess (and Protein_cncpt Gene_cncpt)) (exists PerformsDecrease (and))) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsCellularMetabolicProcess> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsDecrease> owl:Thing)) owl:Nothing)
+
+
+GCI: (gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) (exists PerformsNegativeRegulation (and Protein_cncpt Gene_cncpt))) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsNegativeRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) ProteinComplex_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#ProteinComplex> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsBindingToProtein> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) Protein_cncpt) (and (exists HasPart Protein_cncpt) (exists PerformsPositiveRegulation Transcription_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsBindingToProtein> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> <http://www.bootstrep.eu/ontology/GRO#Transcription>)))
+
+
+GCI: (gci (and (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) Enzyme_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsBindingToProtein> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsBindingToProtein (and Protein_cncpt Gene_cncpt)) ProteinSubunit_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#ProteinSubunit> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsBindingToProtein> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) Mutation_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Mutation> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) SignalingPathway_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#SignalingPathway> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) Cell_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Cell> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) PositiveRegulation_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#PositiveRegulation> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) GeneExpression_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#GeneExpression> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsPositiveRegulation (and Protein_cncpt Gene_cncpt)) (exists PerformsResponseProcess (and))) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsPositiveRegulation> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsResponseProcess> owl:Thing)) owl:Nothing)
+
+
+GCI: (gci (and (exists PerformsIncrease (and Protein_cncpt Gene_cncpt)) (exists PerformsRegulatoryProcess SignalingPathway_cncpt)) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsIncrease> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#performsRegulatoryProcess> <http://www.bootstrep.eu/ontology/GRO#SignalingPathway>)) owl:Nothing)
