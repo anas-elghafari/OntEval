@@ -517,7 +517,61 @@ public class EvaluatingGCIs {
              return result;
         }
 
-
+        static ArrayList<OWLAxiom> getAxiomsViolatingSubClassRels(ArrayList<OWLAxiom> axioms,
+			boolean considerOnlyDirectSubclasses) throws OWLException {
+		loadGRO();
+		helpers.print("in getAxiomsViolatingSubclassRels()....", 2);
+		ArrayList<OWLAxiom> result = new ArrayList<OWLAxiom>();
+		int disjointnessAxiomsForTwoClasses = 0;
+		for (OWLAxiom ax: axioms) {
+			OWLSubClassOfAxiom a = ((OWLSubClassOfAxiom) ax);
+			//we're only looking at disjointness axioms:
+			if(!a.getSuperClass().isBottomEntity()) {
+				continue;
+			}
+			OWLClassExpression exp = a.getSubClass();
+			Set<OWLClassExpression> conjuncts = exp.asConjunctSet();
+			//helpers.print("number of conjuncts: " + conjuncts.size(), 3);
+			Set<OWLClass> classConjuncts = new HashSet<OWLClass>();
+			for (OWLClassExpression clsexp: conjuncts) {
+				if (clsexp instanceof OWLClass) {
+					classConjuncts.add((OWLClass) clsexp);
+				}
+			}
+			if (classConjuncts.size()<2) {
+				//if there are less than 2 class conjuncts in the 1st GCI operand, that GCIs cannot be in
+				//violation of SubClass relation. we go to the next one.
+				continue;
+			}
+			if (classConjuncts.size()>2) {
+				helpers.print("Warning: The following axiom will not considered as it "
+						+ "has more than 2 class conjuncts: " + a , 2);
+				continue;
+			}
+			disjointnessAxiomsForTwoClasses++;
+			Iterator<OWLClass> setIter = classConjuncts.iterator();
+			OWLClass cl1 = setIter.next();
+			OWLClass cl2 = setIter.next();
+			Node<OWLClass> class1EquivalentClasses = reasoner.getEquivalentClasses(cl1);
+			NodeSet<OWLClass> class1SuperClasses = reasoner.getSuperClasses(cl1, considerOnlyDirectSubclasses);
+			NodeSet<OWLClass> class1SubClasses = reasoner.getSubClasses(cl1, considerOnlyDirectSubclasses);
+			if (class1EquivalentClasses.getEntities().contains(cl2)) {
+			   	//found one of the axioms fulfilling our criteria.
+			   	result.add(a);
+			    continue;
+			}
+		    if (class1SuperClasses.containsEntity(cl2)) {
+		    	result.add(a);
+		    	continue;
+		    }
+		    if (class1SubClasses.containsEntity(cl2)) {
+		    	result.add(a);
+		    	continue;
+		    }
+		 }
+		helpers.print("number of binary class disjointness axioms considered: " +disjointnessAxiomsForTwoClasses, 2);
+		return result;
+	}
 
 
 
@@ -865,7 +919,9 @@ public class EvaluatingGCIs {
 
        System.out.println("classes in GCI but not in GRO: " + classesNotInGRO);
        */
-
+       ArrayList<OWLAxiom> axiomsViolatingSubclassness = getAxiomsViolatingSubClassRels(axioms, false);
+       helpers.print("Number of axioms violating subclass relations: " + axiomsViolatingSubclassness.size(), 0);
+       helpers.print(axiomsViolatingSubclassness, 0);
 
        System.out.println("REACHED END OF MAIN.");
      }
