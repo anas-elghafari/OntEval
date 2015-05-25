@@ -1,0 +1,13 @@
+Numbe of axioms violating subclass relations: 12
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chemical> <http://www.bootstrep.eu/ontology/GRO#Ion>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Promoter>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#DNARegion>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#Promoter>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#AminoAcid> <http://www.bootstrep.eu/ontology/GRO#Chemical>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Chromosome>) owl:Nothing)
