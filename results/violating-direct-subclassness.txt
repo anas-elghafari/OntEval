@@ -1,4 +1,4 @@
-Numbe of axioms violating (direct) subclass relations: 7
+Number of axioms violating (direct) subclass relations: 7
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
