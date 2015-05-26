@@ -572,6 +572,146 @@ public class EvaluatingGCIs {
 		helpers.print("number of binary class disjointness axioms considered: " +disjointnessAxiomsForTwoClasses, 2);
 		return result;
 	}
+	
+	
+	
+	static void addAxiomsToOntology(List<OWLAxiom> axioms) {
+		for(OWLAxiom a: axioms) {
+        	ChangeApplied c = manager.addAxiom(gro, a);
+        	if(c == ChangeApplied.UNSUCCESSFULLY) {
+        		helpers.print("This Axiom couldn't be added to the ontology:\n" + a, 0);
+        		helpers.print("input form: " + axiomsToGcis.get(a.toString()), 0);
+        	}
+        }
+	}
+	
+	static boolean checkOntologyConsistency() {
+		reasoner.flush();
+        reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
+        
+		return reasoner.isConsistent();
+	}
+
+	
+	/**
+	 * calling this method causes re-loading the GRO ontology from file. So any added axioms are lost.
+	 * @throws OWLException
+	 */
+	static void compareGCIclassNamesWithGRO() throws OWLException {
+		loadGRO();
+		helpers.print("number of classes appearing in input file: " + extractedClassNames.size(), 0);
+		helpers.print("number of classes appearing in ontology: " + gro.getClassesInSignature().size(), 0);
+		Set<String> invalidClassNames = new HashSet<String>();
+		Set<String> groClassNames = new HashSet<String>();
+		for (OWLClass c: gro.getClassesInSignature()) {
+			groClassNames.add(c.getIRI().getShortForm());
+		}
+		for (String s: extractedClassNames) {
+			if (!groClassNames.contains(s)) {
+				invalidClassNames.add(s);
+			}
+		}
+		helpers.print("classes appearing in input file but not in ontology: " + invalidClassNames, 0);
+		
+	}
+	
+	
+	/**
+	 * calling this method causes re-loading the GRO ontology from file. So any added axioms are lost.
+	 * @throws OWLException
+	 */
+	static void compareGCIPropertyNamesWithGRO() throws OWLException {
+		loadGRO();
+		helpers.print("number of object properties appearing in input file: " + extractedPropertyNames.size(), 0);
+		helpers.print("number of object proerties appearing in ontology: " + gro.getObjectPropertiesInSignature().size(), 0);
+		Set<String> invalidPropNames = new HashSet<String>();
+		Set<String> groPropertyNames = new HashSet<String>();
+		for (OWLObjectProperty p: gro.getObjectPropertiesInSignature()) {
+			groPropertyNames.add(p.getIRI().getShortForm());
+		}
+		for (String s: extractedPropertyNames) {
+			if (!groPropertyNames.contains(s)) {
+				invalidPropNames.add(s);
+			}
+		}
+		helpers.print("obj properties appearing in input file but not in ontology: " + invalidPropNames, 0);
+		
+	}
+	
+	
+	
+	
+	public static void runAllTests() throws Exception {
+		initializeRecords();
+		loadGRO();
+		helpers.print("Running all tests:", 1);
+		helpers.print("input file: " + INPUTFILE, 0);
+		
+		
+		//parsing file:
+		ParserGCIs parser = new ParserGCIs(manager, factory, groIRI, INPUTFILE);
+		ArrayList<OWLAxiom> axioms = parser.parseFile();
+        helpers.print("number of GCIs parsed from input file:" + axioms.size(), 0);
+        axiomsToGcis = parser.getMappingAxiomsToGcis();
+        extractedClassNames = parser.getExtractedClassNames();
+        extractedPropertyNames = parser.getExtractedPropertyNames();
+        
+        //comparing class and property names from the input file with those in the ontology:
+        compareGCIclassNamesWithGRO();
+        compareGCIPropertyNamesWithGRO();
+        
+        
+        //checking consistency, before and after adding the axioms:
+        boolean consistencyBefore = checkOntologyConsistency();
+        helpers.print("\nConsistency (before adding any axioms): " + consistencyBefore, 0);
+        addAxiomsToOntology(axioms);
+		boolean consistencyAfter = checkOntologyConsistency();
+        helpers.print("\nConsistency (after adding the axioms): " + consistencyAfter, 0);
+        
+        
+        //checking for unsat classes:
+        Node<OWLClass> bottomNode = reasoner.getUnsatisfiableClasses();
+        Set<OWLClass> unsatisfiable = bottomNode.getEntitiesMinusBottom();
+        helpers.print("\n\n\n\nCount of unsat. classes: " + unsatisfiable.size(), 0);
+        if (!unsatisfiable.isEmpty()) {
+             helpers.print("The following classes are unsatisfiable: ", 0);
+             for (OWLClass cls : unsatisfiable) {
+            	 helpers.print(" " + cls, 0);
+             }
+        }
+        
+        //locating the GCIs that, by themselves, cause unsat classes:
+        mapGCIsToUnsatClasses(axioms);
+        
+        
+        //locating a set of GCIs whose removal prevents unsat classes from occuring:
+        getGCIsCausingUnsatClassesCUMULATIVE(axioms);
+        
+        
+        //locating GCIs entailed by the ontology:
+        loadGRO();
+        ArrayList<OWLAxiom> axiomsEntaildByOnt = getRedundantAxiomsDETAILED(axioms);
+        helpers.print("\n\n\n\nNumber of GCIs entailed by the ontology: " + axiomsEntaildByOnt.size(), 0);
+        helpers.print("List of GCIs entailed by Ontology: ", 1);
+        for (OWLAxiom a: axiomsEntaildByOnt){
+        	helpers.print(axiomsToGcis.get(a.toString()), 1);
+        	helpers.print(a.toString() + "\n", 1);
+        }
+        
+        
+        //Axioms violating subclass relations:
+        ArrayList<OWLAxiom> axiomsViolatingSubclassness = getAxiomsViolatingSubClassRels(axioms, false);
+        helpers.print("\n\n\n\nNumber of axioms violating subclass relations: " + axiomsViolatingSubclassness.size(), 0);
+        helpers.print(axiomsViolatingSubclassness, 0);
+        
+        //Axioms violating direct subclass relations:
+    
+        axiomsViolatingSubclassness = getAxiomsViolatingSubClassRels(axioms, true);
+        helpers.print("\n\n\n\nNumber of axioms violating (direct) subclass relations: " + axiomsViolatingSubclassness.size(), 0);
+        helpers.print(axiomsViolatingSubclassness, 0);
+        
+		
+	}
 
 
 
