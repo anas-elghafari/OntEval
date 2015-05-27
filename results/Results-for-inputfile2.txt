@@ -1,3 +1,4 @@
+
 Running all tests:
 input file: C:\Users\Anas\Desktop\gro-gcis-role-depth1-top30
 number of GCIs parsed from input file:1552
@@ -340,6 +341,11 @@ The following classes are unsatisfiable:
  <http://www.bootstrep.eu/ontology/GRO#Transcription>
 
 
+
+
+Identifying the GCIs that -individually- cause unsat classes:
+
+
 OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
 adding it caused (34) classes to become unsatisfiable:
  [Nucleus, CellComponent, Ribosome, Mitosis, CellDeath, CellCycle, CoiledChromosomalDNA, CellDifferentiation, Tissue, SPhase, CellGrowth, ProteinTargeting, NuclearExportOfmRNA, EukaryoticGeneExpression, CellAdhesion, CellularComponentOrganizationAndBiogenesis, Cell, IntraCellularTransport, G1Phase, ChromosomalDNA, CellDivision, Interphase, Chromosome, Meiosis, CellularDevelopmentalProcess, Y_Chromosome, Mitochondrion, Spliceosome, G2Phase, CellMotility, CellCyclePhase, CellCommunication, EukaryoticCell, X_Chromosome]
@@ -583,8 +589,13 @@ adding it caused (4) classes to become unsatisfiable:
 OWL axiom: SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Transcription>) owl:Nothing)
 adding it caused (36) classes to become unsatisfiable:
  [RegulationOfTranscriptionOfOperon, TranslationalReadthrough, Transcription, RegulationOfTranscriptionOfRegulon, FormationOfTranscriptionFactorComplex, TranscriptionInitiation, Regulon, TranscriptionRNADependent, TranscriptionOfOperon, TranscriptionTermination, FormationOfTranslationInitiationComplex, EukaryoticGeneExpression, SelenocysteineIncorporation, NegativeRegulationOfTranscriptionByTranscriptionRepressor, RNASplicing, PosttranslationalModification, Translation, Stimulon, TranslationTermination, TranscriptionOfGene, _3_Polyadenylation, TranslationInitiation, TranslationElongation, PosttranscriptionalModification, RNAElongation, NegativeRegulationOfTranscriptionOfGene, TranscriptionDuringRNA-mediatedTransposition, RegulationOfTranscriptionOfGene, TranscriptionOfStimulonGenes, ExpressionProfiling, TranscriptionOfRegulonGenes, _5_Capping, GeneExpression, FormationOfTranscriptionInitiationComplex, PositiveRegulationOfTranscriptionOfGene, TranscriptionDNADependent]
-Number of problematic GCIs causing some classes to become unsat.: 49
+Number of problematic GCIs causing unsat. classes: 49
 Total number of unsat classes accounted for by individual axioms: 316
+
+
+
+
+Identifying a set of GCIs that -collectively- cause unsat classes:
 
 
 input axiom no.2: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
@@ -635,14 +646,25 @@ adding it caused (46) classes to become unsatisfiable:
 input axiom no.538: SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>))
 adding it caused (6) classes to become unsatisfiable:
  [Binding, ProteinPolymerization, Agonist, Ligand, Antagonist, BindingAssay]
-In function mapGCI: This Axiom couldn't be added to the ontology:
-SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#precedes> <http://www.bootstrep.eu/ontology/GRO#GeneExpression>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#precedes> <http://www.bootstrep.eu/ontology/GRO#Transcription>)) owl:Nothing)
+
 Total number of unsat classes by the end: 321
 
+The set of of GCIs causing unsat classes: size: 10
+SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#MessengerRNA> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chemical> <http://www.bootstrep.eu/ontology/GRO#Ion>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chemical> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#DNARegion>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#AminoAcid> <http://www.bootstrep.eu/ontology/GRO#Chemical>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Promoter>) owl:Nothing)
 
 
 
-Number of GCIs entailed by the ontology: 294
+
+Number of GCIs entailed by the ontology: 319
 List of GCIs entailed by Ontology: 
 (gci (and Gene_cncpt ProteinComplex_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#ProteinComplex>) owl:Nothing)
@@ -1409,8 +1431,14 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Peptide> <
 (gci (and ExperimentalMethod_cncpt Peptide_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#ExperimentalMethod> <http://www.bootstrep.eu/ontology/GRO#Peptide>) owl:Nothing)
 
+(gci (and (exists HasPart (and)) Cell_cncpt) (exists HasPart CellComponent_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Cell> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#CellComponent>))
+
 (gci (and (exists Encodes (and)) ProteinComplex_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#ProteinComplex> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) owl:Nothing)
+
+(gci (and (exists Encodes (and)) Protein_cncpt) Gene_cncpt)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) <http://www.bootstrep.eu/ontology/GRO#Gene>)
 
 (gci (and (exists Encodes (and)) Localization_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Localization> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) owl:Nothing)
@@ -1442,6 +1470,9 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#PositiveRe
 (gci (and (exists Encodes (and)) AminoAcid_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#AminoAcid> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) owl:Nothing)
 
+(gci (and (exists Encodes (and)) Sequence_cncpt) (exists Encodes ProteinDomain_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Sequence> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>))
+
 (gci (and (exists Encodes (and)) TranscriptionFactor_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) owl:Nothing)
 
@@ -1457,14 +1488,32 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Experiment
 (gci (and (exists Encodes (and)) (exists HasPart (and)) Chromosome_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
 
+(gci (and (exists HasPart (and)) (exists LocatedIn (and)) Gene_cncpt Protein_cncpt) (exists FromSpecies Eukaryote_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))
+
+(gci (and (exists Encodes (and)) (exists LocatedIn (and)) Gene_cncpt Protein_cncpt) (and (exists Encodes Protein_cncpt) (exists LocatedIn Chromosome_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Chromosome>)))
+
 (gci (and (exists Encodes (and)) (exists LocatedIn (and)) Chromosome_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) owl:Nothing)
 
 (gci (and (exists Encodes Protein_cncpt) Chromosome_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>)) owl:Nothing)
 
+(gci (and (exists Encodes Protein_cncpt) (exists HasPart (and)) Gene_cncpt Protein_cncpt) (exists FromSpecies (and)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing))
+
+(gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) Gene_cncpt) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and))))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>))) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))
+
 (gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) (exists HasPart (and)) DNA_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+
+(gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) (exists FromSpecies (and))) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and)) Gene_cncpt))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing)) ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))
+
+(gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))
 
 (gci (and (exists Encodes Enzyme_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Enzyme>)) owl:Nothing)
@@ -1475,11 +1524,35 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome
 (gci (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt) Chromosome_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>)) owl:Nothing)
 
+(gci (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and)) Gene_cncpt Protein_cncpt) (exists HasPart Peptide_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn CellComponent_cncpt) Gene_cncpt Protein_cncpt) (exists HasPart ProteinDomain_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#CellComponent>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>))
+
 (gci (and (exists Encodes MessengerRNA_cncpt) Chromosome_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>)) owl:Nothing)
 
+(gci (and (exists Encodes MessengerRNA_cncpt) (exists FromSpecies (and)) Gene_cncpt Protein_cncpt) (exists HasPart (and)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))
+
+(gci (and (exists HasPart (and)) (exists LocatedIn Cell_cncpt) (exists LocatedIn Nucleus_cncpt) Protein_cncpt) (exists LocatedIn CellComponent_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Nucleus>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#CellComponent>))
+
+(gci (and (exists FromSpecies Virus_cncpt) Gene_cncpt Protein_cncpt) (and (exists Encodes MessengerRNA_cncpt) (exists Encodes Protein_cncpt) (exists HasFunction (and)) (exists HasPart Promoter_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Virus>)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Promoter>)))
+
+(gci (and (exists FromSpecies (and)) (exists HasFunction (and)) (exists HasPart Promoter_cncpt) Gene_cncpt Protein_cncpt) (and (exists Encodes MessengerRNA_cncpt) (exists Encodes Protein_cncpt) (exists FromSpecies Virus_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Promoter>)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Virus>)))
+
+(gci (and (exists Encodes (and)) (exists HasPart Promoter_cncpt) Gene_cncpt Protein_cncpt) (exists Encodes MessengerRNA_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Promoter>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>))
+
 (gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart Promoter_cncpt) (exists LocatedIn (and)) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Promoter>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) owl:Nothing)
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart AminoAcid_cncpt) Gene_cncpt Protein_cncpt) (exists LocatedIn Chromosome_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#AminoAcid>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Chromosome>))
 
 (gci (and (exists Encodes AminoAcid_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#AminoAcid>)) owl:Nothing)
@@ -1487,8 +1560,14 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <htt
 (gci (and (exists Encodes AminoAcid_cncpt) Chromosome_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#AminoAcid>)) owl:Nothing)
 
+(gci (and (exists HasPart Sequence_cncpt) Gene_cncpt Protein_cncpt) (and (exists Encodes TranscriptionFactor_cncpt) (exists HasPart ProteinDomain_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Sequence>)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>)))
+
 (gci (and (exists Encodes TranscriptionFactor_cncpt) Chromosome_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>)) owl:Nothing)
+
+(gci (and (exists Encodes TranscriptionFactor_cncpt) (exists HasPart (and)) Gene_cncpt Protein_cncpt) (and (exists HasPart ProteinDomain_cncpt) (exists HasPart Sequence_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Sequence>)))
 
 (gci (and (exists Encodes TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>)) owl:Nothing)
@@ -1502,8 +1581,14 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <htt
 (gci (and (exists Encodes ProteinSubunit_cncpt) Chromosome_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chromosome> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>)) owl:Nothing)
 
+(gci (and (exists Encodes MessengerRNA_cncpt) (exists HasPart ProteinDomain_cncpt) Gene_cncpt Protein_cncpt) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart Peptide_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>)))
+
 (gci (and (exists HasPart AminoAcid_cncpt) (exists HasPart ProteinDomain_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#AminoAcid>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>)) owl:Nothing)
+
+(gci (and (exists LocatedIn Tissue_cncpt) Gene_cncpt Protein_cncpt) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and)) (exists LocatedIn Chromosome_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Tissue>)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Chromosome>)))
 
 (gci (and (exists Encodes MessengerRNA_cncpt) (exists Encodes Protein_cncpt) (exists LocatedIn Chromosome_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Chromosome>)) owl:Nothing)
@@ -1511,14 +1596,26 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <htt
 (gci (and (exists Encodes Protein_cncpt) (exists LocatedIn Cell_cncpt) (exists LocatedIn Chromosome_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Chromosome>)) owl:Nothing)
 
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart ProteinDomain_cncpt) (exists LocatedIn Chromosome_cncpt) Gene_cncpt Protein_cncpt) (exists HasPart Peptide_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Chromosome>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>))
+
 (gci (and (exists Encodes (and Protein_cncpt Gene_cncpt)) (exists FromSpecies Eukaryote_cncpt) (exists HasPart Peptide_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>)) owl:Nothing)
+
+(gci (and (exists Encodes MessengerRNA_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasPart Peptide_cncpt) Gene_cncpt Protein_cncpt) (exists HasPart ProteinDomain_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>))
 
 (gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart Peptide_cncpt) (exists HasPart Promoter_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Promoter>)) owl:Nothing)
 
 (gci (and (exists HasPart AminoAcid_cncpt) (exists HasPart Peptide_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#AminoAcid>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>)) owl:Nothing)
+
+(gci (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt) (exists HasPart Peptide_cncpt) (exists HasPart ProteinDomain_cncpt) Gene_cncpt Protein_cncpt) (exists Encodes MessengerRNA_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#MessengerRNA>))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart Peptide_cncpt) (exists HasPart ProteinDomain_cncpt) (exists LocatedIn (and)) Gene_cncpt Protein_cncpt) (exists LocatedIn Chromosome_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Chromosome>))
 
 (gci (and (exists Encodes Peptide_cncpt) Gene_cncpt Protein_cncpt) (bottom))
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Peptide>)) owl:Nothing)
@@ -1555,3 +1652,4 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chemical> 
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#DNARegion>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Chromosome>) owl:Nothing)
+REACHED END OF MAIN.
