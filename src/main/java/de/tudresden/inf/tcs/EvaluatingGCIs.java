@@ -346,6 +346,7 @@ public class EvaluatingGCIs {
 	
 	
 	private static HashSet<OWLAxiom> getGCIsCausingUnsatClassesCUMULATIVE(ArrayList<OWLAxiom> axioms) throws Exception {
+		loadGRO();
 		HashSet<String> unsatBeforeAddition = new HashSet<String>();
 		HashSet<String> unsatAfterAddition = new HashSet<String>();
 		HashSet<String> difference = new HashSet<String>();
