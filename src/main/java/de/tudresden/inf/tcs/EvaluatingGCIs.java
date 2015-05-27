@@ -309,79 +309,88 @@ public class EvaluatingGCIs {
             manager.addAxiom(gro, a);
         }
     }
-
-
-
-
-    private static void mapGCIsToUnsatClasses(ArrayList<OWLAxiom> axioms) throws Exception {
-        HashMap<String, HashSet<String>> m = new HashMap<String, HashSet<String>>();
-        HashSet<String> allUnsatClasses = new HashSet<String>();
-        for(OWLAxiom a: axioms) {
-            loadGRO();
-            manager.addAxiom(gro, a);
-            reasoner.flush();
-            Node<OWLClass> bottomNode = reasoner.getUnsatisfiableClasses();
+    
+    
+       private static void mapGCIsToUnsatClasses(ArrayList<OWLAxiom> axioms) throws OWLOntologyCreationException {
+		HashMap<String, HashSet<String>> m = new HashMap<String, HashSet<String>>();
+		HashSet<String> allUnsatClasses = new HashSet<String>();
+		for(OWLAxiom a: axioms) {
+			loadGRO();
+			ChangeApplied c = manager.addAxiom(gro, a);
+        	if(c == ChangeApplied.UNSUCCESSFULLY) {
+        		helpers.print("This Axiom couldn't be added to the ontology:\n" + a, 0);	
+        	}
+        	reasoner.flush();
+        	Node<OWLClass> bottomNode = reasoner.getUnsatisfiableClasses();
             Set<OWLClass> unsat = bottomNode.getEntitiesMinusBottom();
-            HashSet<String> unsatClassNames = new HashSet<String>();
-            for(OWLClass cl: unsat) {
-                unsatClassNames.add(cl.getIRI().getFragment());
-            }
-            if (!unsatClassNames.isEmpty()) {
-                unsatClassesGCIs2.add(a);
-                System.out.println("\n\nOWL axiom: " +a);
-                System.out.println("adding it caused (" + unsatClassNames.size()  +
-                                   ") classes to become unsatisfiable:\n " +
-                                   unsatClassNames);
-            }
-            allUnsatClasses.addAll(unsatClassNames);
-            m.put(a.toString(), unsatClassNames);
-
-        }
-        System.out.println("Number of problematic GCIs causing some classes to become unsat.: " +  unsatClassesGCIs2.size());
-        System.out.println("Total number of unsat classes accounted for by individual axioms: " + allUnsatClasses.size());
-
-    }
-
-
-
-        private static HashSet<OWLAxiom> getGCIsCausingUnsatClassesCUMULATIVE(ArrayList<OWLAxiom> axioms) throws Exception {
-                HashSet<String> unsatBeforeAddition = new HashSet<String>();
-                HashSet<String> unsatAfterAddition = new HashSet<String>();
-                HashSet<String> difference = new HashSet<String>();
-                HashSet<OWLAxiom> problematicGCIs = new HashSet<OWLAxiom>();
-
-                for(int i=0; i<axioms.size(); i++) {
-                        OWLAxiom a = axioms.get(i);
-                        manager.addAxiom(gro, a);
-                reasoner.flush();
+			HashSet<String> unsatClassNames = new HashSet<String>();
+			for(OWLClass cl: unsat) {
+				unsatClassNames.add(cl.getIRI().getShortForm());
+			}
+			if (!unsatClassNames.isEmpty()) {
+				unsatClassesGCIs2.add(a);
+				helpers.print("\n\nOWL axiom: " +a, 1);
+				helpers.print("adding it caused (" + unsatClassNames.size()  + 
+						") classes to become unsatisfiable:\n " + 
+				unsatClassNames, 1);
+			}
+			allUnsatClasses.addAll(unsatClassNames);
+			m.put(a.toString(), unsatClassNames);
+			
+		}
+		System.out.println("Number of problematic GCIs causing unsat. classes: " +  unsatClassesGCIs2.size());
+		System.out.println("Total number of unsat classes accounted for by individual axioms: " + allUnsatClasses.size());
+		
+	}
+	
+	
+	
+	private static HashSet<OWLAxiom> getGCIsCausingUnsatClassesCUMULATIVE(ArrayList<OWLAxiom> axioms) throws Exception {
+		HashSet<String> unsatBeforeAddition = new HashSet<String>();
+		HashSet<String> unsatAfterAddition = new HashSet<String>();
+		HashSet<String> difference = new HashSet<String>();
+		HashSet<OWLAxiom> problematicGCIs = new HashSet<OWLAxiom>();
+		
+		for(int i=0; i<axioms.size(); i++) {
+			OWLAxiom a = axioms.get(i);
+			ChangeApplied c = manager.addAxiom(gro, a);
+        	if(c == ChangeApplied.UNSUCCESSFULLY) {
+        		helpers.print("In function mapGCI: This Axiom couldn't be added to the ontology:\n" + a, 0);	
+        	}
+        	reasoner.flush();
             reasoner.precomputeInferences(InferenceType.CLASS_HIERARCHY);
-                Node<OWLClass> bottomNode = reasoner.getUnsatisfiableClasses();
-            Set<OWLClass> unsat = bottomNode.getEntitiesMinusBottom();
+        	Node<OWLClass> bottomNode = reasoner.getUnsatisfiableClasses();
+            Set<OWLClass> unsat = bottomNode.getEntitiesMinusBottom(); 
             unsatAfterAddition= new HashSet<String>();
             difference = new HashSet<String>();
-                        for(OWLClass cl: unsat) {
-                                unsatAfterAddition.add(cl.getIRI().getFragment());
-                        }
-                        for (String cl: unsatAfterAddition) {
-                                if (!unsatBeforeAddition.contains(cl)) {
-                                        difference.add(cl);
-                                }
-                        }
+			for(OWLClass cl: unsat) {
+				unsatAfterAddition.add(cl.getIRI().getShortForm());
+			}
+			for (String cl: unsatAfterAddition) {
+				if (!unsatBeforeAddition.contains(cl)) {
+					difference.add(cl);
+				}
+			}
+			
+						
+			if (!difference.isEmpty()) {
+				problematicGCIs.add(a);
+				helpers.print("\n\ninput axiom no." + (i+1) + ": "  +a, 1);
+				helpers.print("adding it caused (" +  difference.size() +
+						") classes to become unsatisfiable:\n " + difference, 1);
+			}
+			unsatBeforeAddition = unsatAfterAddition;
+			
+		}
+		
+		helpers.print("\nTotal number of unsat classes by the end: " + unsatAfterAddition.size(), 1);
+		helpers.print("\nThe set of of GCIs causing unsat classes: size: " + problematicGCIs.size(), 1);
+		helpers.print(problematicGCIs, 1);
+		return problematicGCIs;
+	}
 
 
-                        if (!difference.isEmpty()) {
-                                problematicGCIs.add(a);
-                                System.out.println("\n\ninput axiom no." + (i+1) + ": "  +a);
-                                System.out.println("adding it caused (" +  difference.size() +
-                                                ") classes to become unsatisfiable:\n " + difference);
-                        }
-                        unsatBeforeAddition = unsatAfterAddition;
 
-                }
-
-                System.out.println("Total number of unsat classes by the end: " + unsatAfterAddition.size());
-                return problematicGCIs;
-        }
 
 
 
