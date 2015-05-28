@@ -2836,4 +2836,17 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chemical> 
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#DNARegion>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Chromosome>) owl:Nothing)
+
+
+
+
+NEXT TEST:
+number of axioms violating GRO role relations: 7
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#MessengerRNA> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Transcription> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Tissue> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#GeneExpression> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#AminoAcid>)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Transcription> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#GeneExpression> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
 REACHED END OF MAIN.
