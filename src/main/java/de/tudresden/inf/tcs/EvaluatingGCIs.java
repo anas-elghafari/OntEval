@@ -376,17 +376,14 @@ public class EvaluatingGCIs {
 						
 			if (!difference.isEmpty()) {
 				problematicGCIs.add(a);
-				helpers.print("\n\ninput axiom no." + (i+1) + ": "  +a, 1);
+				helpers.print("\n\ninput axiom no." + (i+1) + ": "  +a, 3);
 				helpers.print("adding it caused (" +  difference.size() +
-						") classes to become unsatisfiable:\n " + difference, 1);
+						") classes to become unsatisfiable:\n " + difference, 3);
 			}
 			unsatBeforeAddition = unsatAfterAddition;
 			
 		}
-		
-		helpers.print("\nTotal number of unsat classes by the end: " + unsatAfterAddition.size(), 1);
-		helpers.print("\nThe set of of GCIs causing unsat classes: size: " + problematicGCIs.size(), 1);
-		helpers.print(problematicGCIs, 1);
+		helpers.print(problematicGCIs, 3);
 		return problematicGCIs;
 	}
 
