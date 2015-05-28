@@ -646,8 +646,6 @@ public class EvaluatingGCIs {
 	}
 	
 	
-	
-	
 	public static void runAllTests() throws Exception {
 		initializeRecords();
 		loadGRO();
@@ -658,10 +656,10 @@ public class EvaluatingGCIs {
 		//parsing file:
 		ParserGCIs parser = new ParserGCIs(manager, factory, groIRI, INPUTFILE);
 		ArrayList<OWLAxiom> axioms = parser.parseFile();
-        helpers.print("number of GCIs parsed from input file:" + axioms.size(), 0);
-        axiomsToGcis = parser.getMappingAxiomsToGcis();
-        extractedClassNames = parser.getExtractedClassNames();
-        extractedPropertyNames = parser.getExtractedPropertyNames();
+        	helpers.print("number of GCIs parsed from input file:" + axioms.size(), 0);
+        	axiomsToGcis = parser.getMappingAxiomsToGcis();
+        	extractedClassNames = parser.getExtractedClassNames();
+        	extractedPropertyNames = parser.getExtractedPropertyNames();
         
         //comparing class and property names from the input file with those in the ontology:
         compareGCIclassNamesWithGRO();
@@ -669,6 +667,7 @@ public class EvaluatingGCIs {
         
         
         //checking consistency, before and after adding the axioms:
+        helpers.print("NEXT TEST:", 0);
         boolean consistencyBefore = checkOntologyConsistency();
         helpers.print("\nConsistency (before adding any axioms): " + consistencyBefore, 0);
         addAxiomsToOntology(axioms);
@@ -677,9 +676,10 @@ public class EvaluatingGCIs {
         
         
         //checking for unsat classes:
+        helpers.print("\n\n\n\nNEXT TEST:", 0);
         Node<OWLClass> bottomNode = reasoner.getUnsatisfiableClasses();
         Set<OWLClass> unsatisfiable = bottomNode.getEntitiesMinusBottom();
-        helpers.print("\n\n\n\nCount of unsat. classes: " + unsatisfiable.size(), 0);
+        helpers.print("Count of unsat. classes: " + unsatisfiable.size(), 0);
         if (!unsatisfiable.isEmpty()) {
              helpers.print("The following classes are unsatisfiable: ", 0);
              for (OWLClass cls : unsatisfiable) {
@@ -687,18 +687,29 @@ public class EvaluatingGCIs {
              }
         }
         
+        
         //locating the GCIs that, by themselves, cause unsat classes:
+        helpers.print("\n\n\n\nNEXT TEST:", 0);
+        helpers.print("Identifying the GCIs that -individually- cause unsat classes:", 0);
         mapGCIsToUnsatClasses(axioms);
         
         
         //locating a set of GCIs whose removal prevents unsat classes from occuring:
-        getGCIsCausingUnsatClassesCUMULATIVE(axioms);
+        helpers.print("\n\n\n\nNEXT TEST:", 0);
+        helpers.print("Identifying a set of GCIs that -collectively- cause unsat classes:", 0);
+        Set<OWLAxiom> unsatClassGCIs = getProblematicGCIs(axioms);
+        helpers.print("size of GCI set (non-minimal) that needs to be removed to get rid of unsat classes:_" + unsatClassGCIs.size() , 0);
+        for(OWLAxiom a: unsatClassGCIs) {
+        	helpers.print(a, 0);
+        }
+        
         
         
         //locating GCIs entailed by the ontology:
+        helpers.print("\n\n\n\nNEXT TEST:", 0);
         loadGRO();
         ArrayList<OWLAxiom> axiomsEntaildByOnt = getRedundantAxiomsDETAILED(axioms);
-        helpers.print("\n\n\n\nNumber of GCIs entailed by the ontology: " + axiomsEntaildByOnt.size(), 0);
+        helpers.print("Number of GCIs entailed by the ontology: " + axiomsEntaildByOnt.size(), 0);
         helpers.print("List of GCIs entailed by Ontology: ", 1);
         for (OWLAxiom a: axiomsEntaildByOnt){
         	helpers.print(axiomsToGcis.get(a.toString()), 1);
@@ -706,19 +717,40 @@ public class EvaluatingGCIs {
         }
         
         
+        
+        
+        //Identifying GCIs that neither follow form the ontology nor cause unsatisfiable classes:
+        helpers.print("\n\n\n\nNEXT TEST:", 0);
+        ArrayList<OWLAxiom> axiomsMinusUnsatClassGCIs = filterOutAxiomsCausingUnsatClasses(axioms);
+        ArrayList<OWLAxiom> axiomsMinusUnsatAndEntailed = filterOutAxiomsEntailedByOntology(axiomsMinusUnsatClassGCIs); 
+        helpers.print("GCIs that neither cause unsat classes nor follow from GRO. "
+        		+ "size: " + axiomsMinusUnsatAndEntailed.size(), 0);
+        for (OWLAxiom a: axiomsMinusUnsatAndEntailed) {
+        	helpers.print(axiomsToGcis.get(a.toString()), 0);
+        }
+        
+        
+        
         //Axioms violating subclass relations:
+        helpers.print("\n\n\n\nNEXT TEST:", 0);
         ArrayList<OWLAxiom> axiomsViolatingSubclassness = getAxiomsViolatingSubClassRels(axioms, false);
-        helpers.print("\n\n\n\nNumber of axioms violating subclass relations: " + axiomsViolatingSubclassness.size(), 0);
+        helpers.print("Number of axioms violating subclass relations: " + axiomsViolatingSubclassness.size(), 0);
         helpers.print(axiomsViolatingSubclassness, 0);
         
         //Axioms violating direct subclass relations:
-    
+        helpers.print("\n\n\n\nNEXT TEST:", 0);
         axiomsViolatingSubclassness = getAxiomsViolatingSubClassRels(axioms, true);
-        helpers.print("\n\n\n\nNumber of axioms violating (direct) subclass relations: " + axiomsViolatingSubclassness.size(), 0);
+        helpers.print("Number of axioms violating (direct) subclass relations: " + axiomsViolatingSubclassness.size(), 0);
         helpers.print(axiomsViolatingSubclassness, 0);
         
 		
 	}
+	
+	
+	
+	
+
+
 
 
 
