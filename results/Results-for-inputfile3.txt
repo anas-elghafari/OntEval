@@ -1,0 +1,820 @@
+Running all tests:
+input file: C:\Users\Anas\Desktop\role-depth2-top10
+number of GCIs parsed from input file:473
+number of classes appearing in input file: 5
+number of classes appearing in ontology: 507
+classes appearing in input file but not in ontology: []
+number of object properties appearing in input file: 7
+number of object proerties appearing in ontology: 24
+obj properties appearing in input file but not in ontology: []
+NEXT TEST:
+
+Consistency (before adding any axioms): true
+
+Consistency (after adding the axioms): true
+
+
+
+
+NEXT TEST:
+Count of unsat. classes: 133
+The following classes are unsatisfiable: 
+ <http://www.bootstrep.eu/ontology/GRO#BindingAssay>
+ <http://www.bootstrep.eu/ontology/GRO#Enzyme>
+ <http://www.bootstrep.eu/ontology/GRO#WRKY>
+ <http://www.bootstrep.eu/ontology/GRO#CopperFist>
+ <http://www.bootstrep.eu/ontology/GRO#IntraCellularTransport>
+ <http://www.bootstrep.eu/ontology/GRO#ProteinBiosynthesis>
+ <http://www.bootstrep.eu/ontology/GRO#DNABindingDomainOfTF>
+ <http://www.bootstrep.eu/ontology/GRO#_3_Polyadenylation>
+ <http://www.bootstrep.eu/ontology/GRO#PositiveRegulationOfTranscriptionOfGene>
+ <http://www.bootstrep.eu/ontology/GRO#PosttranscriptionalModification>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionOfRegulonGenes>
+ <http://www.bootstrep.eu/ontology/GRO#bHSHTF>
+ <http://www.bootstrep.eu/ontology/GRO#ProteinMutation>
+ <http://www.bootstrep.eu/ontology/GRO#HomeoBox>
+ <http://www.bootstrep.eu/ontology/GRO#TBPDomain>
+ <http://www.bootstrep.eu/ontology/GRO#GeneMutation>
+ <http://www.bootstrep.eu/ontology/GRO#ReporterGeneConstruction>
+ <http://www.bootstrep.eu/ontology/GRO#HistoneFoldTF>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionInitiation>
+ <http://www.bootstrep.eu/ontology/GRO#RNAPolymerase>
+ <http://www.bootstrep.eu/ontology/GRO#PairedBox>
+ <http://www.bootstrep.eu/ontology/GRO#NegativeRegulationOfTranscriptionByTranscriptionRepressor>
+ <http://www.bootstrep.eu/ontology/GRO#AP2_EREBPRelatedTF>
+ <http://www.bootstrep.eu/ontology/GRO#TranslationalReadthrough>
+ <http://www.bootstrep.eu/ontology/GRO#HSFTF>
+ <http://www.bootstrep.eu/ontology/GRO#FormationOfTranscriptionFactorComplex>
+ <http://www.bootstrep.eu/ontology/GRO#NuclearExportOfmRNA>
+ <http://www.bootstrep.eu/ontology/GRO#GCMTF>
+ <http://www.bootstrep.eu/ontology/GRO#GeneExpression>
+ <http://www.bootstrep.eu/ontology/GRO#PosttranslationalModification>
+ <http://www.bootstrep.eu/ontology/GRO#SMAD_NF1>
+ <http://www.bootstrep.eu/ontology/GRO#SMAD_NF1Domain>
+ <http://www.bootstrep.eu/ontology/GRO#TranslationElongation>
+ <http://www.bootstrep.eu/ontology/GRO#HomeoboxTF>
+ <http://www.bootstrep.eu/ontology/GRO#RNABiosynthesis>
+ <http://www.bootstrep.eu/ontology/GRO#RNAPolymeraseIIHoloenzyme>
+ <http://www.bootstrep.eu/ontology/GRO#TryptophanCluster>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionOfStimulonGenes>
+ <http://www.bootstrep.eu/ontology/GRO#BetaScaffoldDomainTF_WithMinorGrooveContacts>
+ <http://www.bootstrep.eu/ontology/GRO#ExpressionProfiling>
+ <http://www.bootstrep.eu/ontology/GRO#TryptophanClusterTF>
+ <http://www.bootstrep.eu/ontology/GRO#MADS>
+ <http://www.bootstrep.eu/ontology/GRO#TranslationTermination>
+ <http://www.bootstrep.eu/ontology/GRO#ForkheadWingedHelix>
+ <http://www.bootstrep.eu/ontology/GRO#SANDDomainTF>
+ <http://www.bootstrep.eu/ontology/GRO#ProteinPolymerization>
+ <http://www.bootstrep.eu/ontology/GRO#HelixTurnHelixDomain>
+ <http://www.bootstrep.eu/ontology/GRO#ColdShockDomainTF>
+ <http://www.bootstrep.eu/ontology/GRO#ForkheadWingedHelixTF>
+ <http://www.bootstrep.eu/ontology/GRO#RNAPolymeraseII>
+ <http://www.bootstrep.eu/ontology/GRO#BetaScaffoldDomain_WithMinorGrooveContacts>
+ <http://www.bootstrep.eu/ontology/GRO#ZincCoordinatingDomain>
+ <http://www.bootstrep.eu/ontology/GRO#RegulationOfTranscriptionOfOperon>
+ <http://www.bootstrep.eu/ontology/GRO#Regulon>
+ <http://www.bootstrep.eu/ontology/GRO#AP2EREBPRelatedDomain>
+ <http://www.bootstrep.eu/ontology/GRO#STATTF>
+ <http://www.bootstrep.eu/ontology/GRO#bHSH>
+ <http://www.bootstrep.eu/ontology/GRO#NuclearReceptor>
+ <http://www.bootstrep.eu/ontology/GRO#GeneralTranscriptionFactor>
+ <http://www.bootstrep.eu/ontology/GRO#RHR>
+ <http://www.bootstrep.eu/ontology/GRO#Translation>
+ <http://www.bootstrep.eu/ontology/GRO#RNASplicing>
+ <http://www.bootstrep.eu/ontology/GRO#p53LikeTF>
+ <http://www.bootstrep.eu/ontology/GRO#TBoxDomain>
+ <http://www.bootstrep.eu/ontology/GRO#Stimulon>
+ <http://www.bootstrep.eu/ontology/GRO#EukaryoticGeneExpression>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionOfOperon>
+ <http://www.bootstrep.eu/ontology/GRO#C6ZincClusterTF>
+ <http://www.bootstrep.eu/ontology/GRO#ColdShockDomain>
+ <http://www.bootstrep.eu/ontology/GRO#CopperFistTF>
+ <http://www.bootstrep.eu/ontology/GRO#BasicDomainTF>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactorActivity>
+ <http://www.bootstrep.eu/ontology/GRO#PocketDomain>
+ <http://www.bootstrep.eu/ontology/GRO#BetaBarrelAlphaHelixDomainTF>
+ <http://www.bootstrep.eu/ontology/GRO#RNAElongation>
+ <http://www.bootstrep.eu/ontology/GRO#HelixTurnHelixDomainTF>
+ <http://www.bootstrep.eu/ontology/GRO#ZincCoordinatingDomainTF>
+ <http://www.bootstrep.eu/ontology/GRO#TEADomain>
+ <http://www.bootstrep.eu/ontology/GRO#MADSTF>
+ <http://www.bootstrep.eu/ontology/GRO#bZIPTF>
+ <http://www.bootstrep.eu/ontology/GRO#HMGTF>
+ <http://www.bootstrep.eu/ontology/GRO#bHLH>
+ <http://www.bootstrep.eu/ontology/GRO#PolymeraseActivity>
+ <http://www.bootstrep.eu/ontology/GRO#Tissue>
+ <http://www.bootstrep.eu/ontology/GRO#PairedBoxTF>
+ <http://www.bootstrep.eu/ontology/GRO#C6ZincCluster>
+ <http://www.bootstrep.eu/ontology/GRO#RHRTF>
+ <http://www.bootstrep.eu/ontology/GRO#TranslationInitiation>
+ <http://www.bootstrep.eu/ontology/GRO#p53Like>
+ <http://www.bootstrep.eu/ontology/GRO#GCM>
+ <http://www.bootstrep.eu/ontology/GRO#SelenocysteineIncorporation>
+ <http://www.bootstrep.eu/ontology/GRO#NegativeRegulationOfTranscriptionOfGene>
+ <http://www.bootstrep.eu/ontology/GRO#FormationOfTranslationInitiationComplex>
+ <http://www.bootstrep.eu/ontology/GRO#HMG>
+ <http://www.bootstrep.eu/ontology/GRO#bHLHTF>
+ <http://www.bootstrep.eu/ontology/GRO#DMTF>
+ <http://www.bootstrep.eu/ontology/GRO#HSF>
+ <http://www.bootstrep.eu/ontology/GRO#SANDDomain>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionDuringRNA-mediatedTransposition>
+ <http://www.bootstrep.eu/ontology/GRO#HistoneFold>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionTermination>
+ <http://www.bootstrep.eu/ontology/GRO#Polymerase>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionOfGene>
+ <http://www.bootstrep.eu/ontology/GRO#WRKYTF>
+ <http://www.bootstrep.eu/ontology/GRO#RegulationOfTranscriptionOfGene>
+ <http://www.bootstrep.eu/ontology/GRO#STAT>
+ <http://www.bootstrep.eu/ontology/GRO#FormationOfTranscriptionInitiationComplex>
+ <http://www.bootstrep.eu/ontology/GRO#RNAPolymeraseActivity>
+ <http://www.bootstrep.eu/ontology/GRO#bZIP>
+ <http://www.bootstrep.eu/ontology/GRO#Grainyhead>
+ <http://www.bootstrep.eu/ontology/GRO#DM>
+ <http://www.bootstrep.eu/ontology/GRO#PocketDomainTF>
+ <http://www.bootstrep.eu/ontology/GRO#RegulationOfTranscriptionOfRegulon>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>
+ <http://www.bootstrep.eu/ontology/GRO#_5_Capping>
+ <http://www.bootstrep.eu/ontology/GRO#RuntLikeDomain>
+ <http://www.bootstrep.eu/ontology/GRO#BetaBarrelAlphaHelixDomain>
+ <http://www.bootstrep.eu/ontology/GRO#GrainyHeadTF>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionDNADependent>
+ <http://www.bootstrep.eu/ontology/GRO#BasicDomain>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionInitiationComplex>
+ <http://www.bootstrep.eu/ontology/GRO#CellAdhesion>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactorComplex>
+ <http://www.bootstrep.eu/ontology/GRO#DNAPolymerase>
+ <http://www.bootstrep.eu/ontology/GRO#RuntLikeTF>
+ <http://www.bootstrep.eu/ontology/GRO#DBDomainOfNuclearReceptor>
+ <http://www.bootstrep.eu/ontology/GRO#TEADomainTF>
+ <http://www.bootstrep.eu/ontology/GRO#ProteinTargeting>
+ <http://www.bootstrep.eu/ontology/GRO#TBP>
+ <http://www.bootstrep.eu/ontology/GRO#TranscriptionRNADependent>
+ <http://www.bootstrep.eu/ontology/GRO#FusionOfGeneWithReporterGene>
+ <http://www.bootstrep.eu/ontology/GRO#GeneFusion>
+ <http://www.bootstrep.eu/ontology/GRO#Transcription>
+
+
+
+
+NEXT TEST:
+Identifying the GCIs that -individually- cause unsat classes:
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+adding it caused (44) classes to become unsatisfiable:
+ [RegulationOfTranscriptionOfOperon, TranslationalReadthrough, Transcription, RegulationOfTranscriptionOfRegulon, FormationOfTranscriptionFactorComplex, RNAPolymeraseII, TranscriptionInitiation, DNAPolymerase, Regulon, TranscriptionRNADependent, TranscriptionOfOperon, TranscriptionTermination, FormationOfTranslationInitiationComplex, RNAPolymerase, EukaryoticGeneExpression, SelenocysteineIncorporation, NegativeRegulationOfTranscriptionByTranscriptionRepressor, RNASplicing, PosttranslationalModification, Translation, Stimulon, Enzyme, TranslationTermination, TranscriptionOfGene, _3_Polyadenylation, TranslationInitiation, TranslationElongation, PosttranscriptionalModification, RNAPolymeraseActivity, RNAElongation, NegativeRegulationOfTranscriptionOfGene, TranscriptionDuringRNA-mediatedTransposition, Polymerase, PolymeraseActivity, RegulationOfTranscriptionOfGene, TranscriptionOfStimulonGenes, ExpressionProfiling, TranscriptionOfRegulonGenes, _5_Capping, GeneExpression, FormationOfTranscriptionInitiationComplex, PositiveRegulationOfTranscriptionOfGene, RNAPolymeraseIIHoloenzyme, TranscriptionDNADependent]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) owl:Nothing)
+adding it caused (77) classes to become unsatisfiable:
+ [MADS, TranscriptionFactor, HistoneFoldTF, DM, ForkheadWingedHelix, RuntLikeDomain, bHLH, ForkheadWingedHelixTF, TranscriptionInitiationComplex, PairedBoxTF, AP2EREBPRelatedDomain, SMAD_NF1Domain, RuntLikeTF, C6ZincCluster, HSF, PairedBox, DMTF, BetaScaffoldDomain_WithMinorGrooveContacts, PocketDomainTF, WRKY, SMAD_NF1, HomeoboxTF, TBP, SANDDomain, TEADomainTF, NuclearReceptor, STATTF, GeneralTranscriptionFactor, DNABindingDomainOfTF, TEADomain, WRKYTF, PocketDomain, C6ZincClusterTF, GCMTF, TranscriptionFactorComplex, HelixTurnHelixDomainTF, BetaScaffoldDomainTF_WithMinorGrooveContacts, HomeoBox, ColdShockDomainTF, BetaBarrelAlphaHelixDomainTF, BasicDomain, TryptophanCluster, SANDDomainTF, BetaBarrelAlphaHelixDomain, bZIPTF, bHLHTF, FormationOfTranscriptionFactorComplex, TBPDomain, MADSTF, HMGTF, HelixTurnHelixDomain, HSFTF, TranscriptionFactorActivity, bHSH, ZincCoordinatingDomain, p53Like, AP2_EREBPRelatedTF, RHR, CopperFist, GrainyHeadTF, DBDomainOfNuclearReceptor, TBoxDomain, p53LikeTF, TryptophanClusterTF, HMG, CopperFistTF, RHRTF, ColdShockDomain, GCM, BasicDomainTF, ZincCoordinatingDomainTF, STAT, bZIP, HistoneFold, bHSHTF, Grainyhead, FormationOfTranscriptionInitiationComplex]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+adding it caused (44) classes to become unsatisfiable:
+ [RegulationOfTranscriptionOfOperon, TranslationalReadthrough, Transcription, RegulationOfTranscriptionOfRegulon, FormationOfTranscriptionFactorComplex, RNAPolymeraseII, TranscriptionInitiation, DNAPolymerase, Regulon, TranscriptionRNADependent, TranscriptionOfOperon, TranscriptionTermination, FormationOfTranslationInitiationComplex, RNAPolymerase, EukaryoticGeneExpression, SelenocysteineIncorporation, NegativeRegulationOfTranscriptionByTranscriptionRepressor, RNASplicing, PosttranslationalModification, Translation, Stimulon, Enzyme, TranslationTermination, TranscriptionOfGene, _3_Polyadenylation, TranslationInitiation, TranslationElongation, PosttranscriptionalModification, RNAPolymeraseActivity, RNAElongation, NegativeRegulationOfTranscriptionOfGene, TranscriptionDuringRNA-mediatedTransposition, Polymerase, PolymeraseActivity, RegulationOfTranscriptionOfGene, TranscriptionOfStimulonGenes, ExpressionProfiling, TranscriptionOfRegulonGenes, _5_Capping, GeneExpression, FormationOfTranscriptionInitiationComplex, PositiveRegulationOfTranscriptionOfGene, RNAPolymeraseIIHoloenzyme, TranscriptionDNADependent]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+adding it caused (77) classes to become unsatisfiable:
+ [MADS, TranscriptionFactor, HistoneFoldTF, DM, ForkheadWingedHelix, RuntLikeDomain, bHLH, ForkheadWingedHelixTF, TranscriptionInitiationComplex, PairedBoxTF, AP2EREBPRelatedDomain, SMAD_NF1Domain, RuntLikeTF, C6ZincCluster, HSF, PairedBox, DMTF, BetaScaffoldDomain_WithMinorGrooveContacts, PocketDomainTF, WRKY, SMAD_NF1, HomeoboxTF, TBP, SANDDomain, TEADomainTF, NuclearReceptor, STATTF, GeneralTranscriptionFactor, DNABindingDomainOfTF, TEADomain, WRKYTF, PocketDomain, C6ZincClusterTF, GCMTF, TranscriptionFactorComplex, HelixTurnHelixDomainTF, BetaScaffoldDomainTF_WithMinorGrooveContacts, HomeoBox, ColdShockDomainTF, BetaBarrelAlphaHelixDomainTF, BasicDomain, TryptophanCluster, SANDDomainTF, BetaBarrelAlphaHelixDomain, bZIPTF, bHLHTF, FormationOfTranscriptionFactorComplex, TBPDomain, MADSTF, HMGTF, HelixTurnHelixDomain, HSFTF, TranscriptionFactorActivity, bHSH, ZincCoordinatingDomain, p53Like, AP2_EREBPRelatedTF, RHR, CopperFist, GrainyHeadTF, DBDomainOfNuclearReceptor, TBoxDomain, p53LikeTF, TryptophanClusterTF, HMG, CopperFistTF, RHRTF, ColdShockDomain, GCM, BasicDomainTF, ZincCoordinatingDomainTF, STAT, bZIP, HistoneFold, bHSHTF, Grainyhead, FormationOfTranscriptionInitiationComplex]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+adding it caused (36) classes to become unsatisfiable:
+ [RegulationOfTranscriptionOfOperon, TranslationalReadthrough, Transcription, RegulationOfTranscriptionOfRegulon, FormationOfTranscriptionFactorComplex, TranscriptionInitiation, Regulon, TranscriptionRNADependent, TranscriptionOfOperon, TranscriptionTermination, FormationOfTranslationInitiationComplex, EukaryoticGeneExpression, SelenocysteineIncorporation, NegativeRegulationOfTranscriptionByTranscriptionRepressor, RNASplicing, PosttranslationalModification, Translation, Stimulon, TranslationTermination, TranscriptionOfGene, _3_Polyadenylation, TranslationInitiation, TranslationElongation, PosttranscriptionalModification, RNAElongation, NegativeRegulationOfTranscriptionOfGene, TranscriptionDuringRNA-mediatedTransposition, RegulationOfTranscriptionOfGene, TranscriptionOfStimulonGenes, ExpressionProfiling, TranscriptionOfRegulonGenes, _5_Capping, GeneExpression, FormationOfTranscriptionInitiationComplex, PositiveRegulationOfTranscriptionOfGene, TranscriptionDNADependent]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+adding it caused (1) classes to become unsatisfiable:
+ [EukaryoticGeneExpression]
+
+
+OWL axiom: SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+adding it caused (38) classes to become unsatisfiable:
+ [RegulationOfTranscriptionOfOperon, TranslationalReadthrough, Transcription, RegulationOfTranscriptionOfRegulon, FormationOfTranscriptionFactorComplex, TranscriptionInitiation, Regulon, TranscriptionRNADependent, TranscriptionOfOperon, TranscriptionTermination, FormationOfTranslationInitiationComplex, EukaryoticGeneExpression, SelenocysteineIncorporation, NegativeRegulationOfTranscriptionByTranscriptionRepressor, RNASplicing, PosttranslationalModification, Translation, Stimulon, TranslationTermination, TranscriptionOfGene, _3_Polyadenylation, TranslationInitiation, TranslationElongation, PosttranscriptionalModification, RNAElongation, NegativeRegulationOfTranscriptionOfGene, TranscriptionDuringRNA-mediatedTransposition, RegulationOfTranscriptionOfGene, TranscriptionOfStimulonGenes, ExpressionProfiling, ProteinMutation, TranscriptionOfRegulonGenes, _5_Capping, GeneExpression, FormationOfTranscriptionInitiationComplex, PositiveRegulationOfTranscriptionOfGene, ProteinBiosynthesis, TranscriptionDNADependent]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Cell>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) owl:Nothing)
+adding it caused (1) classes to become unsatisfiable:
+ [Tissue]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) owl:Nothing)
+adding it caused (4) classes to become unsatisfiable:
+ [FormationOfTranscriptionFactorComplex, TranscriptionInitiationComplex, TranscriptionFactorComplex, FormationOfTranscriptionInitiationComplex]
+
+
+OWL axiom: SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+adding it caused (43) classes to become unsatisfiable:
+ [RegulationOfTranscriptionOfOperon, TranslationalReadthrough, Transcription, RegulationOfTranscriptionOfRegulon, FormationOfTranscriptionFactorComplex, TranscriptionInitiation, Regulon, TranscriptionRNADependent, TranscriptionOfOperon, TranscriptionTermination, ReporterGeneConstruction, FormationOfTranslationInitiationComplex, FusionOfGeneWithReporterGene, GeneFusion, EukaryoticGeneExpression, SelenocysteineIncorporation, NegativeRegulationOfTranscriptionByTranscriptionRepressor, RNASplicing, PosttranslationalModification, Translation, Stimulon, TranslationTermination, TranscriptionOfGene, _3_Polyadenylation, TranslationInitiation, TranslationElongation, PosttranscriptionalModification, RNAElongation, NegativeRegulationOfTranscriptionOfGene, TranscriptionDuringRNA-mediatedTransposition, RegulationOfTranscriptionOfGene, TranscriptionOfStimulonGenes, ExpressionProfiling, ProteinMutation, TranscriptionOfRegulonGenes, RNABiosynthesis, _5_Capping, GeneExpression, FormationOfTranscriptionInitiationComplex, PositiveRegulationOfTranscriptionOfGene, ProteinBiosynthesis, GeneMutation, TranscriptionDNADependent]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing))) owl:Nothing)
+adding it caused (4) classes to become unsatisfiable:
+ [FormationOfTranscriptionFactorComplex, TranscriptionInitiationComplex, TranscriptionFactorComplex, FormationOfTranscriptionInitiationComplex]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) owl:Nothing)
+adding it caused (4) classes to become unsatisfiable:
+ [FormationOfTranscriptionFactorComplex, TranscriptionInitiationComplex, TranscriptionFactorComplex, FormationOfTranscriptionInitiationComplex]
+
+
+OWL axiom: SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+adding it caused (36) classes to become unsatisfiable:
+ [RegulationOfTranscriptionOfOperon, TranslationalReadthrough, Transcription, RegulationOfTranscriptionOfRegulon, FormationOfTranscriptionFactorComplex, TranscriptionInitiation, Regulon, TranscriptionRNADependent, TranscriptionOfOperon, TranscriptionTermination, FormationOfTranslationInitiationComplex, EukaryoticGeneExpression, SelenocysteineIncorporation, NegativeRegulationOfTranscriptionByTranscriptionRepressor, RNASplicing, PosttranslationalModification, Translation, Stimulon, TranslationTermination, TranscriptionOfGene, _3_Polyadenylation, TranslationInitiation, TranslationElongation, PosttranscriptionalModification, RNAElongation, NegativeRegulationOfTranscriptionOfGene, TranscriptionDuringRNA-mediatedTransposition, RegulationOfTranscriptionOfGene, TranscriptionOfStimulonGenes, ExpressionProfiling, TranscriptionOfRegulonGenes, _5_Capping, GeneExpression, FormationOfTranscriptionInitiationComplex, PositiveRegulationOfTranscriptionOfGene, TranscriptionDNADependent]
+
+
+OWL axiom: SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+adding it caused (3) classes to become unsatisfiable:
+ [ProteinPolymerization, CellAdhesion, BindingAssay]
+Number of problematic GCIs causing unsat. classes: 14
+Total number of unsat classes accounted for by individual axioms: 130
+
+
+
+
+NEXT TEST:
+Identifying a set of GCIs that -collectively- cause unsat classes:
+size of GCI set (non-minimal) that needs to be removed to get rid of unsat classes:_20
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>)))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Cell>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))) owl:Nothing)
+SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing))) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) <http://www.bootstrep.eu/ontology/GRO#Protein>)
+
+
+
+
+NEXT TEST:
+Number of GCIs entailed by the ontology: 39
+List of GCIs entailed by Ontology: 
+(gci (and Eukaryote_cncpt Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Eukaryote> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+
+(gci (and Enzyme_cncpt Eukaryote_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) owl:Nothing)
+
+(gci (and Cell_cncpt Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Cell> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+
+(gci (and Cell_cncpt Enzyme_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Cell> <http://www.bootstrep.eu/ontology/GRO#Enzyme>) owl:Nothing)
+
+(gci (and Eukaryote_cncpt TranscriptionFactor_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Eukaryote> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) owl:Nothing)
+
+(gci (and Cell_cncpt TranscriptionFactor_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Cell> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) owl:Nothing)
+
+(gci (and (exists Encodes (and)) Enzyme_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) owl:Nothing)
+
+(gci (and (exists Encodes (and)) Eukaryote_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Eukaryote> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) owl:Nothing)
+
+(gci (and (exists Encodes (and)) Cell_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Cell> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) owl:Nothing)
+
+(gci (and (exists Encodes (and)) TranscriptionFactor_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) owl:Nothing)
+
+(gci (and (exists Encodes (and)) (exists LocatedIn (and)) Protein_cncpt) (exists Encodes Protein_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>))
+
+(gci (and (exists Encodes Protein_cncpt) (exists HasPart (and)) Protein_cncpt) (and (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))) (exists FromSpecies (and))))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing)))
+
+(gci (and (exists Encodes Enzyme_cncpt) Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Enzyme>)) owl:Nothing)
+
+(gci (and (exists Encodes Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn (and)) Protein_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>)))
+
+(gci (and (exists Encodes Protein_cncpt) (exists LocatedIn Cell_cncpt) Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>)) owl:Nothing)
+
+(gci (and (exists Encodes TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt) Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>)) owl:Nothing)
+
+(gci (and (exists Encodes (and)) (exists HasPart (exists HasPart (and))) Protein_cncpt) (exists FromSpecies (and)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing))
+
+(gci (and (exists Encodes Protein_cncpt) (exists HasPart (exists HasPart (and)))) (exists Encodes (and Protein_cncpt (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))))
+
+(gci (and (exists Encodes (exists HasPart (and))) (exists Encodes Protein_cncpt)) (exists Encodes (and Protein_cncpt (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))))
+
+(gci (and (exists Encodes (exists HasPart (and))) (exists Encodes TranscriptionFactor_cncpt) Protein_cncpt) (exists Encodes (and TranscriptionFactor_cncpt (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))))
+
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart (and)))) Protein_cncpt) (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn Cell_cncpt) (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))))
+
+(gci (and (exists Encodes (exists Encodes (and))) Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing))) owl:Nothing)
+
+(gci (and (exists Encodes (exists Encodes (and))) (exists Encodes Protein_cncpt)) (exists Encodes (and (exists Encodes (and)) (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))))
+
+(gci (and (exists Encodes (exists Encodes (and))) (exists Encodes (exists HasPart (and)))) (exists Encodes (and (exists Encodes (and)) (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))))
+
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn (and)))) Protein_cncpt) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists FromSpecies Eukaryote_cncpt))))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))))
+
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt)))) (bottom))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>)))) owl:Nothing)
+
+(gci (and (exists HasPart (and (exists Encodes Protein_cncpt) (exists HasPart (and)))) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt)))) (and (exists HasPart (and (exists Encodes Protein_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt) (exists HasPart (and)) (exists FromSpecies (and)))) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt) (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (and Protein_cncpt (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt)))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))) ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))))
+
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) Protein_cncpt) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists FromSpecies Eukaryote_cncpt))))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))))
+
+(gci (and (exists Encodes Protein_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) Protein_cncpt) (exists FromSpecies Eukaryote_cncpt))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))
+
+(gci (and (exists Encodes TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (and)))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))
+
+(gci (and (exists Encodes (and (exists HasPart (and)) (exists LocatedIn (and)))) (exists Encodes (and Protein_cncpt (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists Encodes (and Protein_cncpt (exists LocatedIn (and)) (exists FromSpecies Eukaryote_cncpt)))) (exists Encodes (and Protein_cncpt (exists LocatedIn (and)) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing))))
+
+(gci (and (exists HasPart (and (exists Encodes Protein_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt) (exists HasPart (and)) (exists FromSpecies (and)))) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt) (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (and Protein_cncpt (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt)))) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))))
+
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt))) (exists LocatedIn Cell_cncpt)) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))))
+
+(gci (and (exists Encodes (and (exists HasPart (and)) (exists LocatedIn (and)))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt)))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))))
+
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists FromSpecies Eukaryote_cncpt))) (exists Encodes (and Protein_cncpt (exists LocatedIn (and)) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and))))) (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn Cell_cncpt) (exists HasPart (and)))))
+SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>)))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))))
+
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))) (exists FromSpecies (and)) Protein_cncpt) (exists HasPart (and)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))
+
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))) (exists FromSpecies (and)) (exists HasFunction (and)) (exists HasPart (and)) Protein_cncpt) (exists HasPart (exists HasPart (and))))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)))
+
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))) (exists LocatedIn (and)) Protein_cncpt) (bottom))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> owl:Thing)) owl:Nothing)
+
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))) (exists FromSpecies (and)) (exists HasPart (exists HasPart (and))) Protein_cncpt) (exists HasFunction (and)))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#encodes> ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing))) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing))
+
+
+
+
+
+NEXT TEST:
+Number of axioms entailed by ontology:  39
+GCIs that neither cause unsat classes nor follow from GRO. size: 414
+(gci (and Cell_cncpt Eukaryote_cncpt) (bottom))
+(gci (and Enzyme_cncpt TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists HasPart (and)) Eukaryote_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) Eukaryote_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) Cell_cncpt) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists FromSpecies (and)) TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists FromSpecies (and)) (exists HasPart (and)) Enzyme_cncpt) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists HasFunction (and)) Eukaryote_cncpt) (bottom))
+(gci (and (exists HasFunction (and)) (exists HasPart (and)) Cell_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists HasFunction (and)) Enzyme_cncpt) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists Encodes (and)) (exists HasFunction (and))) (and (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))) Protein_cncpt))
+(gci (and (exists ResultsIn (and)) Protein_cncpt) (bottom))
+(gci (and (exists ResultsIn (and)) Enzyme_cncpt) (bottom))
+(gci (and (exists ResultsIn (and)) Eukaryote_cncpt) (bottom))
+(gci (and (exists ResultsIn (and)) Cell_cncpt) (bottom))
+(gci (and (exists ResultsIn (and)) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists ResultsIn (and))) (bottom))
+(gci (and (exists HasFunction (and)) (exists ResultsIn (and))) (bottom))
+(gci (and (exists Encodes (and)) (exists ResultsIn (and))) (bottom))
+(gci (and (exists LocatedIn (and)) Eukaryote_cncpt) (bottom))
+(gci (and (exists HasPart (and)) (exists LocatedIn (and)) Cell_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists LocatedIn (and)) Enzyme_cncpt) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and))))
+(gci (and (exists FromSpecies (and)) (exists HasPart (and)) (exists LocatedIn (and))) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists HasFunction (and)) (exists LocatedIn (and)) Enzyme_cncpt) (bottom))
+(gci (and (exists HasFunction (and)) (exists LocatedIn (and)) Cell_cncpt) (bottom))
+(gci (and (exists HasFunction (and)) (exists LocatedIn (and)) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists HasFunction (and)) (exists HasPart (and)) (exists LocatedIn (and))) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists FromSpecies (and)) (exists HasFunction (and)) (exists LocatedIn (and))) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and))))
+(gci (and (exists Encodes (and)) (exists HasPart (and)) (exists LocatedIn (and))) (and (exists Encodes TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (and)) (exists FromSpecies (and)) (exists LocatedIn (and))) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists Precedes (and)) Protein_cncpt) (bottom))
+(gci (and (exists Precedes (and)) Enzyme_cncpt) (bottom))
+(gci (and (exists Precedes (and)) Eukaryote_cncpt) (bottom))
+(gci (and (exists Precedes (and)) Cell_cncpt) (bottom))
+(gci (and (exists Precedes (and)) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists HasPart (and)) (exists Precedes (and))) (exists Precedes (exists Precedes (and))))
+(gci (and (exists FromSpecies (and)) (exists Precedes (and))) (bottom))
+(gci (and (exists HasFunction (and)) (exists Precedes (and))) (bottom))
+(gci (and (exists Encodes (and)) (exists Precedes (and))) (bottom))
+(gci (and (exists Precedes (and)) (exists ResultsIn (and))) (bottom))
+(gci (and (exists HasPart Protein_cncpt) Protein_cncpt) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists HasPart Protein_cncpt) Cell_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists HasPart Protein_cncpt)) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists HasFunction (and)) (exists HasPart Protein_cncpt)) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt) Protein_cncpt))
+(gci (and (exists Encodes (and)) (exists HasPart Protein_cncpt)) (bottom))
+(gci (and (exists HasPart Protein_cncpt) (exists LocatedIn (and))) (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists HasPart (exists HasPart (and))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt) Protein_cncpt))
+(gci (exists FromSpecies Protein_cncpt) (bottom))
+(gci (exists HasFunction Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn Protein_cncpt) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn Protein_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists LocatedIn Protein_cncpt) Cell_cncpt) (bottom))
+(gci (and (exists LocatedIn Protein_cncpt) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists HasPart (and)) (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (and (exists FromSpecies (and)) (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (and (exists HasFunction (and)) (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (and (exists Encodes (and)) (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (and (exists LocatedIn Protein_cncpt) (exists Precedes (and))) (bottom))
+(gci (exists Precedes Protein_cncpt) (bottom))
+(gci (and (exists HasPart Enzyme_cncpt) Cell_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (and (exists HasFunction (and)) (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (and (exists Encodes (and)) (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (and (exists HasPart Enzyme_cncpt) (exists LocatedIn (and))) (bottom))
+(gci (and (exists HasPart Enzyme_cncpt) (exists HasPart Protein_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart Enzyme_cncpt) (exists HasPart Protein_cncpt) TranscriptionFactor_cncpt) (bottom))
+(gci (exists FromSpecies Enzyme_cncpt) (bottom))
+(gci (exists HasFunction Enzyme_cncpt) Protein_cncpt)
+(gci (and (exists HasFunction Enzyme_cncpt) (exists HasPart (and))) (bottom))
+(gci (and (exists FromSpecies (and)) (exists HasFunction Enzyme_cncpt)) (bottom))
+(gci (and (exists HasFunction Enzyme_cncpt) (exists LocatedIn (and))) (bottom))
+(gci (and (exists Encodes Enzyme_cncpt) (exists HasPart (and))) (exists Encodes (and Enzyme_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes Enzyme_cncpt) (exists FromSpecies (and))) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists Encodes Enzyme_cncpt) (exists Encodes Protein_cncpt)) (bottom))
+(gci (exists ResultsIn Enzyme_cncpt) (bottom))
+(gci (exists LocatedIn Enzyme_cncpt) (bottom))
+(gci (exists Precedes Enzyme_cncpt) (bottom))
+(gci (exists HasPart Eukaryote_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and)) Cell_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) Protein_cncpt) (and (exists HasPart (and)) (exists LocatedIn (and))))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) Cell_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists HasPart (and))) (exists LocatedIn (and)))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn (and)) Cell_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and)) (exists LocatedIn (and)) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart Protein_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart Protein_cncpt) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists Encodes Enzyme_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn (and))) (bottom))
+(gci (exists HasFunction Eukaryote_cncpt) (bottom))
+(gci (exists Encodes Eukaryote_cncpt) (bottom))
+(gci (exists ResultsIn Eukaryote_cncpt) (bottom))
+(gci (and (exists LocatedIn Eukaryote_cncpt) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn Eukaryote_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists LocatedIn Eukaryote_cncpt) Cell_cncpt) (bottom))
+(gci (and (exists LocatedIn Eukaryote_cncpt) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists HasPart (and)) (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (and (exists FromSpecies (and)) (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (and (exists HasFunction (and)) (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (and (exists Encodes (and)) (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (and (exists LocatedIn Eukaryote_cncpt) (exists Precedes (and))) (bottom))
+(gci (and (exists LocatedIn Eukaryote_cncpt) (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (exists Precedes Eukaryote_cncpt) (bottom))
+(gci (exists HasPart Cell_cncpt) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists HasPart Cell_cncpt) Protein_cncpt) (bottom))
+(gci (and (exists HasPart Cell_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart Cell_cncpt) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists Encodes (and)) (exists HasPart Cell_cncpt)) (bottom))
+(gci (and (exists HasPart Cell_cncpt) (exists LocatedIn (and))) (bottom))
+(gci (and (exists HasPart Cell_cncpt) (exists HasPart Protein_cncpt)) (bottom))
+(gci (and (exists FromSpecies Cell_cncpt) Protein_cncpt) (bottom))
+(gci (and (exists FromSpecies Cell_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists FromSpecies Cell_cncpt) (exists HasPart (and))) (bottom))
+(gci (and (exists FromSpecies Cell_cncpt) (exists HasFunction (and))) (bottom))
+(gci (and (exists Encodes (and)) (exists FromSpecies Cell_cncpt)) (bottom))
+(gci (and (exists FromSpecies Cell_cncpt) (exists LocatedIn (and))) (bottom))
+(gci (and (exists FromSpecies Cell_cncpt) (exists FromSpecies Eukaryote_cncpt)) (bottom))
+(gci (exists HasFunction Cell_cncpt) (bottom))
+(gci (exists Encodes Cell_cncpt) (bottom))
+(gci (exists ResultsIn Cell_cncpt) (bottom))
+(gci (and (exists LocatedIn Cell_cncpt) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (and)) (exists LocatedIn Cell_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists LocatedIn Cell_cncpt) (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (and (exists Encodes Enzyme_cncpt) (exists LocatedIn Cell_cncpt)) (exists Encodes TranscriptionFactor_cncpt))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and)) (exists LocatedIn Cell_cncpt) Protein_cncpt) (exists HasPart (exists HasPart (and))))
+(gci (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn Cell_cncpt)) (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists Encodes TranscriptionFactor_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))))
+(gci (and (exists LocatedIn Cell_cncpt) (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (exists Precedes Cell_cncpt) (bottom))
+(gci (and (exists HasPart TranscriptionFactor_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart TranscriptionFactor_cncpt) Cell_cncpt) (bottom))
+(gci (and (exists HasPart TranscriptionFactor_cncpt) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists HasFunction (and)) (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists Encodes (and)) (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists HasPart TranscriptionFactor_cncpt) (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt))
+(gci (and (exists HasPart Enzyme_cncpt) (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists HasPart TranscriptionFactor_cncpt) (exists LocatedIn Cell_cncpt) Protein_cncpt) (bottom))
+(gci (exists FromSpecies TranscriptionFactor_cncpt) (bottom))
+(gci (exists HasFunction TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists Encodes TranscriptionFactor_cncpt) (exists FromSpecies (and))) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists Encodes Protein_cncpt) (exists Encodes TranscriptionFactor_cncpt)) (exists LocatedIn Cell_cncpt))
+(gci (and (exists Encodes Enzyme_cncpt) (exists Encodes TranscriptionFactor_cncpt)) (exists LocatedIn Cell_cncpt))
+(gci (and (exists Encodes TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)))
+(gci (exists ResultsIn TranscriptionFactor_cncpt) (bottom))
+(gci (exists LocatedIn TranscriptionFactor_cncpt) (bottom))
+(gci (exists Precedes TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists HasPart (exists HasPart (and))) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (exists HasPart (and))) TranscriptionFactor_cncpt) (exists HasPart (and Protein_cncpt (exists HasPart (and)) (exists LocatedIn (and)))))
+(gci (and (exists HasFunction (and)) (exists HasPart (exists HasPart (and)))) (and (exists FromSpecies (and)) Protein_cncpt))
+(gci (and (exists HasPart (exists HasPart (and))) (exists LocatedIn (and)) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart (exists HasPart (and))) (exists HasPart Protein_cncpt) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart (exists HasPart (and))) (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) Enzyme_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (and)) Protein_cncpt) (exists LocatedIn Cell_cncpt))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists HasPart Protein_cncpt)) (and (exists HasFunction (and)) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt) Protein_cncpt))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists HasPart (exists HasPart (and))) (exists LocatedIn Cell_cncpt) Protein_cncpt) (and (exists HasPart Protein_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn (and)))))
+(gci (and (exists Encodes TranscriptionFactor_cncpt) (exists HasPart (exists HasPart (and)))) (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))))
+(gci (exists FromSpecies (exists HasPart (and))) (bottom))
+(gci (exists HasFunction (exists HasPart (and))) (bottom))
+(gci (and (exists Encodes (exists HasPart (and))) (exists HasPart (and))) (exists Encodes (and Protein_cncpt (exists HasPart (and)))))
+(gci (and (exists Encodes (exists HasPart (and))) (exists FromSpecies (and))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))))
+(gci (and (exists Encodes (exists HasPart (and))) (exists LocatedIn (and))) (exists Encodes (and Protein_cncpt (exists HasPart (and)))))
+(gci (and (exists Encodes (exists HasPart (and))) (exists Encodes Enzyme_cncpt)) (bottom))
+(gci (exists LocatedIn (exists HasPart (and))) (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (exists Precedes (exists HasPart (and))) (bottom))
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart (and)))) (exists Encodes TranscriptionFactor_cncpt) (exists LocatedIn Cell_cncpt)) (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))))
+(gci (exists Encodes (and TranscriptionFactor_cncpt (exists HasPart (and)))) Protein_cncpt)
+(gci (and (exists HasPart (exists FromSpecies (and))) Protein_cncpt) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn Cell_cncpt))))
+(gci (and (exists HasPart (exists FromSpecies (and))) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart (exists FromSpecies (and))) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (exists FromSpecies (and))) TranscriptionFactor_cncpt) (exists HasPart (exists FromSpecies Eukaryote_cncpt)))
+(gci (and (exists FromSpecies (and)) (exists HasPart (exists FromSpecies (and)))) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn Cell_cncpt)) Protein_cncpt))
+(gci (and (exists HasFunction (and)) (exists HasPart (exists FromSpecies (and)))) (bottom))
+(gci (and (exists Encodes (and)) (exists HasPart (exists FromSpecies (and)))) (bottom))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists LocatedIn (and))) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn Cell_cncpt)) Protein_cncpt))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists HasPart Protein_cncpt)) (exists HasPart (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists HasPart (exists HasPart (and)))) (exists HasPart (and (exists Encodes Protein_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (exists FromSpecies (exists FromSpecies (and))) (bottom))
+(gci (exists HasFunction (exists FromSpecies (and))) (bottom))
+(gci (exists Encodes (exists FromSpecies (and))) (exists Encodes (exists FromSpecies Eukaryote_cncpt)))
+(gci (exists ResultsIn (exists FromSpecies (and))) (bottom))
+(gci (exists LocatedIn (exists FromSpecies (and))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)))
+(gci (exists Precedes (exists FromSpecies (and))) (bottom))
+(gci (and (exists HasPart (exists HasFunction (and))) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (exists HasFunction (and))) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists HasPart (exists HasFunction (and)))) (bottom))
+(gci (and (exists HasFunction (and)) (exists HasPart (exists HasFunction (and)))) (bottom))
+(gci (and (exists Encodes (and)) (exists HasPart (exists HasFunction (and)))) (bottom))
+(gci (and (exists HasPart (exists HasFunction (and))) (exists LocatedIn (and))) (bottom))
+(gci (and (exists HasPart (exists HasFunction (and))) (exists HasPart Protein_cncpt)) (exists HasPart (and Protein_cncpt (exists HasFunction (and)))))
+(gci (and (exists HasPart (exists HasFunction (and))) (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists HasPart (exists HasFunction (and)))) (bottom))
+(gci (exists FromSpecies (exists HasFunction (and))) (bottom))
+(gci (exists HasFunction (exists HasFunction (and))) (bottom))
+(gci (exists Encodes (exists HasFunction (and))) (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))))
+(gci (exists ResultsIn (exists HasFunction (and))) (bottom))
+(gci (exists LocatedIn (exists HasFunction (and))) (bottom))
+(gci (exists Precedes (exists HasFunction (and))) (bottom))
+(gci (and (exists HasPart (and Protein_cncpt (exists HasFunction (and)))) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) Protein_cncpt) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists Encodes Protein_cncpt))))
+(gci (and (exists HasPart (exists Encodes (and))) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) TranscriptionFactor_cncpt) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt))))
+(gci (and (exists FromSpecies (and)) (exists HasPart (exists Encodes (and)))) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists Encodes Protein_cncpt))))
+(gci (and (exists HasFunction (and)) (exists HasPart (exists Encodes (and)))) (bottom))
+(gci (and (exists Encodes (and)) (exists HasPart (exists Encodes (and)))) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) (exists LocatedIn (and))) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) (exists HasPart Protein_cncpt)) (exists HasPart (and Protein_cncpt (exists Encodes Protein_cncpt))))
+(gci (and (exists HasPart (exists Encodes (and))) (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) (exists HasPart (exists HasPart (and)))) (exists HasPart (and (exists Encodes Protein_cncpt) (exists HasPart (and)))))
+(gci (and (exists HasPart (exists Encodes (and))) (exists HasPart (exists FromSpecies (and)))) (exists HasPart (and (exists Encodes Protein_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists HasPart (exists Encodes (and))) (exists HasPart (exists HasFunction (and)))) (bottom))
+(gci (exists FromSpecies (exists Encodes (and))) (bottom))
+(gci (exists HasFunction (exists Encodes (and))) (bottom))
+(gci (and (exists Encodes (exists Encodes (and))) (exists HasPart (and))) (bottom))
+(gci (and (exists Encodes (exists Encodes (and))) (exists FromSpecies (and))) (bottom))
+(gci (and (exists Encodes (exists Encodes (and))) (exists LocatedIn (and))) (and (exists Encodes (and (exists Encodes TranscriptionFactor_cncpt) (exists HasPart (and)))) (exists Encodes (and Protein_cncpt (exists Encodes TranscriptionFactor_cncpt)))))
+(gci (and (exists Encodes (exists Encodes (and))) (exists Encodes Enzyme_cncpt)) (bottom))
+(gci (and (exists Encodes (exists Encodes (and))) (exists Encodes TranscriptionFactor_cncpt)) (bottom))
+(gci (exists ResultsIn (exists Encodes (and))) (bottom))
+(gci (exists LocatedIn (exists Encodes (and))) (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (exists Precedes (exists Encodes (and))) (bottom))
+(gci (exists FromSpecies (exists ResultsIn (and))) (bottom))
+(gci (exists HasFunction (exists ResultsIn (and))) (bottom))
+(gci (exists Encodes (exists ResultsIn (and))) (bottom))
+(gci (exists LocatedIn (exists ResultsIn (and))) (bottom))
+(gci (exists Precedes (exists ResultsIn (and))) (bottom))
+(gci (and (exists HasPart (exists LocatedIn (and))) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart (exists LocatedIn (and))) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (exists LocatedIn (and))) TranscriptionFactor_cncpt) (exists HasPart (and Protein_cncpt (exists HasPart (and)) (exists LocatedIn (and)))))
+(gci (and (exists FromSpecies (and)) (exists HasPart (exists LocatedIn (and)))) (bottom))
+(gci (and (exists HasFunction (and)) (exists HasPart (exists LocatedIn (and)))) (bottom))
+(gci (and (exists Encodes (and)) (exists HasPart (exists LocatedIn (and)))) (bottom))
+(gci (and (exists HasPart (exists LocatedIn (and))) (exists HasPart Enzyme_cncpt)) (exists HasPart (and Enzyme_cncpt (exists LocatedIn (and)))))
+(gci (and (exists HasPart (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt) Protein_cncpt) (bottom))
+(gci (and (exists HasPart (exists LocatedIn (and))) (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists HasPart (exists HasPart (and))) (exists HasPart (exists LocatedIn (and)))) (exists HasPart (and (exists HasPart (and)) (exists LocatedIn (and)))))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists HasPart (exists LocatedIn (and)))) (exists HasPart (and (exists LocatedIn (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists HasPart (exists HasFunction (and))) (exists HasPart (exists LocatedIn (and)))) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) (exists HasPart (exists LocatedIn (and)))) (exists HasPart (and (exists LocatedIn Cell_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt) (exists Encodes Protein_cncpt) (exists Encodes TranscriptionFactor_cncpt))))
+(gci (exists FromSpecies (exists LocatedIn (and))) (bottom))
+(gci (exists HasFunction (exists LocatedIn (and))) (bottom))
+(gci (and (exists Encodes (exists LocatedIn (and))) (exists FromSpecies (and))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))))
+(gci (and (exists Encodes (exists LocatedIn (and))) (exists Encodes Protein_cncpt)) (exists Encodes (and Protein_cncpt (exists LocatedIn (and)))))
+(gci (and (exists Encodes (exists LocatedIn (and))) (exists Encodes Enzyme_cncpt)) (bottom))
+(gci (and (exists Encodes (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt)) (exists Encodes (and Protein_cncpt (exists LocatedIn (and)))))
+(gci (and (exists Encodes (exists LocatedIn (and))) (exists Encodes TranscriptionFactor_cncpt)) (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))))
+(gci (and (exists Encodes (exists LocatedIn (and))) (exists HasPart (exists HasPart (and)))) (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists FromSpecies (and))))
+(gci (and (exists Encodes (exists HasPart (and))) (exists Encodes (exists LocatedIn (and)))) (exists Encodes (and (exists HasPart (and)) (exists LocatedIn (and)))))
+(gci (and (exists Encodes (exists Encodes (and))) (exists Encodes (exists LocatedIn (and)))) (bottom))
+(gci (exists ResultsIn (exists LocatedIn (and))) (bottom))
+(gci (and (exists LocatedIn (exists LocatedIn (and))) Enzyme_cncpt) (exists LocatedIn (exists LocatedIn Cell_cncpt)))
+(gci (and (exists LocatedIn (exists LocatedIn (and))) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists LocatedIn (exists LocatedIn (and))) Protein_cncpt) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists HasFunction (and)) (exists LocatedIn (exists LocatedIn (and)))) (and (exists LocatedIn Cell_cncpt) Protein_cncpt))
+(gci (and (exists Encodes (and)) (exists LocatedIn (exists LocatedIn (and)))) (bottom))
+(gci (and (exists LocatedIn (exists LocatedIn (and))) (exists Precedes (and))) (bottom))
+(gci (and (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (and (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (and (exists HasPart (and)) (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt)) (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists HasPart (exists HasPart (and))) (exists HasPart Protein_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) Protein_cncpt))
+(gci (and (exists FromSpecies (and)) (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt)) (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists HasPart (exists HasPart (and))) (exists HasPart Protein_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) Protein_cncpt))
+(gci (and (exists HasPart (exists LocatedIn (and))) (exists LocatedIn (exists LocatedIn (and))) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn (and)) (exists Precedes (exists LocatedIn (and)))) (exists Precedes (exists LocatedIn Cell_cncpt)))
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn (and)))) (exists HasPart (and))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt))))
+(gci (and (exists HasPart (and Enzyme_cncpt (exists LocatedIn (and)))) Protein_cncpt) (bottom))
+(gci (and (exists HasPart (and Enzyme_cncpt (exists LocatedIn (and)))) (exists HasPart Protein_cncpt)) (bottom))
+(gci (and (exists HasPart (and (exists HasPart (and)) (exists LocatedIn (and)))) Protein_cncpt) (bottom))
+(gci (and (exists HasPart (and (exists HasPart (and)) (exists LocatedIn (and)))) (exists HasPart Protein_cncpt)) (exists HasPart (and Protein_cncpt (exists HasPart (and)) (exists LocatedIn (and)))))
+(gci (and (exists HasPart (exists Precedes (and))) Protein_cncpt) (bottom))
+(gci (and (exists HasPart (exists Precedes (and))) Enzyme_cncpt) (bottom))
+(gci (and (exists HasPart (exists Precedes (and))) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (exists Precedes (and))) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists HasPart (exists Precedes (and)))) (bottom))
+(gci (and (exists HasFunction (and)) (exists HasPart (exists Precedes (and)))) (bottom))
+(gci (and (exists Encodes (and)) (exists HasPart (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists Precedes (and))) (exists LocatedIn (and))) (bottom))
+(gci (and (exists HasPart (exists Precedes (and))) (exists HasPart Protein_cncpt)) (bottom))
+(gci (and (exists HasPart (exists Precedes (and))) (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (and (exists HasPart (exists Precedes (and))) (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists HasPart (exists HasPart (and))) (exists HasPart (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists HasPart (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists HasFunction (and))) (exists HasPart (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) (exists HasPart (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists LocatedIn (and))) (exists HasPart (exists Precedes (and)))) (bottom))
+(gci (exists FromSpecies (exists Precedes (and))) (bottom))
+(gci (exists HasFunction (exists Precedes (and))) (bottom))
+(gci (exists Encodes (exists Precedes (and))) (bottom))
+(gci (exists ResultsIn (exists Precedes (and))) (bottom))
+(gci (exists LocatedIn (exists Precedes (and))) (bottom))
+(gci (and (exists LocatedIn (and)) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart Protein_cncpt) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart Enzyme_cncpt) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart TranscriptionFactor_cncpt) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists HasPart (and))) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists FromSpecies (and))) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists HasFunction (and))) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists Encodes (and))) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists LocatedIn (and))) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists Precedes (exists LocatedIn (and))) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (and (exists HasPart (exists Precedes (and))) (exists Precedes (exists Precedes (and)))) (bottom))
+(gci (exists HasPart (exists HasPart Protein_cncpt)) (bottom))
+(gci (exists Encodes (exists HasPart Protein_cncpt)) (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))))
+(gci (and (exists HasPart (exists Encodes Protein_cncpt)) (exists HasPart Cell_cncpt)) (bottom))
+(gci (exists Encodes (exists Encodes Protein_cncpt)) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and (exists Encodes Protein_cncpt) (exists HasPart (and))))) (bottom))
+(gci (exists HasPart (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (exists Encodes (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (exists LocatedIn (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (exists Precedes (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (exists HasPart (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (exists Encodes (exists HasPart Enzyme_cncpt)) (bottom))
+(gci (exists HasPart (exists HasFunction Enzyme_cncpt)) (bottom))
+(gci (exists HasPart (exists Encodes Enzyme_cncpt)) (bottom))
+(gci (exists Encodes (exists Encodes Enzyme_cncpt)) (bottom))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists FromSpecies (and))) (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (and))) (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists Encodes Protein_cncpt)) (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists Encodes Enzyme_cncpt)) (exists Encodes (and Enzyme_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists Encodes TranscriptionFactor_cncpt)) (exists Encodes (and TranscriptionFactor_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists HasPart (exists HasPart (and)))) (exists Encodes (and Protein_cncpt (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists Encodes (exists HasPart (and)))) (exists Encodes (and Protein_cncpt (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (and TranscriptionFactor_cncpt (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (and))) (bottom))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists Encodes (exists Encodes (and)))) (exists Encodes (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists Encodes (exists LocatedIn (and)))) (exists Encodes (and Protein_cncpt (exists LocatedIn (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) TranscriptionFactor_cncpt) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists HasPart (and)) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) Protein_cncpt) (exists LocatedIn Cell_cncpt))
+(gci (and (exists HasPart (and)) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) Enzyme_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) Protein_cncpt) (exists FromSpecies Eukaryote_cncpt))
+(gci (and (exists HasFunction (and)) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))) (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists HasPart Protein_cncpt) (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt) Protein_cncpt))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists Precedes (and))) (and (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt))) (exists Precedes (exists LocatedIn Cell_cncpt))))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn Protein_cncpt)) (bottom))
+(gci (and (exists Encodes Enzyme_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))) (bottom))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn Cell_cncpt) Enzyme_cncpt) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (and)) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn Cell_cncpt)) (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists Encodes TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and)) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn Cell_cncpt)) (exists HasPart (exists HasPart (and))))
+(gci (and (exists HasPart TranscriptionFactor_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn Cell_cncpt)) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn Cell_cncpt) Protein_cncpt) (and (exists HasFunction (and)) (exists HasPart Protein_cncpt) (exists LocatedIn (exists LocatedIn (and)))))
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart (and)))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))) (exists Encodes (and (exists HasPart (and)) (exists LocatedIn (and)))))
+(gci (and (exists HasPart (and)) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt))) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt))) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))) (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists Encodes TranscriptionFactor_cncpt)))
+(gci (and (exists Encodes (exists LocatedIn (and))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))) (exists Encodes (and (exists HasPart (and)) (exists LocatedIn (and)))))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn (and)))) (and (exists LocatedIn Cell_cncpt) Protein_cncpt))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists HasPart (and Protein_cncpt (exists HasPart (and)))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn (and))) (exists LocatedIn Cell_cncpt) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (exists LocatedIn (and))) Protein_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists HasPart (exists HasPart (and))) (exists HasPart Protein_cncpt) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (and Cell_cncpt (exists LocatedIn (and)))) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (and (exists FromSpecies (and)) (exists LocatedIn (and))))) (bottom))
+(gci (and (exists HasPart (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt))) TranscriptionFactor_cncpt) (bottom))
+(gci (and (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt))) (exists FromSpecies (and)) (exists HasPart (and))) (and (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))) Protein_cncpt))
+(gci (and (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn Cell_cncpt)) (exists Encodes (and Protein_cncpt (exists LocatedIn (and)) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))) (bottom))
+(gci (and (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) Enzyme_cncpt) (bottom))
+(gci (and (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) Cell_cncpt) (bottom))
+(gci (and (exists FromSpecies (and)) (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt)))) (bottom))
+(gci (and (exists Encodes (and)) (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt)))) (bottom))
+(gci (and (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (exists HasPart Protein_cncpt))) (bottom))
+(gci (and (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (exists HasPart Enzyme_cncpt))) (bottom))
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (and))) (exists Encodes (and Protein_cncpt (exists LocatedIn (and)) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) (exists Encodes (and (exists Encodes (and)) (exists HasPart (and)))) (exists Encodes (and Protein_cncpt (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt)))) (bottom))
+(gci (and (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) Enzyme_cncpt) (bottom))
+(gci (and (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (and)) (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt)))) (bottom))
+(gci (and (exists FromSpecies (and)) (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt)))) (bottom))
+(gci (and (exists Encodes (and)) (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt)))) (bottom))
+(gci (and (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn Cell_cncpt)) (bottom))
+(gci (and (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (exists Encodes Protein_cncpt))) (bottom))
+(gci (and (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (exists Encodes Enzyme_cncpt))) (bottom))
+(gci (and (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt)))) (bottom))
+(gci (and (exists HasPart (and (exists LocatedIn (and)) (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt)))) (exists HasPart (and Protein_cncpt (exists LocatedIn (and)) (exists FromSpecies Eukaryote_cncpt))))
+(gci (exists HasPart (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (exists Encodes (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (exists LocatedIn (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (exists Precedes (exists LocatedIn Eukaryote_cncpt)) (bottom))
+(gci (and (exists HasPart (and (exists Encodes Protein_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (exists HasPart Cell_cncpt))) (bottom))
+(gci (and (exists Encodes (exists HasPart Cell_cncpt)) (exists Encodes (and Protein_cncpt (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt)))) (bottom))
+(gci (exists LocatedIn (exists HasPart Cell_cncpt)) (bottom))
+(gci (exists HasPart (exists FromSpecies Cell_cncpt)) (bottom))
+(gci (and (exists Encodes (exists FromSpecies Eukaryote_cncpt)) (exists Encodes (exists FromSpecies Cell_cncpt))) (bottom))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists FromSpecies Cell_cncpt))) (bottom))
+(gci (and (exists HasPart (exists LocatedIn Cell_cncpt)) (exists LocatedIn (and)) Protein_cncpt) (bottom))
+(gci (and (exists HasPart (exists LocatedIn Cell_cncpt)) (exists HasPart Protein_cncpt)) (bottom))
+(gci (and (exists HasPart (exists LocatedIn Cell_cncpt)) (exists HasPart (and Enzyme_cncpt (exists LocatedIn (and))))) (bottom))
+(gci (and (exists HasPart (and (exists LocatedIn (and)) (exists FromSpecies Eukaryote_cncpt))) (exists HasPart (exists LocatedIn Cell_cncpt))) (exists HasPart (and (exists LocatedIn Cell_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt) (exists Encodes Protein_cncpt) (exists Encodes TranscriptionFactor_cncpt))))
+(gci (and (exists Encodes (exists LocatedIn Cell_cncpt)) (exists LocatedIn (and))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt))))
+(gci (and (exists Encodes (exists LocatedIn Cell_cncpt)) (exists Encodes (and Protein_cncpt (exists LocatedIn (and))))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt))))
+(gci (and (exists LocatedIn (exists LocatedIn Cell_cncpt)) Cell_cncpt) (bottom))
+(gci (and (exists HasPart (and)) (exists LocatedIn (exists LocatedIn Cell_cncpt)) Enzyme_cncpt) (bottom))
+(gci (and (exists FromSpecies Eukaryote_cncpt) (exists HasPart (and)) (exists LocatedIn (exists LocatedIn Cell_cncpt)) Protein_cncpt) (exists HasPart (exists FromSpecies Eukaryote_cncpt)))
+(gci (and (exists LocatedIn (exists LocatedIn Cell_cncpt)) (exists LocatedIn Cell_cncpt)) Protein_cncpt)
+(gci (and (exists HasFunction (and)) (exists LocatedIn (exists LocatedIn Cell_cncpt)) (exists LocatedIn Cell_cncpt) Protein_cncpt) (bottom))
+(gci (and (exists HasPart (exists HasPart (and))) (exists LocatedIn (exists LocatedIn Cell_cncpt))) (bottom))
+(gci (and (exists LocatedIn (exists LocatedIn Cell_cncpt)) (exists LocatedIn (and Cell_cncpt (exists LocatedIn (and)))) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn (exists FromSpecies Eukaryote_cncpt)) (exists LocatedIn (exists LocatedIn Cell_cncpt)) (exists LocatedIn Cell_cncpt) Protein_cncpt) (bottom))
+(gci (and (exists LocatedIn Cell_cncpt) (exists Precedes (exists LocatedIn Cell_cncpt))) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn (and)) (exists FromSpecies Eukaryote_cncpt))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt)))) (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists FromSpecies Eukaryote_cncpt))))
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn (and))) (and (exists Encodes TranscriptionFactor_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))))
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and)))) (and (exists Encodes TranscriptionFactor_cncpt) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))))
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))) (and (exists Encodes TranscriptionFactor_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasPart (exists HasPart (and))) (exists LocatedIn (and Cell_cncpt (exists FromSpecies Eukaryote_cncpt)))))
+(gci (and (exists Encodes (and Protein_cncpt (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists Encodes (and TranscriptionFactor_cncpt (exists LocatedIn (and)))) (exists LocatedIn (exists FromSpecies Eukaryote_cncpt))) (bottom))
+(gci (and (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists HasPart (and))) (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))))
+(gci (and (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists FromSpecies (and))) (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))))
+(gci (and (exists Encodes (and Protein_cncpt (exists FromSpecies Eukaryote_cncpt) (exists LocatedIn Cell_cncpt) (exists HasPart (and)))) (exists LocatedIn (and))) (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))))
+(gci (and (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt))) (exists HasFunction Enzyme_cncpt)) (bottom))
+(gci (and (exists Encodes (exists HasFunction Enzyme_cncpt)) (exists Encodes (and Protein_cncpt (exists HasPart Protein_cncpt) (exists FromSpecies Eukaryote_cncpt) (exists HasFunction (and)) (exists LocatedIn Cell_cncpt)))) (bottom))
+(gci (exists HasPart (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (exists Encodes (exists HasPart TranscriptionFactor_cncpt)) (bottom))
+(gci (and (exists LocatedIn (and (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (exists HasPart TranscriptionFactor_cncpt))) (bottom))
+(gci (exists HasPart (exists Encodes TranscriptionFactor_cncpt)) (exists HasPart (and (exists LocatedIn Cell_cncpt) (exists HasPart (and)) (exists FromSpecies Eukaryote_cncpt) (exists Encodes Protein_cncpt) (exists Encodes TranscriptionFactor_cncpt))))
+(gci (exists Encodes (exists Encodes TranscriptionFactor_cncpt)) (and (exists Encodes (and (exists Encodes TranscriptionFactor_cncpt) (exists HasPart (and)))) (exists Encodes (and Protein_cncpt (exists Encodes TranscriptionFactor_cncpt)))))
+(gci (and (exists LocatedIn (and (exists Encodes (and)) (exists FromSpecies Eukaryote_cncpt))) (exists LocatedIn (exists Encodes TranscriptionFactor_cncpt))) (bottom))
+
+
+
+
+NEXT TEST:
+Number of axioms violating subclass relations: 2
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#TranscriptionFactor>) owl:Nothing)
+
+
+
+
+NEXT TEST:
+Number of axioms violating (direct) subclass relations: 1
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+REACHED END OF MAIN.
