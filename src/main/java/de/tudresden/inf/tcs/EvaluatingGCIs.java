@@ -582,6 +582,76 @@ public class EvaluatingGCIs {
 	
 	
 	
+	/**
+	 * @param axioms
+	 * @return list of axioms of the form ((and CLASS ROLE-Expression) (bottom)) that
+	 * violate GRO.
+	 */
+	static ArrayList<OWLAxiom> getAxiomsViolatingRoleRels(ArrayList<OWLAxiom> axioms) {
+		ArrayList<OWLAxiom> result = new ArrayList<OWLAxiom>();
+		int consideredAxioms = 0;
+		for(OWLAxiom ax: axioms) {
+			OWLSubClassOfAxiom a = ((OWLSubClassOfAxiom) ax);
+			//we're only looking at disjointness axioms:
+			if(!a.getSuperClass().isBottomEntity()) {
+				continue;
+			}
+			OWLClassExpression exp = a.getSubClass();
+			Set<OWLClassExpression> conjuncts = exp.asConjunctSet();
+			if (conjuncts.size()!=2) {
+				//we're only looking at axioms with 2 conjuncts.
+				continue;
+			}
+			Iterator<OWLClassExpression> t = conjuncts.iterator();
+			OWLClassExpression conj1 = t.next();
+			OWLClassExpression conj2 = t.next();
+			if((conj1 instanceof OWLClass && conj2 instanceof OWLClass) ||
+				(!(conj1 instanceof OWLClass) && !(conj2 instanceof OWLClass))) {
+				//if both conjuncts are classes, or neither is a class,
+				//then the axiom is not the form we are looking for.
+				continue;
+			}
+			
+			helpers.print("axiom to be evaluated: ", 3);
+			helpers.print(a, 3);
+			consideredAxioms++;
+			OWLClass cls;
+			OWLClassExpression clexp;
+			if(conj1 instanceof OWLClass) {
+				cls = ((OWLClass) conj1);
+				clexp = conj2;
+			}
+			else {//conj2 is OWLClass
+				cls = ((OWLClass) conj2);
+				clexp = conj1;
+			}
+			
+			//addin a dummy class that is equivalent to the class expression
+			OWLClass dummy = factory.getOWLClass(IRI.create(groIRI + "#" + "DUMMY" + consideredAxioms));
+			Set<OWLClassExpression> equivSet = new HashSet<OWLClassExpression>();
+		    equivSet.add(dummy);
+		    equivSet.add(clexp);
+		    OWLEquivalentClassesAxiomImpl equiv = new OWLEquivalentClassesAxiomImpl(equivSet, 
+		    		new HashSet<OWLAnnotation>());
+		    manager.addAxiom(gro, equiv);
+		    reasoner.flush();
+		    NodeSet<OWLClass> clsSuperclasses = reasoner.getSuperClasses(cls, false); 
+		    NodeSet<OWLClass> clsSubclasses = reasoner.getSubClasses(cls, false);
+		    Node<OWLClass> clsEquivclasses = reasoner.getEquivalentClasses(cls);
+		    if(clsSuperclasses.containsEntity(dummy) || 
+		    		clsSubclasses.containsEntity(dummy) ||
+		    		clsEquivclasses.contains(dummy)) {
+		    	helpers.print("Found a GCI that violates role relations: ", 3);
+		    	helpers.print(a, 3);
+		    	result.add(a);
+		    }
+		    
+		}
+		return result;
+	}
+	
+	
+	
 	static void addAxiomsToOntology(List<OWLAxiom> axioms) {
 		for(OWLAxiom a: axioms) {
         	ChangeApplied c = manager.addAxiom(gro, a);
@@ -743,7 +813,11 @@ public class EvaluatingGCIs {
         helpers.print("Number of axioms violating (direct) subclass relations: " + axiomsViolatingSubclassness.size(), 0);
         helpers.print(axiomsViolatingSubclassness, 0);
         
-		
+	//Axioms violating role relations:
+        helpers.print("\n\n\n\nNEXT TEST:", 0);
+        ArrayList<OWLAxiom> axiomsViolatingRoles = getAxiomsViolatingRoleRels(axioms);
+        helpers.print("number of axioms violating GRO role relations: " + axiomsViolatingRoles.size(), 0);
+		helpers.print(axiomsViolatingRoles, 0);	
 	}
 	
 	
