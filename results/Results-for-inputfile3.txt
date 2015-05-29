@@ -1,3 +1,4 @@
+
 Running all tests:
 input file: C:\Users\Anas\Desktop\role-depth2-top10
 number of GCIs parsed from input file:473
@@ -817,4 +818,10 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <
 NEXT TEST:
 Number of axioms violating (direct) subclass relations: 1
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
+
+
+
+
+NEXT TEST:
+number of axioms violating GRO role relations: 0
 REACHED END OF MAIN.
