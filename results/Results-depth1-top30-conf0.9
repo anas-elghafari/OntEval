@@ -1,0 +1,91 @@
+
+Running all tests:
+input file: C:\Users\Anas\Desktop\depth1_top30_conf0.9
+number of GCIs parsed from input file:18
+number of classes appearing in input file: 8
+number of classes appearing in ontology: 507
+classes appearing in input file but not in ontology: []
+number of object properties appearing in input file: 4
+number of object proerties appearing in ontology: 24
+obj properties appearing in input file but not in ontology: []
+NEXT TEST:
+
+Consistency (before adding any axioms): true
+
+Consistency (after adding the axioms): true
+
+
+
+
+NEXT TEST:
+Count of unsat. classes: 0
+
+
+
+
+NEXT TEST:
+Identifying the GCIs that -individually- cause unsat classes:
+Number of problematic GCIs causing unsat. classes: 0
+Total number of unsat classes accounted for by individual axioms: 0
+
+
+
+
+NEXT TEST:
+Identifying a set of GCIs that -collectively- cause unsat classes:
+size of GCI set (non-minimal) that needs to be removed to get rid of unsat classes:_0
+
+
+
+
+NEXT TEST:
+Number of GCIs entailed by the ontology: 2
+List of GCIs entailed by Ontology: 
+(gci (and Protein (exists FromSpecies (and)) Gene) (exists FromSpecies Eukaryote))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))
+
+(gci (and Protein (exists FromSpecies (and)) (exists HasPart (and)) Gene) (exists FromSpecies Eukaryote))
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Gene> <http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>))
+
+
+
+
+
+NEXT TEST:
+Number of axioms entailed by ontology:  2
+GCIs that neither cause unsat classes nor follow from GRO. size: 16
+(gci (and (exists FromSpecies (and)) (exists Encodes Protein) (exists Encodes (and))) Gene)
+(gci (and (exists Encodes MessengerRNA) (exists Encodes (and))) Gene)
+(gci (exists FromSpecies (and)) (exists FromSpecies Eukaryote))
+(gci (and (exists FromSpecies (and)) (exists Encodes (and))) (exists FromSpecies Eukaryote))
+(gci (and (exists FromSpecies (and)) (exists Encodes Protein) (exists Encodes (and))) (exists FromSpecies Eukaryote))
+(gci (and (exists FromSpecies (and)) Gene) (exists FromSpecies Eukaryote))
+(gci (and (exists FromSpecies (and)) Gene (exists Encodes (and))) (exists FromSpecies Eukaryote))
+(gci (and (exists FromSpecies (and)) Gene (exists Encodes Protein) (exists Encodes (and))) (exists FromSpecies Eukaryote))
+(gci (and (exists FromSpecies Eukaryote) (exists FromSpecies (and)) (exists Encodes Protein) (exists Encodes (and))) Gene)
+(gci (and (exists FromSpecies (and)) (exists HasPart (and)) Gene) (exists FromSpecies Eukaryote))
+(gci (and (exists FromSpecies (and)) (exists HasPart (and)) (exists HasPart ProteinDomain)) (exists FromSpecies Eukaryote))
+(gci (and Enzyme (exists FromSpecies (and))) (exists FromSpecies Eukaryote))
+(gci (and Protein (exists FromSpecies (and)) (exists HasPart (and))) (exists FromSpecies Eukaryote))
+(gci (and (exists FromSpecies Eukaryote) (exists FromSpecies (and)) (exists HasPart (and)) (exists HasPart AminoAcid)) Protein)
+(gci (and (exists LocatedIn (and)) (exists HasPart (and)) Gene) (and (exists FromSpecies Eukaryote) (exists FromSpecies (and))))
+(gci (and (exists LocatedIn (and)) Gene (exists Encodes (and))) (exists LocatedIn Chromosome))
+
+
+
+
+NEXT TEST:
+Number of axioms violating subclass relations: 0
+
+
+
+
+NEXT TEST:
+Number of axioms violating (direct) subclass relations: 0
+
+
+
+
+NEXT TEST:
+number of axioms violating GRO role relations: 0
+REACHED END OF MAIN.
