@@ -568,20 +568,51 @@ public class EvaluatingGCIs {
 		OWLReasoner r = getELKReasonerForOntology(gciOnt);
 		ArrayList<OWLAxiom> result = new ArrayList<OWLAxiom>();
 		int groAxioms = gro.getAxiomCount();
-		int evaluatedGroAxioms = 0;
+		int disjointnessAxioms = 0;
+		int subclassAxioms = 0;
+		int equivclassAxioms = 0;
 		for (OWLAxiom ax: gro.getAxioms(AxiomType.DISJOINT_CLASSES))  {
-			evaluatedGroAxioms++;
+			disjointnessAxioms++;
 			OWLDisjointClassesAxiom a = (OWLDisjointClassesAxiom) ax;
 			Set<OWLClassExpression> s = a.getClassExpressions();
 			OWLObjectIntersectionOf intersection = factory.getOWLObjectIntersectionOf(s);
 			if (r.getEquivalentClasses(intersection).contains(factory.getOWLNothing())) {
-				helpers.print("Found a GRO axiom that follows from the GCIs: "  + a, 3);
+				helpers.print("Found a (disjointness) GRO axiom that follows from the GCIs: "  + a, 3);
+				result.add(a);
+			}
+		}
+		
+		for (OWLAxiom ax:gro.getAxioms(AxiomType.EQUIVALENT_CLASSES)) {
+			equivclassAxioms++;
+			OWLEquivalentClassesAxiomImpl a = (OWLEquivalentClassesAxiomImpl) ax;
+			Set<OWLClassExpression> equivClasses = a.getClassExpressions();
+			//helpers.print("equivalent classes: " + equivClasses,0);
+			Iterator<OWLClassExpression> t = equivClasses.iterator();
+			OWLClassExpression ce1 = t.next();
+			OWLClassExpression ce2 = t.next();
+			OWLClass dummyEquivClass1 = factory.getOWLClass(IRI.create(groIRI + "#DUMMY-EQUIVClass1-" + equivclassAxioms ));
+			OWLClass dummyEquivClass2 = factory.getOWLClass(IRI.create(groIRI + "#DUMMY-EQUIVClass2-" + equivclassAxioms));
+			Set<OWLClassExpression> equivSet1 = new HashSet<OWLClassExpression>();
+			equivSet1.add(ce1);
+			equivSet1.add(dummyEquivClass1);
+			OWLEquivalentClassesAxiomImpl equiv1 = new OWLEquivalentClassesAxiomImpl(equivSet1, 
+		    		new HashSet<OWLAnnotation>());
+			manager.addAxiom(gciOnt, equiv1);
+			Set<OWLClassExpression> equivSet2 = new HashSet<OWLClassExpression>();
+			equivSet2.add(ce2);
+			equivSet2.add(dummyEquivClass2);
+			OWLEquivalentClassesAxiomImpl equiv2 = new OWLEquivalentClassesAxiomImpl(equivSet2, 
+					new HashSet<OWLAnnotation>());
+			manager.addAxiom(gciOnt, equiv2);
+			r.flush();
+			if(r.getEquivalentClasses(dummyEquivClass1).contains(dummyEquivClass2)) {
+				helpers.print("Found a (equivalence) GRO axiom that follows from the GCIs: "  + a, 3);
 				result.add(a);
 			}
 		}
 		
 		for (OWLAxiom ax: gro.getAxioms(AxiomType.SUBCLASS_OF)) {
-			evaluatedGroAxioms++;
+			subclassAxioms++;
 			OWLSubClassOfAxiom a = (OWLSubClassOfAxiom) ax;
 			OWLClassExpression superclass = a.getSuperClass();
 			OWLClassExpression subclass = a.getSubClass();
@@ -592,31 +623,33 @@ public class EvaluatingGCIs {
 			
 			//using "evaluatedGroAxioms" as kind of an index to differentiate different dummy classes.
 			OWLClass dummySuper = factory.getOWLClass
-					(IRI.create(groIRI + "#DUMMY-SUPERCLASS" + evaluatedGroAxioms));
+					(IRI.create(groIRI + "#DUMMY-SUPERCLASS" + subclassAxioms));
 			Set<OWLClassExpression> equivSetSuper = new HashSet<OWLClassExpression>();
 			equivSetSuper.add(dummySuper);
 			equivSetSuper.add(superclass);
 			OWLEquivalentClassesAxiomImpl equivSuper = new OWLEquivalentClassesAxiomImpl(equivSetSuper, 
 		    		new HashSet<OWLAnnotation>());
-			OWLClass dummySub = factory.getOWLClass(IRI.create(groIRI + "#DUMMY-SUBCLASS" +evaluatedGroAxioms));
+			OWLClass dummySub = factory.getOWLClass(IRI.create(groIRI + "#DUMMY-SUBCLASS" +subclassAxioms));
 			Set<OWLClassExpression> equivSetSub = new HashSet<OWLClassExpression>();
 			equivSetSub.add(dummySub);
 			equivSetSub.add(subclass);
 			OWLEquivalentClassesAxiomImpl equivSub = new OWLEquivalentClassesAxiomImpl(equivSetSub, 
 		    		new HashSet<OWLAnnotation>());
-			manager.addAxiom(gro,  equivSuper);
-		    manager.addAxiom(gro, equivSub);
-		    reasoner.flush();
+			manager.addAxiom(gciOnt,  equivSuper);
+		    manager.addAxiom(gciOnt, equivSub);
+		    r.flush();
 		    
 			if(r.getSubClasses(dummySuper, false).containsEntity((OWLClass) dummySub)) {
-				helpers.print("Found a GRO axiom that follows from the GCIs: "  + a, 3);
+				helpers.print("Found a (subclass) GRO axiom that follows from the GCIs: "  + a, 3);
 				result.add(a);
 			}
-		}
+	    }
 		
+		
+		int evaluatedGroAxioms = disjointnessAxioms + subclassAxioms + equivclassAxioms;
 		helpers.print("Finished checking if GRO axioms follow from input GCIs.", 1);
 		helpers.print("Total number of GRO axioms: " + groAxioms, 1);
-		helpers.print("Number of GRO axioms that were evaluated  (disjointess axioms, subclassof axioms): " + evaluatedGroAxioms, 1);
+		helpers.print("Number of GRO axioms that were evaluated  (disjointess axioms, subclassof axioms, equivalence axioms): " + evaluatedGroAxioms, 1);
 		helpers.print("Number of GRO axioms found to follow from GCIs: " + result.size(), 1);
 		return result;
 		
@@ -1384,7 +1417,11 @@ public class EvaluatingGCIs {
 	    printSuperClasses(testc);
 	    printSubClasses(testc);
 		printDisjointClasses(testc);
-        runAllTests();
+        //runAllTests();
+		OWLOntology gciOnt = createOntologyWithGCIsAsAxioms(axioms);
+		ArrayList<OWLAxiom> groAxiomsEntailedByGCIs = getGroAxiomsEntailedByGCIs(gciOnt);
+		helpers.print("GRO axioms entailed by the GCIs: ", 0);
+		helpers.print(groAxiomsEntailedByGCIs, 0);
 		System.out.println("REACHED END OF MAIN.");
       
      }
