@@ -1,5 +1,10 @@
-
+SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+SLF4J: Defaulting to no-operation (NOP) logger implementation
+SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+0     [main] INFO  org.semanticweb.elk.reasoner.Reasoner  - ELK reasoner was created
+number of GCIs parsed from file:3101
 Running all tests:
+Log leve: 1
 input file: C:\Users\Anas\Desktop\gro-gcis-role-depth1-top30
 number of GCIs parsed from input file:1552
 number of classes appearing in input file: 30
@@ -657,6 +662,102 @@ SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn>
 SubClassOf(ObjectIntersectionOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasFunction> owl:Thing) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#AminoAcid>)) ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Eukaryote>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#fromSpecies> <http://www.bootstrep.eu/ontology/GRO#Virus>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Peptide>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Protein>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinDomain>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Cell>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#CellComponent>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#locatedIn> <http://www.bootstrep.eu/ontology/GRO#Tissue>)))
 SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#resultsIn> <http://www.bootstrep.eu/ontology/GRO#DNARegion>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Promoter>) owl:Nothing)
+
+
+
+
+NEXT TEST: 
+Restricting the reference ontology to only the classess appearing the GCI file, then checking unsat. classes again.
+Count of classes in the ontology after restriction: 32
+Count of axioms in the ontology after restriction: 2903
+Count of unsatisfiable classes after restriction: 11
+The following classes are unsatisfiable: 
+ <http://www.bootstrep.eu/ontology/GRO#GeneExpression>
+ <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>
+ <http://www.bootstrep.eu/ontology/GRO#Gene>
+ <http://www.bootstrep.eu/ontology/GRO#CellComponent>
+ <http://www.bootstrep.eu/ontology/GRO#DNARegion>
+ <http://www.bootstrep.eu/ontology/GRO#Tissue>
+ <http://www.bootstrep.eu/ontology/GRO#Cell>
+ <http://www.bootstrep.eu/ontology/GRO#Ion>
+ <http://www.bootstrep.eu/ontology/GRO#Chromosome>
+ <http://www.bootstrep.eu/ontology/GRO#Nucleus>
+ <http://www.bootstrep.eu/ontology/GRO#Transcription>
+
+
+
+
+NEXT TEST:
+AFTER RESTRICTING ONTOLOGY TO CLASSES IN GCI, identifying the GCIs that -individually- cause unsat classes:
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
+adding it caused (5) classes to become unsatisfiable:
+ [Nucleus, Tissue, CellComponent, Chromosome, Cell]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
+adding it caused (3) classes to become unsatisfiable:
+ [Gene, Transcription, GeneExpression]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chemical> <http://www.bootstrep.eu/ontology/GRO#Ion>) owl:Nothing)
+adding it caused (1) classes to become unsatisfiable:
+ [Ion]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
+adding it caused (3) classes to become unsatisfiable:
+ [Gene, Transcription, GeneExpression]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#DNARegion>) owl:Nothing)
+adding it caused (4) classes to become unsatisfiable:
+ [DNARegion, Gene, Transcription, GeneExpression]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>) owl:Nothing)
+adding it caused (1) classes to become unsatisfiable:
+ [ProteinSubunit]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Chromosome>) owl:Nothing)
+adding it caused (1) classes to become unsatisfiable:
+ [Chromosome]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Tissue> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+adding it caused (1) classes to become unsatisfiable:
+ [Tissue]
+
+
+OWL axiom: SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#GeneExpression> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+adding it caused (2) classes to become unsatisfiable:
+ [Transcription, GeneExpression]
+
+
+OWL axiom: SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Transcription>) owl:Nothing)
+adding it caused (2) classes to become unsatisfiable:
+ [Transcription, GeneExpression]
+Number of problematic GCIs causing unsat. classes: 10
+Total number of unsat classes accounted for by individual axioms: 11
+
+
+
+
+NEXT TEST:
+AFTER RESTRICTING ONTOLOGY TO CLASSES IN GCI, identifying a set of GCIs that -collectively- cause unsat classes:
+size of GCI set (non-minimal) that needs to be removed to get rid of unsat classes:_10
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#GeneExpression> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Chemical> <http://www.bootstrep.eu/ontology/GRO#Ion>) owl:Nothing)
+SubClassOf(ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> <http://www.bootstrep.eu/ontology/GRO#Transcription>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Tissue> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#DNARegion>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Protein> <http://www.bootstrep.eu/ontology/GRO#ProteinSubunit>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNA> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
+SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Chromosome>) owl:Nothing)
 
 
 
@@ -2810,7 +2911,7 @@ GCIs that neither cause unsat classes nor follow from GRO. size: 1177
 
 
 NEXT TEST:
-Number of axioms violating subclass relations: 12
+Number of GCIs violating subclass relations: 12
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
@@ -2828,7 +2929,7 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellCompon
 
 
 NEXT TEST:
-Number of axioms violating (direct) subclass relations: 7
+Number of GCIs violating (direct) subclass relations: 7
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellComponent> <http://www.bootstrep.eu/ontology/GRO#Nucleus>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#DNARegion> <http://www.bootstrep.eu/ontology/GRO#Gene>) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Enzyme> <http://www.bootstrep.eu/ontology/GRO#Protein>) owl:Nothing)
@@ -2841,7 +2942,7 @@ SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#CellCompon
 
 
 NEXT TEST:
-number of axioms violating GRO role relations: 7
+number of GCIs violating GRO role relations: 7
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#MessengerRNA> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Transcription> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
 SubClassOf(ObjectIntersectionOf(<http://www.bootstrep.eu/ontology/GRO#Tissue> ObjectSomeValuesFrom(<http://www.bootstrep.eu/ontology/GRO#hasPart> owl:Thing)) owl:Nothing)
@@ -3137,7 +3238,7 @@ Declaration(Class(<http://www.bootstrep.eu/ontology/GRO#Nucleus>))
 NEXT TEST:
 Finished checking if GRO axioms follow from input GCIs.
 Total number of GRO axioms: 2736
-Number of GRO axioms that were evaluated  (disjointess axioms, subclassof axioms): 850
+Number of GRO axioms that were evaluated  (disjointess axioms, subclassof axioms, equivalence axioms): 915
 Number of GRO axioms found to follow from GCIs: 6
 GRO axioms entailed by the GCIs: 
 DisjointClasses(<http://www.bootstrep.eu/ontology/GRO#AminoAcid> <http://www.bootstrep.eu/ontology/GRO#Ion>)
