@@ -1166,23 +1166,11 @@ public class GCIEvaluator {
 	
 	
 	public static void main(String[] args) throws Exception{
+		//the 4 args to the constructor: IRI string, reference ontology file, input (GCIs)file, log level.
 		GCIEvaluator evaluator1 = new GCIEvaluator("http://www.bootstrep.eu/ontology/GRO",
-													"C:\\Users\\Anas\\Desktop\\GRO_latest.xml", 
-													"C:\\Users\\Anas\\Desktop\\role-depth1_top50", 1);
-        evaluator1.runAllTests(1);
-		//OWLOntology gciOnt = createOntologyWithGCIsAsAxioms(axioms);
-		//ArrayList<OWLAxiom> groAxiomsEntailedByGCIs = getGroAxiomsEntailedByGCIs(gciOnt);
-		//helpers.print("GRO axioms entailed by the GCIs: ", 0);
-		//helpers.print(groAxiomsEntailedByGCIs, 0);
-        /*
-		HashSet<OWLClass> toRemove = new HashSet<OWLClass>();
-        helpers.print("count before: " + refOnt.getClassesInSignature().size(), 0);
-        toRemove.add(getClassFromName("Nucleus"));
-        removeConceptsFromReferenceOntology(toRemove);
-        helpers.print("count after: " + refOnt.getClassesInSignature().size(), 0);
-        reasoner.flush();
-        helpers.print("count after, after flushing: " + refOnt.getClassesInSignature().size(), 0);
-        */
+		                                           "C:\\Users\\Anas\\Desktop\\GRO_latest.xml",
+		                                           "C:\\Users\\Anas\\Desktop\\role-depth1_top50", 1);
+                evaluator1.runAllTests(2); //we can specify a different log level here.
 		System.out.println("REACHED END OF MAIN.");
       
      }
